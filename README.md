@@ -47,8 +47,7 @@
 ```
 
 ### 🇹🇷 Geliştiriciler / Developers 🇺🇲
-  [![ErdemBey](https://github.com/Erdembey0.png?size=100)](https://github.com/erdembey0)
- [![Misaki](https://github.com/ByMisakiMey.png?size=100)](https://github.com/ByMisakiMey) [![burak](https://github.com/ribonney.png?size=100)](https://github.com/ribonney)
+  [![ErdemBey](https://avatars.githubusercontent.com/u/84121542?v=4?size=100)](https://github.com/SancaklarMedias/)
 
 ## Credit
 Thanks for;
