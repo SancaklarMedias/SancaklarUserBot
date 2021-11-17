@@ -1,16 +1,16 @@
 
 <div align="center">
   <img src="https://i.hizliresim.com/rlogmsn.jpg" width="400" height="400">
-  <h1>🇹🇷 Owen UserBot 🇺🇲</h1>
+  <h1>🇹🇷 sancaklar UserBot 🇺🇲</h1>
 </div>
 <p align="center">
-    Owen UserBot, Telegram kullanmanızı kolaylaştıran ve eğlenceli bir yol almasını sağlayan bir bottur. <br>
-    Owen UserBot is a bot that makes it easy and fun to use Telegram.
+    sancaklar UserBot, Telegram kullanmanızı kolaylaştıran ve eğlenceli bir yol almasını sağlayan bir bottur. <br>
+    sancaklar UserBot is a bot that makes it easy and fun to use Telegram.
     <br>
-        <a href="https://github.com/erdewbey/OwenUserBot/blob/master/README.md#kurulum/setup">| Kurulum/Setup</a> |
-        <a href="https://github.com/erdewbey/OwenUserBot/wiki/G%C3%BCncelleme">Güncelleme/Update</a> |
-        <a href="https://t.me/OwenUserBot">Kanal/Channel </a> |
-        <a href="https://t.me/OwenSupport">Destek/Support</a> |
+        <a href="https://github.com/erdewbey/SancaklarUsersBot/blob/master/README.md#kurulum/setup">| Kurulum/Setup</a> |
+        <a href="https://github.com/erdewbey/SancaklarUsersBot/wiki/G%C3%BCncelleme">Güncelleme/Update</a> |
+        <a href="https://t.me/SancaklarUsersBot">Kanal/Channel </a> |
+        <a href="https://t.me/sancaklarSupport">Destek/Support</a> |
     <br>
 </p>
 
@@ -24,26 +24,26 @@
 
 🇹🇷**Tarayıcı Kurulum / Online Setup**🇺🇲
 
-[![Run on Repl.it](https://repl.it/badge/github/erdewbey/oweninstaller)](https://repl.it/@erdewbey/oweninstaller)
+[![Run on Repl.it](https://repl.it/badge/github/erdewbey/sancaklarinstaller)](https://repl.it/@erdewbey/sancaklarinstaller)
 
 ### 🇹🇷 Elle Kurulum / Manual Setup 🇺🇲
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/erdewbey/OwenUserBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/erdewbey/SancaklarUsersBot)
 
 ## 🇹🇷 Bilgilendirme / İnformation 🇺🇲
-***Herhangi bir istek & şikayet & öneriniz varsa [destek grubuna](https://t.me/OwenSupport) ulaşabilirsiniz.***
+***Herhangi bir istek & şikayet & öneriniz varsa [destek grubuna](https://t.me/sancaklarSupport) ulaşabilirsiniz.***
 
-***You can reach the [support group](https://t.me/OwenSupport) if there are any requests & complaints & suggestions.***
+***You can reach the [support group](https://t.me/sancaklarSupport) if there are any requests & complaints & suggestions.***
 ```
     Userbottan dolayı; Telegram hesabınız yasaklanabilir.
-    Bu bir açık kaynaklı projedir, yaptığınız her işlemden kendiniz sorumlusunuz. Kesinlikle Owen yöneticileri sorumluluk kabul etmemektedir.
-    Owen kurarak bu sorumlulukları kabul etmiş sayılırsınız.
+    Bu bir açık kaynaklı projedir, yaptığınız her işlemden kendiniz sorumlusunuz. Kesinlikle sancaklar yöneticileri sorumluluk kabul etmemektedir.
+    sancaklar kurarak bu sorumlulukları kabul etmiş sayılırsınız.
 ```
 
 ```
      Due to Userbot; Your Telegram account may be banned.
-    This is an open source project, you are responsible for everything you do. Absolutely, Owen administrators do not accept responsibility.
-    By establishing Owen, you are deemed to have accepted these responsibilities.
+    This is an open source project, you are responsible for everything you do. Absolutely, sancaklar administrators do not accept responsibility.
+    By establishing sancaklar, you are deemed to have accepted these responsibilities.
 ```
 
 ### 🇹🇷 Geliştiriciler / Developers 🇺🇲

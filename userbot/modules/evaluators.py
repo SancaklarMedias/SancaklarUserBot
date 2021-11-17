@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 """ Telegram'dan kod ve terminal komutlarını yürütmek için UserBot modülü. """

@@ -1,4 +1,4 @@
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 # Translated&Updated by @Erdme
 """Hesabınızın istatistiklerini gösterir"""
 import logging
@@ -26,7 +26,7 @@ LANG = get_value("hbilgi")
 @register(outgoing=True, pattern=r"^.infom(?: |$)(.*)") 
 async def hesapstat(event: NewMessage.Event) -> None:  # pylint: disable = R0912, R0914, R0915
     """Istatistikler için bir komut"""
-    waiting_message = await event.edit('`Owen Hesap Istatistikleri toplarken biraz bekle.`')
+    waiting_message = await event.edit('`sancaklar Hesap Istatistikleri toplarken biraz bekle.`')
     start_time = time.time()
     private_chats = 0
     bots = 0

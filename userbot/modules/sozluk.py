@@ -4,9 +4,9 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
-# Turkish word meaning. Only Turkish. Coded @By_Azade, Owen uyarlaması @erdewbey
+# Turkish word meaning. Only Turkish. Coded @By_Azade, sancaklar uyarlaması @erdewbey
 #
 
 import requests

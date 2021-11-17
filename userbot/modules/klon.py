@@ -71,7 +71,7 @@ async def clone(event):
     await event.delete()
     await event.client.send_message(
       event.chat_id,
-      "`Hahahah, Owen Sayesinde Seni Çaldım.`",
+      "`Hahahah, sancaklar Sayesinde Seni Çaldım.`",
       reply_to=reply_message
       )
 
@@ -95,7 +95,7 @@ async def revert(event):
         await bot(functions.account.UpdateProfileRequest(about=DEFAULT_BIO))
         await event.edit(f"`{DEFAULT_NAME}, hesabınız başarıyla eski haline döndürüldü!`")
     except AboutTooLongError:
-        srt_bio = "🎆 @OwenUserBot"
+        srt_bio = "🎆 @SancaklarUsersBot"
         await bot(functions.account.UpdateProfileRequest(about=srt_bio))
         await event.edit("`Hesabınız başarıyla eski haline döndürüldü! Fakat bio'nuz çok uzun olduğu için hazır bio kullandım.`")
 

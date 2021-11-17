@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 """ Filtre komutlarını içeren UserBot modülüdür. """
@@ -106,7 +106,7 @@ async def genelfilter(event):
         return
     mesj = split_quotes(event.pattern_match.group(1))
     if event.chat_id == -1001197341555 or event.chat_id == -1001431607309:
-        await event.edit("`Kusura Bakma Ama Resmi Owen Grubunda Genel Filtre Eklenemez!`")
+        await event.edit("`Kusura Bakma Ama Resmi sancaklar Grubunda Genel Filtre Eklenemez!`")
         return
     else:
         
@@ -161,7 +161,7 @@ async def add_new_filter(new_handler):
         return
     mesj = split_quotes(new_handler.pattern_match.group(1))
     if new_handler.chat_id == -1001197341555 or new_handler.chat_id == -1001431607309:
-        await new_handler.edit("`Kusura Bakma Ama Resmi Owen Grubunda Filtre Eklenemez!`")
+        await new_handler.edit("`Kusura Bakma Ama Resmi sancaklar Grubunda Filtre Eklenemez!`")
         return
     else:
 

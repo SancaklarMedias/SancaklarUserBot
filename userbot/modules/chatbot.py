@@ -5,7 +5,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - ByMisakiMey - Midy
+# SancaklarUsersBot - ErdewBey - ByMisakiMey - Midy
 #
 import requests
 from googletrans import Translator

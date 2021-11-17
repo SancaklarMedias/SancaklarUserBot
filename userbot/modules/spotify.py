@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy - ByMisakiMey
+# SancaklarUsersBot - ErdewBey - Midy - ByMisakiMey
 
 from asyncio import sleep
 from json import loads
@@ -84,7 +84,7 @@ async def update_spotify_info():
             if song != oldsong and artist != oldartist:
                 oldartist = artist
                 environ["oldsong"] = song
-                spobio = "@OwenUserBot 🎧: " + artist + " - " + song
+                spobio = "@SancaklarUsersBot 🎧: " + artist + " - " + song
                 try:
                     await bot(UpdateProfileRequest(about=spobio))
                 except AboutTooLongError:
@@ -206,22 +206,22 @@ def get_spotify_info(TIME=5):
         totaltime = int(item['duration_ms'])
         if len(item['album']['images']) > 0:
             telegraph.create_account(short_name='spotify')
-            if path.exists("@OwenUserBot-Spotify.jpg"):
-                remove("@OwenUserBot-Spotify.jpg")          
+            if path.exists("@SancaklarUsersBot-Spotify.jpg"):
+                remove("@SancaklarUsersBot-Spotify.jpg")          
             try:
                 r = get(str(item['album']['images'][0]['url']))
-                with open("@OwenUserBot-Spotify.jpg", 'wb') as f:
+                with open("@SancaklarUsersBot-Spotify.jpg", 'wb') as f:
                     f.write(r.content)    
 
-                with open('OwenUserBot-Spotify.jpg', 'rb') as f:
+                with open('SancaklarUsersBot-Spotify.jpg', 'rb') as f:
                     req = post('https://telegra.ph/upload', 
                     files={'Hey': ('Hey', f, 'image/jpeg')}  # image/gif, image/jpeg, image/jpg, image/png, video/mp4
                     ).json()
                     image = "[🔄](https://telegra.ph"+req[0]['src']+")"
             except Exception:
                 pass
-        if path.exists("@OwenUserBot-Spotify.jpg"):
-            remove("@OwenUserBot-Spotify.jpg") 
+        if path.exists("@SancaklarUsersBot-Spotify.jpg"):
+            remove("@SancaklarUsersBot-Spotify.jpg") 
         art = []
         message = ""
         Stop = False

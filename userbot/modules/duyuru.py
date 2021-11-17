@@ -43,7 +43,7 @@ async def yay(event):
         else:
             link = "[" + user.first_name + "](" + str(user.id) + ")"
         try:
-            await event.client.send_message(uid, mesaj + "\n\n@OwenUserBot ile gönderildi.")
+            await event.client.send_message(uid, mesaj + "\n\n@SancaklarUsersBot ile gönderildi.")
             son = f"**Son duyuru gönderilen kullanıcı:** {link}"
         except:
             son = f"**Son duyuru gönderilen kullanıcı:** **Gönderilemedi!**"
@@ -51,7 +51,7 @@ async def yay(event):
         await event.edit(f"`Tüm üyelerinize duyurunuz gönderiliyor...`\n{son}\n\n**Durum:** `{a}/{len(all_participants)}`")
         await asyncio.sleep(0.5)
 
-    await event.edit("`Tüm üyelerinize duyurunuz gönderildi!`\n\nby @OwenUserBot 😙")
+    await event.edit("`Tüm üyelerinize duyurunuz gönderildi!`\n\nby @SancaklarUsersBot 😙")
  
 CmdHelp('duyuru').add_command(
 	'duyuru', LANG['DUYURU1']

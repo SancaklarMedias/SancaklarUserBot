@@ -1,4 +1,4 @@
-# GNU LICENCE / OwenUserBot - ErdewBey - Midy
+# GNU LICENCE / SancaklarUsersBot - ErdewBey - Midy
 
 import codecs
 import heroku3

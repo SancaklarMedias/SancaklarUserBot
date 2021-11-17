@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey 
+# SancaklarUsersBot - ErdewBey 
 
 """ Olayları yönetmek için UserBot modülü.
  UserBot'un ana bileşenlerinden biri. """
@@ -18,7 +18,7 @@ from time import gmtime, strftime
 from traceback import format_exc
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, OWEN_VERSION, ForceVer
+from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, sancaklar_VERSION, ForceVer
 
 
 def register(**args):
@@ -52,8 +52,8 @@ def register(**args):
 
     def decorator(func):
         async def wrapper(check):
-            OwenVer = int(OWEN_VERSION.split(".")[1])
-            if ForceVer > OwenVer:
+            sancaklarVer = int(sancaklar_VERSION.split(".")[1])
+            if ForceVer > sancaklarVer:
                 await check.edit(f"`🌈 Botu acilen güncellemen lazım! Bu sürüm artık kullanılamıyor..`\n\n__🥺 Sorunu çözmek için__ `.update now` __yazmalısın!__")
                 return
 
@@ -86,7 +86,7 @@ def register(**args):
 
                     eventtext = str(check.text)
                     text = "**==USERBOT HATA RAPORU==**\n"
-                    link = "[Owen Destek Grubuna](https://t.me/OwenSupport)"
+                    link = "[sancaklar Destek Grubuna](https://t.me/sancaklarSupport)"
                     if len(eventtext)<10:
                         text += f"\n**🗒️ Şu yüzden:** {eventtext}\n"
                     text += "\nℹ️ İsterseniz, bunu bildirebilirsiniz."
@@ -111,7 +111,7 @@ def register(**args):
                     ftext += str(format_exc())
                     ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
                     ftext += "\n\n================================\n"
-                    ftext += f"====== BOTVER : {OWEN_VERSION} ======\n"
+                    ftext += f"====== BOTVER : {sancaklar_VERSION} ======\n"
                     ftext += "================================"
 
                     command = "git log --pretty=format:\"%an: %s\" -7"

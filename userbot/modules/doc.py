@@ -1,4 +1,4 @@
-# Owen Dev - 
+# sancaklar Dev - 
 
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp

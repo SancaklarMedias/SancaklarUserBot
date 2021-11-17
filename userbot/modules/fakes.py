@@ -1,4 +1,4 @@
-# ErdewBey OwenUserBot 
+# ErdewBey SancaklarUsersBot 
 
 from userbot.events import register
 from userbot import CMD_HELP 

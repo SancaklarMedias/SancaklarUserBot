@@ -3,8 +3,8 @@
 # Licensed under the GPL-3.0 License;
 # you may not use this file except in compliance with the License.
 ##
-# - tg: @owenuserbot - @OwenSupport
-# OwenUserBot - Erdem Bey - ByMisakiMey
+# - tg: @SancaklarUsersBot - @sancaklarSupport
+# SancaklarUsersBot - Erdem Bey - ByMisakiMey
 
 
 """ AFK ile ilgili komutları içeren UserBot modülü """
@@ -337,10 +337,10 @@ async def set_afk(afk_e):
         AFKREASON = string
         await afk_e.edit(f"{LANG['IM_AFK']}\
         \n{LANG['REASON']}: `{string}`")
-        await afk_e.client(UpdateProfileRequest(about='Sahibim Şuan #AFK @Owenuserbot ✨')) #BUNU KULLANIPTA CR VERMEYENİN ANASINI SİKİM TEŞEKKÜRLER / ByMisakiMey
+        await afk_e.client(UpdateProfileRequest(about='Sahibim Şuan #AFK @SancaklarUsersBot ✨')) #BUNU KULLANIPTA CR VERMEYENİN ANASINI SİKİM TEŞEKKÜRLER / ByMisakiMey
     else:
         await afk_e.edit(LANG['IM_AFK'])
-        await afk_e.client(UpdateProfileRequest(about='Sahibim Şuan #AFK @Owenuserbot ✨'))
+        await afk_e.client(UpdateProfileRequest(about='Sahibim Şuan #AFK @SancaklarUsersBot ✨'))
     SON_GORULME = time()
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nAFK oldunuz.")

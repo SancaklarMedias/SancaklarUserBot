@@ -1,5 +1,5 @@
 #Thanks: Sandy
-#ByMisakiMey-Owenuserbot-OwenProjects
+#ByMisakiMey-SancaklarUsersBot-SancaklarMedias
 
 from sqlalchemy import Column, String, UnicodeText
 

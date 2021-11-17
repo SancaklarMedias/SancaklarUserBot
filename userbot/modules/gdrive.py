@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 import asyncio
@@ -298,7 +298,7 @@ async def upload_file(http, file_path, file_name, mime_type, event, parent_id):
     media_body = MediaFileUpload(file_path, mimetype=mime_type, resumable=True)
     body = {
         "title": file_name,
-        "description": "Owen UserBot kullanılarak yüklendi.",
+        "description": "sancaklar UserBot kullanılarak yüklendi.",
         "mimeType": mime_type,
     }
     if parent_id:

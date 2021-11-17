@@ -1,4 +1,4 @@
-# ErdewBey İpLogger | OwenUserbot 
+# ErdewBey İpLogger | SancaklarUsersBot 
 # ipstack.com 
 # Token Sahibi Sam Pandeey
 

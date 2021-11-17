@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 """ Diğer kategorilere uymayan fazlalık komutların yer aldığı modül. """
@@ -235,8 +235,8 @@ async def haber(event):
 @register(outgoing=True, pattern="^.karbon ?(.*)")
 async def karbon(e):
     cmd = e.pattern_match.group(1)
-    if os.path.exists("@OwenUserBot-Karbon.jpg"):
-        os.remove("@OwenUserBot-Karbon.jpg")
+    if os.path.exists("@SancaklarUsersBot-Karbon.jpg"):
+        os.remove("@SancaklarUsersBot-Karbon.jpg")
 
     if len(cmd) < 1:
         await e.edit("Kullanım: .karbon mesaj")    
@@ -247,10 +247,10 @@ async def karbon(e):
 
     r = get(f"https://carbonnowsh.herokuapp.com/?code={cmd}")
 
-    with open("@OwenUserBot-Karbon.jpg", 'wb') as f:
+    with open("@SancaklarUsersBot-Karbon.jpg", 'wb') as f:
         f.write(r.content)    
 
-    await e.client.send_file(e.chat_id, file="@OwenUserBot-Karbon.jpg", force_document=True, caption="[OwenUserBot](https://t.me/owenuserbot) ile oluşturuldu.")
+    await e.client.send_file(e.chat_id, file="@SancaklarUsersBot-Karbon.jpg", force_document=True, caption="[SancaklarUsersBot](https://t.me/SancaklarUsersBot) ile oluşturuldu.")
     await e.delete()
 
 @register(outgoing=True, pattern="^.crblang (.*)")
@@ -811,7 +811,7 @@ async def download_video(v_url):
         await v_url.edit("`İstek sırasında bir hata baş verdi.`")
         return
     except UnavailableVideoError:
-        await v_url.edit("`Error UnavialableVideoError |//\\| Bu mesajı görürsen büyük ihtimal ile userbotunda _youtube_ modülü hata verdi bu mesajı @OwenSupport grubuna gönder`")
+        await v_url.edit("`Error UnavialableVideoError |//\\| Bu mesajı görürsen büyük ihtimal ile userbotunda _youtube_ modülü hata verdi bu mesajı @sancaklarSupport grubuna gönder`")
         return
     except XAttrMetadataError as XAME:
         await v_url.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")

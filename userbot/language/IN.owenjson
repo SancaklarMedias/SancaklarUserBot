@@ -1,6 +1,6 @@
 {
 
-    "__OWENJSON__": true,
+    "__sancaklarJSON__": true,
     
     "LANGUAGE": "Hindi",
 
@@ -62,15 +62,15 @@
 
             "PLUG_DELETED": "`Plugin deleted successfully!` '**You need to restart operations to be implemented.**",
 
-            "OWEN_PLUGIN_CAPTION": "This is a plugin of [Owen](https://t.me/OwenUserBot)."
+            "sancaklar_PLUGIN_CAPTION": "This is a plugin of [sancaklar](https://t.me/SancaklarUsersBot)."
 
         },
 
-        "__owen": {
+        "__sancaklar": {
 
-            "NEED_PLUGIN": "✨Please provide a Owen module name.",
+            "NEED_PLUGIN": "✨Please provide a sancaklar module name.",
 
-            "NEED_MODULE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 𝑴𝒐𝒅𝒖𝒍 𝑯𝒆𝒍𝒑𝒆𝒓\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Please specify which Owen module you want help for !!\nUsage: .owen <module name>"
+            "NEED_MODULE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 𝑴𝒐𝒅𝒖𝒍 𝑯𝒆𝒍𝒑𝒆𝒓\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Please specify which sancaklar module you want help for !!\nUsage: .sancaklar <module name>"
 
         },
 
@@ -102,7 +102,7 @@
 
             "EKLE": "`Added successfully`",
 
-            "BRAIN": "`Error! I can't do this to the Owen Admin.`",
+            "BRAIN": "`Error! I can't do this to the sancaklar Admin.`",
 
             "BANNING": "`User banning...`",
 
@@ -222,7 +222,7 @@
 
             "BIO": "📅 Date: {tarih} | ⏰ Time: {saat} | ",
 
-            "NICK": "@OwenUserBot",
+            "NICK": "@SancaklarUsersBot",
 
             "SETTED": "`%s set :)`",
 
@@ -252,7 +252,7 @@
 
         "botfather": {
 
-            "ERROR": "`⛔ Please Provide Missing Information for Owen to Create a Bot!`"
+            "ERROR": "`⛔ Please Provide Missing Information for sancaklar to Create a Bot!`"
 
         },
 
@@ -320,9 +320,9 @@
 
             "NEED_VIDEO": "`Please reply to a Video!`",
 
-            "WITH_OWEN": "`Effect applied with` @OwenUserBot",
+            "WITH_sancaklar": "`Effect applied with` @SancaklarUsersBot",
 
-            "WITH_OWEN_GIF": "`Turned to Gif with` @OwenUserBot",
+            "WITH_sancaklar_GIF": "`Turned to Gif with` @SancaklarUsersBot",
 
             "CONVERTING_TO_GIF": "Turning to gif ...",
 
@@ -536,7 +536,7 @@
 
             "ADDED_LIST": "`The photo has been queued.`",
 
-            "INVALID_URL": "`You have entered an invalid image URL. If you have no idea of usage,` `.owen galeri` `please write.`",
+            "INVALID_URL": "`You have entered an invalid image URL. If you have no idea of usage,` `.sancaklar galeri` `please write.`",
 
             "EXAMPLE": "`Please enter a picture address. As an example: ` `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`",
 
@@ -552,7 +552,7 @@
 
             "STARTED": "`The gallery is working`",
 
-            "NEED_PHOTO": "You need to add photos for the gallery work. If you do not know how to add it, you may know about use with the .owen galeri",
+            "NEED_PHOTO": "You need to add photos for the gallery work. If you do not know how to add it, you may know about use with the .sancaklar galeri",
 
             "STOPPED": "`The Gallery is stopped!`",
 
@@ -582,13 +582,13 @@
 
             "REPLY_MESSAGE": "`Please respond to a message.`",
 
-            "SUCCESSFUL": "`Owen Sent Message to Recorded Messages Section!`"
+            "SUCCESSFUL": "`sancaklar Sent Message to Recorded Messages Section!`"
 
         },
 
         "klon": {
 
-            "WLKLON": "`Owen managers don't like to be cloned.`"
+            "WLKLON": "`sancaklar managers don't like to be cloned.`"
 
         },
 
@@ -686,7 +686,7 @@
 
             "RESULT": "Result",
 
-            "NEED_MUCH_DATA_FOR_RANDOM": "`2 or more items are required. Enter the .Owen random command for more information.`",
+            "NEED_MUCH_DATA_FOR_RANDOM": "`2 or more items are required. Enter the .sancaklar random command for more information.`",
 
             "SLEEP_DESC": "Usage: ` .sleep [saniye]`",
 
@@ -698,13 +698,13 @@
 
             "RESTARTING": "`Bot restarting...`",
 
-            "SUPPORT_GROUP": "[From Here](http://t.me/OwenSupport) you can contact our support group.",
+            "SUPPORT_GROUP": "[From Here](http://t.me/sancaklarSupport) you can contact our support group.",
 
             "CREATOR": "developed by \n @erdewbey \n",
 
-            "README": "[Owen README.md](https://github.com/OwenUserBot/OwenUserBot/blob/master/README.md)",
+            "README": "[sancaklar README.md](https://github.com/SancaklarUsersBot/SancaklarUsersBot/blob/master/README.md)",
 
-            "REPO": "[Owen Repo](https://github.com/OwenUserBot/Owenuserbot)",
+            "REPO": "[sancaklar Repo](https://github.com/SancaklarUsersBot/SancaklarUsersBot)",
 
             "CHECK_LOGS": "`Check userbot logs for decoded message!`"
 
@@ -742,7 +742,7 @@
 
         "playstore": {
 
-            "SEARCH": "`🔎Owen Looking For Your Program...`",
+            "SEARCH": "`🔎sancaklar Looking For Your Program...`",
 
             "EKS": "`⛔ Please write program name... Example`",
 
@@ -1016,7 +1016,7 @@
 
             "NOT_FOUND": "` The song you were looking for was not found! I'm sorry.`",
 
-            "UPLOADED_WITH": "Upload with @OwenUserBot",
+            "UPLOADED_WITH": "Upload with @SancaklarUsersBot",
 
             "USAGE": "`Usage:` `.song song name/youtube url/spotify url`",
 
@@ -1092,7 +1092,7 @@
 
             "NOT_FOUND": "Nothing found",
 
-            "EXAMPLE": "`Use the .owen pip command to see an example. `"
+            "EXAMPLE": "`Use the .sancaklar pip command to see an example. `"
 
         },
 
@@ -1130,7 +1130,7 @@
 
             "NOT_GIT": "folder does not look like a git repo. \nBut you can solve this problem by forcibly updating the bot with the .update now command.",
 
-            "INVALID_BRANCH": "**[UPDATER]: * * ` I think you've modified the Owen bot and you're using your own branch.\nThis confuses the Updater,\nWhere will the update be pulled?\nPlease use the Owen bot from the official repo.`",
+            "INVALID_BRANCH": "**[UPDATER]: * * ` I think you've modified the sancaklar bot and you're using your own branch.\nThis confuses the Updater,\nWhere will the update be pulled?\nPlease use the sancaklar bot from the official repo.`",
 
             "UPDATE": "\n`Your bot` **completely up to date!** `Branch:` **{}**\n",
 

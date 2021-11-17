@@ -1,4 +1,4 @@
-# OwenUsebot ErdewBey / Bymisakimey
+# sancaklarUsebot ErdewBey / Bymisakimey
 # Kullanırken info Kısmını Silmeyiniz Ve Credit Vermeyi Unutmayın.
 import random
 import asyncio

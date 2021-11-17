@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 import os
 from telethon.tl.types import InputMessagesFilterDocument
@@ -28,22 +28,22 @@ LANG = get_value("__plugin")
 @register(outgoing=True, pattern="^.ma[gğ]aza ?(.*)")
 async def magaza(event):
     plugin = event.pattern_match.group(1)
-    await event.edit('** Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n`🔎 Plugin\'i Getiriyorum, Lütfen Bekle!`')
+    await event.edit('** sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n`🔎 Plugin\'i Getiriyorum, Lütfen Bekle!`')
     split = plugin.split()
     if plugin == '':
         plugin = 'Son Yüklenen'
-        plugins = await event.client.get_messages('@owenplugin', limit=15, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@sancaklarplugin', limit=15, filter=InputMessagesFilterDocument)
     elif len(split) >= 1 and (split[0] == 'random' or split[0] == 'rastgele'):
         plugin = 'Rastgele'
-        plugins = await event.client.get_messages('@owenplugin', limit=None, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@sancaklarplugin', limit=None, filter=InputMessagesFilterDocument)
         plugins = sample(plugins, int(split[1]) if len(split) == 2 else 5)
     else:
-        plugins = await event.client.get_messages('@owenplugin', limit=None, search=plugin, filter=InputMessagesFilterDocument)
-        random = await event.client.get_messages('@owenplugin', limit=None, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@sancaklarplugin', limit=None, search=plugin, filter=InputMessagesFilterDocument)
+        random = await event.client.get_messages('@sancaklarplugin', limit=None, filter=InputMessagesFilterDocument)
         random = choice(random)
         random_file = random.file.name
 
-    result = f'** Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n**🔎 Veriler:** `{plugin}`\n**🔢 Sonuç: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
+    result = f'** sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n**🔎 Veriler:** `{plugin}`\n**🔢 Sonuç: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
     
     if len(plugins) == 0:
         result += f'**Bu İsimde Plugin Bulamadım...**\n`{random_file}` __Bu plugini Denemek İster Misin ?__'
@@ -66,13 +66,13 @@ async def sinstall(event):
     try:
         plugin = int(plugin)
     except:
-        return await event.edit('**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Hata:** `Lütfen Sadece Say Yazınız .sinstall pluginid`')
+        return await event.edit('**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Hata:** `Lütfen Sadece Say Yazınız .sinstall pluginid`')
     
-    await event.edit('**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n`🔎 Plugin\'i Getiriyorum...`')
-    plugin = await event.client.get_messages('@owenplugin', ids=plugin)
-    await event.edit(f'**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n`✅ {plugin.file.name} Plugini Getirildi!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
+    await event.edit('**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n`🔎 Plugin\'i Getiriyorum...`')
+    plugin = await event.client.get_messages('@sancaklarplugin', ids=plugin)
+    await event.edit(f'**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n`✅ {plugin.file.name} Plugini Getirildi!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
     dosya = await plugin.download_media('./userbot/modules/')
-    await event.edit(f'**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
+    await event.edit(f'**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
     
     try:
         spec = importlib.util.spec_from_file_location(dosya, dosya)
@@ -80,7 +80,7 @@ async def sinstall(event):
         spec.loader.exec_module(mod)
     except Exception as e:
         os.remove("./userbot/modules/" + dosya)
-        return await event.edit(f'**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Hata:** `Plugin Hatalı. {e}`\n**LÜTFEN BUNU ADMİNLERE BİLDİRİN!**')
+        return await event.edit(f'**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Hata:** `Plugin Hatalı. {e}`\n**LÜTFEN BUNU ADMİNLERE BİLDİRİN!**')
 
     dosy = open(dosya, "r").read()
     if re.search(r"@tgbot\.on\(.*pattern=(r|)\".*\".*\)", dosy):
@@ -100,7 +100,7 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımı İçin__ `.owen {cmdhelp}` __Yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımı İçin__ `.sancaklar {cmdhelp}` __Yazın.__')
             else:
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -109,12 +109,12 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.owen {cmdhelp}` __Yazınız.__')
+                return await event.edit(f'**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.sancaklar {cmdhelp}` __Yazınız.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Owen Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.owen {dosyaAdi}` __Yazınız.__')
+                return await event.edit(f'**sancaklar Plugin Mağazası**\n__Versiyon 1.0__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.sancaklar {dosyaAdi}` __Yazınız.__')
 
 userbot.cmdhelp.CmdHelp('store').add_command(
     'store', LANG['P1'], LANG['P2']

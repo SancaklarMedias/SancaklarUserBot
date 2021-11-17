@@ -74,23 +74,23 @@ async def get_users(event):
     f = 0
     error = "None"
 
-    await erdem.edit("**Owen UserBot ADDER**\n\n`Üyeler Ekleniyor...`")
+    await erdem.edit("**sancaklar UserBot ADDER**\n\n`Üyeler Ekleniyor...`")
     async for user in event.client.iter_participants(farid.full_chat.id):
         try:
             if error.startswith("Too"):
                 return await erdem.edit(
-                    f"**Owen UserBot ADDER**\n `Spamdasınız Galiba Emin Olmak İçin .sinfo Yazarak Kontrol Edebilirsiniz.` \nHata \n`{error}` \n\n `{s}` Üyeler Eklendi.\n `{f}` Kullanıcı Eklenemedi."
+                    f"**sancaklar UserBot ADDER**\n `Spamdasınız Galiba Emin Olmak İçin .sinfo Yazarak Kontrol Edebilirsiniz.` \nHata \n`{error}` \n\n `{s}` Üyeler Eklendi.\n `{f}` Kullanıcı Eklenemedi."
                 )
             await event.client(
                 functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
             )
             s = s + 1
             await erdem.edit(
-                f"**Owen UserBot ADDER**\n\n`{s}` Üyeler Eklendi.\n`{f}` Kullanıcı Eklenemedi \n\n**Hata:** `{error}`"
+                f"**sancaklar UserBot ADDER**\n\n`{s}` Üyeler Eklendi.\n`{f}` Kullanıcı Eklenemedi \n\n**Hata:** `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
     return await erdem.edit(
-        f"**Owen UserBot ADDER** \n\nBaşarılı İşlem: ✔️ `{s}` .\nBaşarısız İşlem: ❌ `{f}`"
+        f"**sancaklar UserBot ADDER** \n\nBaşarılı İşlem: ✔️ `{s}` .\nBaşarısız İşlem: ❌ `{f}`"
     )

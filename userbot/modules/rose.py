@@ -1,4 +1,4 @@
-# Owen 
+# sancaklar 
 import os
 from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -20,9 +20,9 @@ async def fstat(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        sancaklar = event.pattern_match.group(1)
     else:
-        owen = ""
+        sancaklar = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -31,7 +31,7 @@ async def fstat(event):
         kullanıcı = str(replied_user.user.id)
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fedstat " + kullanıcı + " " + owen)
+                await conv.send_message("/fedstat " + kullanıcı + " " + sancaklar)
                 fedstat = await conv.get_response()
                 if "file" in fedstat.text:
                     await fedstat.click(0)
@@ -46,7 +46,7 @@ async def fstat(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fedstat " + owen)
+                await conv.send_message("/fedstat " + sancaklar)
                 fedstat = await conv.get_response()
                 if "file" in fedstat.text:
                     await fedstat.click(0)
@@ -65,10 +65,10 @@ async def info(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        sancaklar = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        sancaklar = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -87,7 +87,7 @@ async def info(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/info " + owen)
+                await conv.send_message("/info " + sancaklar)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -100,8 +100,8 @@ async def info(event):
 async def fedinfo(event):
     if event.fwd_from:
         return
-    owen = event.pattern_match.group(1)
-    if owen == "" and not event.reply_to_msg_id:
+    sancaklar = event.pattern_match.group(1)
+    if sancaklar == "" and not event.reply_to_msg_id:
         async with event.client.conversation(chat) as conv:
             try:
                 await conv.send_message("/fedinfo")
@@ -114,7 +114,7 @@ async def fedinfo(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fedinfo " + owen)
+                await conv.send_message("/fedinfo " + sancaklar)
                 fedinfo = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, fedinfo)
                 await event.delete()
@@ -147,10 +147,10 @@ async def fban(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        sancaklar = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        sancaklar = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -169,7 +169,7 @@ async def fban(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fban " + owen)
+                await conv.send_message("/fban " + sancaklar)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -182,10 +182,10 @@ async def unfban(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        sancaklar = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        sancaklar = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -204,7 +204,7 @@ async def unfban(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/unfban " + owen)
+                await conv.send_message("/unfban " + sancaklar)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -217,10 +217,10 @@ async def feddemote(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        sancaklar = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        sancaklar = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -239,7 +239,7 @@ async def feddemote(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/unfban " + owen)
+                await conv.send_message("/unfban " + sancaklar)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
@@ -252,10 +252,10 @@ async def fpromode(event):
     if event.fwd_from:
         return
     if event.pattern_match.group(1):
-        owen = event.pattern_match.group(1)
+        sancaklar = event.pattern_match.group(1)
         
     else:
-        owen = ""
+        sancaklar = ""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         replied_user = await event.client(
@@ -274,7 +274,7 @@ async def fpromode(event):
     else:
         async with event.client.conversation(chat) as conv:
             try:
-                await conv.send_message("/fpromode " + owen)
+                await conv.send_message("/fpromode " + sancaklar)
                 audio = await conv.get_response()
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()

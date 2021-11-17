@@ -1,11 +1,11 @@
 
-# Copyright (C) 2021 OwenProjects.
+# Copyright (C) 2021 SancaklarMedias.
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ByMisakiMey - ErdewBey 
+# SancaklarUsersBot - ByMisakiMey - ErdewBey 
 #
 import glob
 import os
@@ -85,14 +85,14 @@ async def logo_gen(event):
     draw.text(
         (x, y), ad, font=font, fill="white", stroke_width=strke, stroke_fill="black"
     )
-    fayladi = f"owen.png"
+    fayladi = f"sancaklar.png"
     img.save(fayladi, "png")
     await event.edit("`Hazırlanıyor...`")
     if os.path.exists(fayladi):
         await event.client.send_file(
             event.chat_id,
             file=fayladi,
-            caption=f"[OwenUserBot](https://t.me/owenuserbot) **{DEFAULT_NAME}** için logo hazırladı.",
+            caption=f"[SancaklarUsersBot](https://t.me/SancaklarUsersBot) **{DEFAULT_NAME}** için logo hazırladı.",
             force_document=True,
         )
         os.remove(fayladi)
@@ -104,6 +104,6 @@ async def logo_gen(event):
             os.remove(font_)
 
 Help = CmdHelp('logo')
-Help.add_command('logo', '<yazı>', '@OwenUserBot sizin için logo hazırlar.')
-Help.add_info('@OwenUserBot - @ByMisakiMey ')
+Help.add_command('logo', '<yazı>', '@SancaklarUsersBot sizin için logo hazırlar.')
+Help.add_info('@SancaklarUsersBot - @ByMisakiMey ')
 Help.add() 

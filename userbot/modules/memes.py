@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 """ İnsanlarla eğlenmek için yapılmış olan UserBot modülü. """
@@ -492,7 +492,7 @@ async def slap(replied_user, event):
     hit = choice(HIT)
     throw = choice(THROW)
 
-    caption = "Owen " + temp.format(
+    caption = "sancaklar " + temp.format(
         victim=slapped, item=item, hits=hit, throws=throw)
 
     return caption

@@ -1,4 +1,4 @@
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 import bs4
 import requests
@@ -21,8 +21,8 @@ async def play_store(message):
             await message.edit(f'`{LANG["EKS"]} : ``.playstore Telegram`')
             return
             
-        remove_owen = app_name.split(' ')
-        final_name = '+'.join(remove_owen)
+        remove_sancaklar = app_name.split(' ')
+        final_name = '+'.join(remove_sancaklar)
         page = requests.get(f"https://play.google.com/store/search?q={final_name}&c=apps")
         soup = bs4.BeautifulSoup(page.content, 'lxml', from_encoding='utf-8')
         results = soup.findAll("div", "ZmHEEd")

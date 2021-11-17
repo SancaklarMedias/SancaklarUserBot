@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 """ Internet ile alakalı bilgileri edinmek için kullanılan UserBot modülüdür. """
@@ -51,7 +51,7 @@ async def speedtst(spd):
 
 def speed_convert(size):
     """
-    Merhaba Owen, baytları okuyamıyor musun?
+    Merhaba sancaklar, baytları okuyamıyor musun?
     """
     power = 2**10
     zero = 0

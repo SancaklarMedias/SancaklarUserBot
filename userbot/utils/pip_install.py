@@ -1,4 +1,4 @@
-# OwenUserBot - Pip Install
+# SancaklarUsersBot - Pip Install
 
 #Credit: sandy1709
 

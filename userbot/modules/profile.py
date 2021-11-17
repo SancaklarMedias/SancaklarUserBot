@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 
 """ Telegram'daki profil detaylarınızı değişmeye yarayan UserBot modülüdür. """
@@ -73,8 +73,8 @@ async def update_name(name):
 
 
 @register(outgoing=True, pattern="^.setpfp$")
-async def set_profilowen(propic):
-    """ .profilowen komutu Telegram'daki profil resminizi yanıtladığınız resimle değişir. """
+async def set_profilsancaklar(propic):
+    """ .profilsancaklar komutu Telegram'daki profil resminizi yanıtladığınız resimle değişir. """
     replymsg = await propic.get_reply_message()
     photo = None
     if replymsg.media:
@@ -157,7 +157,7 @@ async def count(event):
 
 
 @register(outgoing=True, pattern=r"^.delpfp")
-async def remove_profilowen(delpfp):
+async def remove_profilsancaklar(delpfp):
     """ .delpfp komutu Telegram'daki şu anki profil resminizi kaldırır. """
     group = delpfp.text[8:]
     if group == 'all':

@@ -1,8 +1,8 @@
 {
-    "__OWENJSON__": true,
+    "__sancaklarJSON__": true,
     "LANGUAGE": "Türkçe",
     "LANGCODE": "tr",
-    "AUTHOR": "Owen Ekibi / MESR",
+    "AUTHOR": "sancaklar Ekibi / MESR",
     "STRINGS": {
         "__plugin": {
             "REPLY_FOR_PORT": "`Plugin-Port için lütfen bir dosyaya yanıt verin.`",
@@ -30,8 +30,8 @@
             "PREMOVE_DELETING": "`Plugin Siliniyor...`",
             "ALREADY_DELETED": "`Plugin dosyası zaten silinmiş.`",
             "NOT_FOUND_PLUGIN": "`Böyle bir plugin belki vardı, belki de yoktu. Ama şu an olmadığı kesin.`",
-            "PLUG_DELETED": "`Plugin başarıyla silindi! Owen yeniden başlatılıyor`",
-            "OWEN_PLUGIN_CAPTION": "Bu bir [Owen](https://t.me/OwenUserBot) pluginidir.",
+            "PLUG_DELETED": "`Plugin başarıyla silindi! sancaklar yeniden başlatılıyor`",
+            "sancaklar_PLUGIN_CAPTION": "Bu bir [sancaklar](https://t.me/SancaklarUsersBot) pluginidir.",
             "P1": "'<kelime>'",
             "P2": "'Plugin kanalına son atılan Pluginleri getirir. Eğer kelime yazarsanız onu kanalda arar.'",
             "P3": "'<say>'",
@@ -39,9 +39,9 @@
             "P5": "'store random 10'",
             "P6": "'Plugin kanalından direkt olarak Plugini yükler.'"
         },
-        "__owen": {
-            "NEED_PLUGIN": "💻 Lütfen bir Owen modülü adı belirtin.",
-            "NEED_MODULE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 𝑴𝒐𝒅𝒖𝒍 𝑯𝒆𝒍𝒑𝒆𝒓 \n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡ Lütfen hangi Owen modülü için yardım istediğinizi belirtin !!\nKullanım: .owen <modül adı>"
+        "__sancaklar": {
+            "NEED_PLUGIN": "💻 Lütfen bir sancaklar modülü adı belirtin.",
+            "NEED_MODULE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 𝑴𝒐𝒅𝒖𝒍 𝑯𝒆𝒍𝒑𝒆𝒓 \n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡ Lütfen hangi sancaklar modülü için yardım istediğinizi belirtin !!\nKullanım: .sancaklar <modül adı>"
         },
         "__helpme": {
             "NO_BOT": "`Bot çalışmıyor! Lütfen Bot Tokeni ve Kullanıcı adını doğru ayarlayın. Modül durduruldu.`"
@@ -58,7 +58,7 @@
             "INVALID_MEDIA": "```Medya geçerli değil.```",
             "PRIVATE": "`Bu komut özel mesajda kullanılamaz!`",
             "EKLE": "`Başarıyla eklendi`",
-            "BRAIN": "`Hata! Bu işlemi Owen Yetkilisine yapamam.`",
+            "BRAIN": "`Hata! Bu işlemi sancaklar Yetkilisine yapamam.`",
             "BANNING": "`Kullanıcı yasaklanıyor...`",
             "ALREADY_GBANNED": "`Hata! Kullanıcı zaten küresel olarak yasaklanmış.`",
             "GBANNED_REASON": "`Kullanıcı küresel olarak yasaklandı!`\n**Nedeni:**",
@@ -185,7 +185,7 @@
             "ALREADY": "`Görünüşe göre %s zaten otomatik olarak değişiyor.`",
             "SETTING": "`%s ayarlanıyor...`",
             "BIO": "📆 Tarih: {tarih} | ⏰ Saat: {saat} | ",
-            "NICK": "@OwenUserBot ❤ @OwenProjects",
+            "NICK": "@SancaklarUsersBot ❤ @SancaklarMedias",
             "SETTED": "`%s ayarlandı :)`",
             "NAME": "⌚%s",
             "AUTO1": "'isim ya da bio'",
@@ -207,7 +207,7 @@
             "AUTOPP4": "'.autovideo ahan saat $saat bu da tarih $tarih'"
         },
         "botfather": {
-            "ERROR": "`⛔ Owennin Bot Oluşturması İçin Eksik Bilgi Verme Lütfen!`",
+            "ERROR": "`⛔ sancaklarnin Bot Oluşturması İçin Eksik Bilgi Verme Lütfen!`",
             "BOTF1": "'<bot_name><bot_username>'",
             "BOTF2": "'Yeni Bot Oluşturun'"
         },
@@ -263,8 +263,8 @@
             "EFECTING": "`Efekt uygulanıyor...`",
             "NOT_FOUND_EFECT": "**Belirttiğiniz efekt bulunamadı! **`Kullanılabileceğiniz efektler: ``çocuk/robot/earrape/hızlı/parazit/yankı`",
             "NEED_VIDEO": "`Lütfen bir videoya yanıt verin!`",
-            "WITH_OWEN":"@OwenUserBot `ile efekt uygulandı.`",
-            "WITH_OWEN_GIF": "@OwenUserBot `ile Gif'e çevirildi.`",
+            "WITH_sancaklar":"@SancaklarUsersBot `ile efekt uygulandı.`",
+            "WITH_sancaklar_GIF": "@SancaklarUsersBot `ile Gif'e çevirildi.`",
             "CONVERTING_TO_GIF": "Gif'e çeviriliyor...",
             "UPLOADING_GIF": "`Gif yükleniyor...`",
             "ERROR": "Gif'e çeviremedim :/",
@@ -303,7 +303,7 @@
             "DGT1": "'<modul> <mesaj/yanıt>'",
             "DGT2": "'Değiştir, bottaki plugin-mesajlarını değiştirmenize yarar. Eğer mesaj yazmazsanız Plugin mesajını orijinal haline döndürür.'",
             "DGT3": "'.değiştir afk \"Şu an burda değilim... Belki hiç gelmem\"'",
-            "DGT4": "'**Desteklenen Pluginler:** `afk/alive/pm/kickme/dızcı/cv/ban/mute/approve/disapprove/block`\n**Alive Değişkenleri:** `{plugin}, {telethon}, {owen}, {python}, {owensahip}`\n**Ban/Mute Değişkenleri:** `{id}, {username}, {first_name}, {last_name}, {mention}, {date}, {count}`\n**AFK Değişkenleri:** `{username}, {mention}, {first_name}, {last_name}, {last_seen_seconds}, {last_seen}, {last_seen_long}`\n**PMpermit Değişkenler(pm, block, approve, disapprove):** `{id}, {username}, {mention}, {first_name}, {last_name}`\n**Kickme Değişkenleri:** `{title}`'"
+            "DGT4": "'**Desteklenen Pluginler:** `afk/alive/pm/kickme/dızcı/cv/ban/mute/approve/disapprove/block`\n**Alive Değişkenleri:** `{plugin}, {telethon}, {sancaklar}, {python}, {sancaklarsahip}`\n**Ban/Mute Değişkenleri:** `{id}, {username}, {first_name}, {last_name}, {mention}, {date}, {count}`\n**AFK Değişkenleri:** `{username}, {mention}, {first_name}, {last_name}, {last_seen_seconds}, {last_seen}, {last_seen_long}`\n**PMpermit Değişkenler(pm, block, approve, disapprove):** `{id}, {username}, {mention}, {first_name}, {last_name}`\n**Kickme Değişkenleri:** `{title}`'"
         },
         "covid19": {
             "SOME_ERRORS": "`Bir hata oluştu.`",
@@ -375,7 +375,7 @@
             "EVA3": "'eval 2+3'",
             "EVA4": "'<python kodu>'",
             "EVA5": "'Küçük python komutları yürütün.'",
-            "EVA6": "'exec print(\"OwenUserbottan Selamlar!\")'",
+            "EVA6": "'exec print(\"SancaklarUsersBottan Selamlar!\")'",
             "EVA7": "'Sunucunuzda bash komutlarını ve komut dosyalarını çalıştırın.'",
             "EVA8": "'term ls'"
         },
@@ -420,7 +420,7 @@
         },
         "galeri": {
             "ADDED_LIST": "`Fotoğraf sıraya alındı.`",
-            "INVALID_URL": "`Geçersiz bir resim URL'si girdiniz. Kullanım hakkında bir fikriniz yoksa, ` `.owen galeri` `yazınız.`",
+            "INVALID_URL": "`Geçersiz bir resim URL'si girdiniz. Kullanım hakkında bir fikriniz yoksa, ` `.sancaklar galeri` `yazınız.`",
             "EXAMPLE": "`Lütfen bir resim adresi giriniz. Örnek olarak: ` `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`",
             "LIST": "Sıraya Aldığınız Fotoğraflar",
             "REMOVED": "**Sıradaki fotoğraf başarıyla kaldırıldı**",
@@ -428,7 +428,7 @@
             "NEED_NUMBER": "Lütfen resmin sırasını belirtiniz. Örnek:",
             "WORKING": "`Hali hazırda galeri çalışıyor.`",
             "STARTED": "`Galeri çalışmaya başladı.`",
-            "NEED_PHOTO": "Galeri çalışması için fotoğraf eklemeniz gerekmektedir. Eklemeyi bilmiyorsanız .owen galeri ile kullanım hakkında bilgi sahibi olabilirsiniz.",
+            "NEED_PHOTO": "Galeri çalışması için fotoğraf eklemeniz gerekmektedir. Eklemeyi bilmiyorsanız .sancaklar galeri ile kullanım hakkında bilgi sahibi olabilirsiniz.",
             "STOPPED": "`Galeri durduruldu!`",
             "ALREADY_STOP": "`Galeri zaten çalışmıyor.`",
             "INVALID": "**Bilinmeyen komut** Kullanım:\n\nGaleri'ye fotoğraf ekleme: `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`\nGaleri listesini görme: `.galeri liste`\nSıradan bir fotoğrafı silme: `.galeri sil <sıra sayısı>`",
@@ -514,26 +514,26 @@
             "REPLY_TO_FILE": "`Bir dosyaya yanıt ver.`",
             "QUERY": "Sorgu",
             "RESULT": "Çıktı",
-            "NEED_MUCH_DATA_FOR_RANDOM": "`2 veya daha fazla eşya gerekli. Daha fazla bilgi için .owen random komutunu gir.`",
+            "NEED_MUCH_DATA_FOR_RANDOM": "`2 veya daha fazla eşya gerekli. Daha fazla bilgi için .sancaklar random komutunu gir.`",
             "SLEEP_DESC": "Kullanım Şekli: `.sleep [saniye]`",
             "SLEEPING": "`Horlayarak uyuyorum...`",
             "GOODMORNIN_YALL": "`Günaydın!`",
             "GOODBYE_MFRS": "`Görüşürüz... *Windows XP kapanma sesi*`",
             "RESTARTING": "`Bot yeniden başlatılıyor...`",
-            "SUPPORT_GROUP": "[Buradan](http://t.me/OwenSupport) destek grubumuza ulaşabilirsiniz.",
-            "CREATOR": "Bu Bot @OwenProjects Ekibi Tarafından Yapılmıştır.",
-            "README": "[Owen README.md](https://github.com/erdewbey/OwenUserBot/blob/master/README.md)",
-            "REPO": "[Owen Repo](https://github.com/erdewbey/owenuserbot)",
+            "SUPPORT_GROUP": "[Buradan](http://t.me/sancaklarSupport) destek grubumuza ulaşabilirsiniz.",
+            "CREATOR": "Bu Bot @SancaklarMedias Ekibi Tarafından Yapılmıştır.",
+            "README": "[sancaklar README.md](https://github.com/erdewbey/SancaklarUsersBot/blob/master/README.md)",
+            "REPO": "[sancaklar Repo](https://github.com/erdewbey/SancaklarUsersBot)",
             "CHECK_LOGS": "`Çözülmüş mesaj için userbot loglarını kontrol et!`",
             "MS1": "'<eşya1> <eşya2> ... <eşyaN>'",
             "MS2": "'Eşya listesinden rastgele bir eşya seçer'",
-            "MS3": "'random owen uniborg userge'",
+            "MS3": "'random sancaklar uniborg userge'",
             "MS4": "'<süre>'",
-            "MS5": "'Owen de bir insan, o da yoruluyor. Ara sıra biraz uyumasına izin ver.'",
+            "MS5": "'sancaklar de bir insan, o da yoruluyor. Ara sıra biraz uyumasına izin ver.'",
             "MS6": "'sleep 30'",
             "MS7": "'Nostaljik bir şekilde botunuzu kapatın.'",
-            "MS8": "'Owen botunun GitHubdaki reposuna giden bir bağlantı.'",
-            "MS9": "'Owen botunun GitHubdaki README.md dosyasına giden bir bağlantı.'",
+            "MS8": "'sancaklar botunun GitHubdaki reposuna giden bir bağlantı.'",
+            "MS9": "'sancaklar botunun GitHubdaki README.md dosyasına giden bir bağlantı.'",
             "MS10": "'Bu güzel botu kimlerin oluşturduğunu öğren :-)'",
             "MS11": "'<sayı> <metin>'",
             "MS12": "'Bir metni belli bir sayıda tekrar eder. Spam komutu ile karıştırma!'",
@@ -567,7 +567,7 @@
             "OCR3": "'Dil kodlarını [buradan](https://ocr.space/ocrapi) alın'"
         },
         "playstore": {
-            "SEARCH": "`🔎Owen Verdiğiniz Program Arıyor..`",
+            "SEARCH": "`🔎sancaklar Verdiğiniz Program Arıyor..`",
             "EKS": "`⛔ Lütfen Program adı yazın.. Örnek`",
             "NOT_FOUND": "`⛔ Verdiğiniz Programı Bulamadım..`",
             "PUAN": "Puan :",
@@ -726,7 +726,7 @@
             "SB4": "'Belirtilen dosyada virüs var mı yok mu bakın.'",
             "SB5": "'<font> <üst;alt>'",
             "SB6": "'Fotoğrafa yazı ekleyin. İsterseniz font büyüklüğünü de yazabilirsiniz.'",
-            "SB7": "'meme 30 owen;usta'",
+            "SB7": "'meme 30 sancaklar;usta'",
             "SB8": "'<yanıt>'",
             "SB9": "'Sesi yazıya çevirin.'",
             "SB10": "'<sayı>'",
@@ -771,7 +771,7 @@
             "SEARCHING": "`Şarkı aranıyor...`",
             "BLOCKED_DEEZER": "`Mmmh sanırım` @DeezerMusicBot `engellemişsin. Lütfen engeli aç.",
             "NOT_FOUND": "`Aradığınız şarkı bulunamadı! Üzgünüm.`",
-            "UPLOADED_WITH": "@OwenUserBot ile yüklendi.",
+            "UPLOADED_WITH": "@SancaklarUsersBot ile yüklendi.",
             "USAGE": "`Kullanım:` `.song şarkı ismi/youtube url/spotify url`",
             "SEARCHING_SPOT": "`Şarkı aranıyor ve indiriliyor lütfen bekleyin!",
             "DOWNLOADED": "`İndirme işlemi başarılı lütfen bekleyiniz.`",
@@ -824,12 +824,12 @@
             "QUERY": "Sorgu",
             "RESULT": "Sonuç",
             "NOT_FOUND": "Bir şey bulunamadı",
-            "EXAMPLE": "`Bir örnek görmek için .owen pip komutunu kullanın.`",
+            "EXAMPLE": "`Bir örnek görmek için .sancaklar pip komutunu kullanın.`",
             "SS1": "'Neofetch modülünü kullanarak sistem bilgisi gösterir.'",
             "SS2": "'Userbot sürümünü gösterir.'",
             "SS3": "'<modül(ler)>'",
             "SS4": "'Pip modüllerinde arama yapar.'",
-            "SS5": "'Owen botunun çalışıp çalışmadığını kontrol etmek için kullanılır.'"
+            "SS5": "'sancaklar botunun çalışıp çalışmadığını kontrol etmek için kullanılır.'"
         },
         "time": {
             "CLOCK": "Burada saat",
@@ -852,7 +852,7 @@
             "NOT_FOUND": "klasörü bulunamadı.",
             "GIT_ERROR": "Git hatası!",
             "NOT_GIT": "klasörü bir git reposu gibi görünmüyor. \nFakat bu sorunu .update now komutuyla botu zorla güncelleyerek çözebilirsin.",
-            "INVALID_BRANCH": "**[UPDATER]:**` Galiba Owen botunu modifiye ettin ve kendi branşını kullanıyorsun.\nBu durum güncelleyicinin kafasını karıştırıyor,\nGüncelleme nereden çekilecek?\nLütfen Owen botunu resmi repodan kullan.`",
+            "INVALID_BRANCH": "**[UPDATER]:**` Galiba sancaklar botunu modifiye ettin ve kendi branşını kullanıyorsun.\nBu durum güncelleyicinin kafasını karıştırıyor,\nGüncelleme nereden çekilecek?\nLütfen sancaklar botunu resmi repodan kullan.`",
             "UPDATE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 ⤴ \n\n**✅  Şu an en güncel durumdayım!** \n**⚡ Branch: {}**",
             "WAS_UPDATE": "𝙊𝙬𝙚𝙣 𝑼𝒔𝒆𝒓𝑩𝒐𝒕 ⤴ \n **{} yeni güncelleme mevcut!\n\nDeğişiklikler:**\n`{}`",
             "BIG": "`Değişiklik listesi çok büyük, dosya olarak görüntülemelisin.`",
@@ -915,7 +915,7 @@
             "WA2": "'Bir bölgenin hava durumunu verir.'"
         },
         "klon": {
-            "WLKLON": "`Owen yöneticileri klonlanmayı sevmiyor.`",
+            "WLKLON": "`sancaklar yöneticileri klonlanmayı sevmiyor.`",
             "K1": "'<mesajı yanıtlayarak>'",
             "K2": "'Mesajına yanıt verdiğiniz kişinin klonu olursunuz.'",
             "K3": "'Klondan sonra hesabınızın eski haline dönmesi için :p'",
@@ -1111,7 +1111,7 @@
             "S1": "'<bir mesaja yanıt verin>'",
             "S2": "'Yanıt verdiyiniz mesajı Kayıtlı Mesajlar(Saved Messages) bölümüne gönderir.'",
 	    "REPLY_MESSAGE": "`Lütfen bir mesaja yanıt verin.`",
-            "SUCCESSFUL": "`Owen Mesajı Kayıtlı Mesajlar Bölümüne Yolladı!`"
+            "SUCCESSFUL": "`sancaklar Mesajı Kayıtlı Mesajlar Bölümüne Yolladı!`"
         },
         "scra": {
             "": ""
@@ -1127,7 +1127,7 @@
             "VC1": "'Bir grupta sesli sohbet başlatır.'",
             "VC2": "'Sesli sohbeti sonlandırır.'",
             "VC3": "'Gruptaki üyeleri sesli sohbete davet eder.'",
-            "VC4": "'@OwenUserBot Sesli Sohbet Modülüdür.'"
+            "VC4": "'@SancaklarUsersBot Sesli Sohbet Modülüdür.'"
         },
         "texts": {
             "TE1": "'kelimeleri daha süslü bir şekilde yazar oto renk ve font seçiimi yapar.'",
@@ -1173,7 +1173,7 @@
         "smsg": {
             "SM1": "'.pmyaz <kullanıcı/grup/kanal/bot linki> <mesajınız>'",
             "SM2": "'Yazdığınız mesajı veya yanıtladığınız mesajı belirttiğiniz linke gönderir'",
-            "SM3": "'.send @owenuserbot selam'"
+            "SM3": "'.send @SancaklarUsersBot selam'"
         }
     }
 }

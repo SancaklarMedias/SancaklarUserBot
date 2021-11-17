@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy
+# SancaklarUsersBot - ErdewBey - Midy
 
 # ██████ LANGUAGE CONSTANTS ██████ #
 
@@ -87,7 +87,7 @@ async def log(log_text):
 @register(outgoing=True, pattern="^.kickme ?(.*)")
 async def kickme(leave):
     if leave.chat_id in BLACKLIST_CHAT:
-        return await leave.edit("**Sahibim kusura bakma ama burdan çıkamam resmi owen grubu burası**,\n\n**Bana gelen yeniliklerden haberdar olman için burada kalmam lazım.**")
+        return await leave.edit("**Sahibim kusura bakma ama burdan çıkamam resmi sancaklar grubu burası**,\n\n**Bana gelen yeniliklerden haberdar olman için burada kalmam lazım.**")
     """ .kickme komutu gruptan çıkmaya yarar """
     sebep = leave.pattern_match.group(1)
     chat = await leave.get_chat()

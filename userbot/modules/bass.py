@@ -1,4 +1,4 @@
-#OwenProjects-Owenuserbot
+#SancaklarMedias-SancaklarUsersBot
 #ByMisakiMey-erdewbey-İxelizm
 import asyncio
 import io, os, math
@@ -78,11 +78,11 @@ async def bassbooster(e):
             m,
             reply_to=reply.id,
             voice_note=True,
-            caption=" `@OwenUserBot `ile bass boostlandı.`",
+            caption=" `@SancaklarUsersBot `ile bass boostlandı.`",
         )
 
     else:
-        m.name = "OwenBASS.mp3"
+        m.name = "sancaklarBASS.mp3"
         await e.edit("`Hazırlanıyor...`")
         await asyncio.sleep(0.3)
         out.export(m, format="mp3")
@@ -98,7 +98,7 @@ async def bassbooster(e):
                     performer="BassBoost",
                 )
             ],
-            caption="@OwenUserBot `ile bass boostlandı.",
+            caption="@SancaklarUsersBot `ile bass boostlandı.",
         )
     await e.delete()
     os.remove(fname)

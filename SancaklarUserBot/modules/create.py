@@ -1,2 +1,0 @@
-# OwenUserBot •_• # Erdem 
-

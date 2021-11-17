@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # 
 
-# OwenUserBot - ErdewBey - Midy - ByMisakiMey
+# SancaklarUsersBot - ErdewBey - Midy - ByMisakiMey
 
 """
 Bu modül commit sayısına bağlı olarak botu günceller.
@@ -17,7 +17,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HELP, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, ASISTAN, MYID, AUTO_UPDATE, OWEN_VERSION, upVer, EMERGENCY
+from userbot import CMD_HELP, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, ASISTAN, MYID, AUTO_UPDATE, sancaklar_VERSION, upVer, EMERGENCY
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 
@@ -54,9 +54,9 @@ async def update_requirements():
   
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
 async def upstream(ups):
-    OwenVer = int(OWEN_VERSION.split(".")[1])
-    if OwenVer < upVer:
-     await ups.edit(f"**Sakın Yanlış Anlama Bazı Kısıtlamalar Yapılmalıdır Botunu Sağlıksız Güncellemen Botuna Zarar Verir**.\n\nDurum: İzin Verilmiyor. \n[Son Güncelleme Raporu](https://t.me/OwenUserBot/77)") #CR vERMEYEN NE OLSUN - ByMisakiMey
+    sancaklarVer = int(sancaklar_VERSION.split(".")[1])
+    if sancaklarVer < upVer:
+     await ups.edit(f"**Sakın Yanlış Anlama Bazı Kısıtlamalar Yapılmalıdır Botunu Sağlıksız Güncellemen Botuna Zarar Verir**.\n\nDurum: İzin Verilmiyor. \n[Son Güncelleme Raporu](https://t.me/SancaklarUsersBot/77)") #CR vERMEYEN NE OLSUN - ByMisakiMey
      return
     await ups.edit(LANG['DETECTING'])
     conf = ups.pattern_match.group(1)
@@ -110,9 +110,9 @@ async def upstream(ups):
         return
 
     if conf != "now" and not force_update:
-        OwenVer = int(OWEN_VERSION.split(".")[1])
-        if OwenVer < upVer:
-          await ups.edit(f"**Lütfen owen yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @OwenUserBot")
+        sancaklarVer = int(sancaklar_VERSION.split(".")[1])
+        if sancaklarVer < upVer:
+          await ups.edit(f"**Lütfen sancaklar yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @SancaklarUsersBot")
           return
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
         if len(changelog_str) > 4096:
@@ -408,9 +408,9 @@ async def asistan_update(ups):
             
 @register(outgoing=True, pattern=r"^\.er(?: |$)(.*)")
 async def upstream(ups):
-    OwenVer = int(OWEN_VERSION.split(".")[1])
-    if OwenVer < upVer:
-     await ups.edit(f"**Lütfen owen yöneticileri izin vermeden güncelleme yapmaya çalişma\n Botun bozulabilir\n Güncelleme kanali :** @OwenUserBot") #CR vERMEYEN NE OLSUN - ByMisakiMey
+    sancaklarVer = int(sancaklar_VERSION.split(".")[1])
+    if sancaklarVer < upVer:
+     await ups.edit(f"**Lütfen sancaklar yöneticileri izin vermeden güncelleme yapmaya çalişma\n Botun bozulabilir\n Güncelleme kanali :** @SancaklarUsersBot") #CR vERMEYEN NE OLSUN - ByMisakiMey
      return
     await ups.edit(LANG['DETECTING'])
     conf = ups.pattern_match.group(1)
@@ -465,9 +465,9 @@ async def upstream(ups):
         return
 
     if conf != "now" and not force_update:
-        OwenVer = int(OWEN_VERSION.split(".")[1])
-        if OwenVer < upVer:
-          await ups.edit(f"**Lütfen owen yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @OwenUserBot")
+        sancaklarVer = int(sancaklar_VERSION.split(".")[1])
+        if sancaklarVer < upVer:
+          await ups.edit(f"**Lütfen sancaklar yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @SancaklarUsersBot")
           return
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
         if len(changelog_str) > 4096:

@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# OwenUserBot - ErdewBey - Midy - ByMisakiMey
+# SancaklarUsersBot - SancakalrMedias
 #
 
 """ UserBot yardım komutu """
@@ -17,13 +17,13 @@ from userbot.events import register
 # ██████ LANGUAGE CONSTANTS ██████ #
 
 from userbot.language import get_value
-LANG = get_value("__owen")
+LANG = get_value("__sancaklar")
 
 # ████████████████████████████████ #
 
-@register(outgoing=True, pattern="^.owen(?: |$)(.*)")
-async def owen(event):
-    """ .owen komutun """
+@register(outgoing=True, pattern="^.sancaklar(?: |$)(.*)")
+async def sancaklar(event):
+    """ .sancaklar komutun """
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:

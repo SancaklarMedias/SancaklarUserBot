@@ -1,10 +1,10 @@
 
-# Copyright (C) 2021 The OwenProjects Company LLC.
+# Copyright (C) 2021 The SancaklarMedias Company LLC.
 #
-# Licensed under the OwenProjects Public License, Version 1.c (the "License");
+# Licensed under the SancaklarMedias Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
-# OwenUserBot - ByMisakiMey - ErdewBey
+# SancaklarUsersBot - ByMisakiMey - ErdewBey
 
 
 import sys
@@ -19,7 +19,7 @@ from telethon import events
 from userbot import tgbot, LOGSPAMMER, PATTERNS
 
 
-def owen(**args):
+def sancaklar(**args):
     """ Yeni bir etkinlik kaydedin. """
     pattern = args.get('pattern', None)
     disable_edited = args.get('disable_edited', False)
@@ -77,7 +77,7 @@ def owen(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**ASİSTAN HATA RAPORU**\n"
-                    link = "[Owen Destek Grubu](https://t.me/OwenSupport)"
+                    link = "[sancaklar Destek Grubu](https://t.me/sancaklarSupport)"
                     text += "İsterseniz, bunu rapor edebilirsiniz"
                     text += f"- sadece bu mesajı buraya iletin {link}.\n"
                     text += "Hata ve Tarih dışında hiçbir şey kaydedilmez\n"
