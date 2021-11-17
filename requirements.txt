@@ -4,6 +4,7 @@ async_generator
 bs4
 beautifulsoup4>=4.9.3
 cowpy
+colour
 cryptg
 dnspython
 emoji
@@ -61,5 +62,6 @@ emoji-country-flag
 cairosvg
 imagedown
 pyfiglet
+faker
 
 

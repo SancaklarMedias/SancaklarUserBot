@@ -1,18 +1,18 @@
 {
-  "name": "Epic UserBot",
-  "description": "Epic UserBot",
+  "name": "Owen UserBot",
+  "description": "Owen UserBot",
   "logo": "https://i.hizliresim.com/9tep7oz.jpg",
   "keywords": [
     "telegram",
     "userbot",
-	"Epic",
+	"Owen",
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/ErdemBey0/EpicUserBot",
-  "website":   "https://t.me/hydradev",
-  "success_url": "https://t.me/Epicuserbot",
+  "repository": "https://github.com/OwenProjects/OwenUserBot",
+  "website":   "https://t.me/OwenProjects",
+  "success_url": "https://t.me/Owenuserbot",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -34,7 +34,7 @@
     },
 "CV_MSG": {
   "description": "CV nizde gözükecek olan yazı.",
-  "value": "Sahibim Fazla Bi Bilgi Ayarlamamış Ama Şunu Biliyorum Kendisi Baya Zevkli Birisi Çünkü Epic Userbot Kullanıyor 😁",
+  "value": "Sahibim Fazla Bi Bilgi Ayarlamamış Ama Şunu Biliyorum Kendisi Baya Zevkli Birisi Çünkü Owen Userbot Kullanıyor 😁",
   "required": false
     },
     "SPOTIFY_DC": {
@@ -69,7 +69,7 @@
     },
     "UPSTREAM_REPO_URL": {
       "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/ErdemBey0/EpicUserBot",
+      "value": "https://github.com/erdewbey/OwenUserBot",
       "required": true
     },
     "COUNTRY": {
@@ -106,7 +106,7 @@
       "value": "False"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @EpicBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @OwenBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
       "required": false  
     },
     "BOT_TOKEN": {
@@ -142,8 +142,8 @@
       "description": ".yt komutu için YouTube Veri API'sı keyidir. https://console.cloud.google.com adresinden alın.",
       "required": false
     },
-    "OCR_EPİC_API_KEY": {
-      "description": ".ocr komutu için OCR API Key. https://ocr.epic/ocrapi adresinden alın.",
+    "OCR_OWEN_API_KEY": {
+      "description": ".ocr komutu için OCR API Key. https://ocr.owen/ocrapi adresinden alın.",
       "required": false
     },
     "REM_BG_API_KEY": {
@@ -196,7 +196,7 @@
     }, 
     "DEFAULT_BIO": {
       "description": "Varsayılan profil biyografisi.",
-      "value": "@EpicUserBot",
+      "value": "@OwenUserBot",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
@@ -236,7 +236,7 @@
     },
     "PAKET_ISMI": {
       "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@EpicUserBot Paketi",
+      "value": "@OwenUserBot Paketi",
       "required": false
     },
     "OTOMATIK_KATILMA": {

@@ -37,7 +37,7 @@ class InteractiveTelegramClient(TelegramClient):
             proxy=proxy
         )
         self.found_media = {}
-        print('@EpicUserBot String Alıcıya Hoş Geldiniz')
+        print('@OwenUserBot String Alıcıya Hoş Geldiniz')
         print('[i] Telegramın Sunucularına Bağlanılıyor...')
         try:
             loop.run_until_complete(self.connect())
@@ -78,7 +78,7 @@ class InteractiveTelegramClient(TelegramClient):
 
 
 if __name__ == '__main__':
-   print("[i] epic String V3\n@epicUserBot\n\n")
+   print("[i] owen String V3\n@owenUserBot\n\n")
    print("[1] OtoMatik API ID/HASH Alıcı")
    print("[2] String Alıcı\n")
    
@@ -120,8 +120,8 @@ if __name__ == '__main__':
          hashh = soup.find("input", {"name": "hash"}).get("value")
          AppInfo = {
             "hash": hashh,
-            "app_title":"epic UserBot",
-            "app_shortname": "epicai" + str(random.randint(9, 99)) + str(time.time()).replace(".", ""),
+            "app_title":"owen UserBot",
+            "app_shortname": "owenai" + str(random.randint(9, 99)) + str(time.time()).replace(".", ""),
             "app_url": "",
             "app_platform": "android",
             "app_desc": ""
