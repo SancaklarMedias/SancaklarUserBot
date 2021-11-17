@@ -7,8 +7,8 @@
     Sancaklar UserBot, Telegram kullanmanızı kolaylaştıran ve eğlenceli bir yol almasını sağlayan bir bottur. <br>
     Sancaklar UserBot is a bot that makes it easy and fun to use Telegram.
     <br>
-        <a href="https://github.com/ErdemBey0/SancaklarUserBot/blob/master/README.md#kurulum/setup">| Kurulum/Setup</a> |
-        <a href="https://github.com/ErdemBey0/SancaklarUserBot/wiki/G%C3%BCncelleme">Güncelleme/Update</a> |
+        <a href="https://github.com/SancaklarMedias/SancaklarUserBot/blob/master/README.md#kurulum/setup">| Kurulum/Setup</a> |
+        <a href="https://github.com/SancaklarMedias/SancaklarUserBot/wiki/G%C3%BCncelleme">Güncelleme/Update</a> |
         <a href="https://t.me/SancaklarUserBot">Kanal/Channel </a> |
         <a href="https://t.me/HydraDestek">Destek/Support</a> |
     <br>
