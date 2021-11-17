@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="https://i.hizliresim.com/rlogmsn.jpg" width="400" height="400">
+  <img src="https://i.hizliresim.com/5bko3hs.jpg" width="400" height="400">
   <h1>🇹🇷 sancaklar UserBot 🇺🇲</h1>
 </div>
 <p align="center">
@@ -28,7 +28,7 @@
 
 ### 🇹🇷 Elle Kurulum / Manual Setup 🇺🇲
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/erdewbey/SancaklarUsersBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sancaklarmedias/SancaklarUsersBot)
 
 ## 🇹🇷 Bilgilendirme / İnformation 🇺🇲
 ***Herhangi bir istek & şikayet & öneriniz varsa [destek grubuna](https://t.me/sancaklarSupport) ulaşabilirsiniz.***
