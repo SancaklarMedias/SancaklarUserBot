@@ -69,7 +69,7 @@
     },
     "UPSTREAM_REPO_URL": {
       "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/erdewbey/SancaklarUsersBot",
+      "value": "https://github.com/SancaklarMedias/SancaklarUsersBot",
       "required": true
     },
     "COUNTRY": {

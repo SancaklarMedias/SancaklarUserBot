@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 
 from userbot import CMD_HELP
 from userbot.events import register

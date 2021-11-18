@@ -1,4 +1,4 @@
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 # Translated&Updated by @Erdme
 """Hesabınızın istatistiklerini gösterir"""
 import logging

@@ -4,9 +4,9 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 
-# Turkish word meaning. Only Turkish. Coded @By_Azade, sancaklar uyarlaması @erdewbey
+# Turkish word meaning. Only Turkish. Coded @By_Azade, sancaklar uyarlaması @SancaklarMedias
 #
 
 import requests

@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ErdewBey 
+# SancaklarUsersBot - SancaklarMedias 
 
 import datetime
 from telethon import events

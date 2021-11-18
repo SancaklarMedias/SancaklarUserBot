@@ -1,4 +1,4 @@
-# GNU LICENCE / SancaklarUsersBot - ErdewBey - Midy
+# GNU LICENCE / SancaklarUsersBot - SancaklarMedias - Midy
 
 import codecs
 import heroku3

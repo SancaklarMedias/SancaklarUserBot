@@ -1,4 +1,4 @@
-# ErdewBey SancaklarUsersBot 
+# SancaklarMedias SancaklarUsersBot 
 
 from userbot.events import register
 from userbot import CMD_HELP 
@@ -61,4 +61,4 @@ async def _(event):
 CmdHelp('fakes').add_command(
 	'fyazı', None, 'Fake Yazı Yazıyormuş Gibi Gösterir (1dk)').add_command(
     'fses', None, 'Fake Ses Kayıt Ediyormuş Gibi Gösterir (1dk)').add_command(
-    'fvideo', None, 'Fake Video Kayıt Ediyormuş Gibi Gösterir (1dk)').add_info("`Botu Yeniden Başlatarak İşleme Son Veriniz` @ErdewBey ✨").add()
+    'fvideo', None, 'Fake Video Kayıt Ediyormuş Gibi Gösterir (1dk)').add_info("`Botu Yeniden Başlatarak İşleme Son Veriniz` @SancaklarMedias ✨").add()

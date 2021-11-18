@@ -1,4 +1,4 @@
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 
 import bs4
 import requests

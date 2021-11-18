@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ErdewBey - Midy - ByMisakiMey
+# SancaklarUsersBot - SancaklarMedias - Midy - ByMisakiMey
 
 from asyncio import sleep
 from json import loads

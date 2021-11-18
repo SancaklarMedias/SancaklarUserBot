@@ -1,4 +1,4 @@
-# sancaklarUsebot ErdewBey / Bymisakimey
+# sancaklarUsebot SancaklarMedias / Bymisakimey
 # Kullanırken info Kısmını Silmeyiniz Ve Credit Vermeyi Unutmayın.
 import random
 import asyncio

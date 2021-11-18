@@ -1,5 +1,5 @@
 #SancaklarMedias-SancaklarUsersBot
-#ByMisakiMey-erdewbey-İxelizm
+#ByMisakiMey-SancaklarMedias-İxelizm
 import asyncio
 import io, os, math
 from io import BytesIO
@@ -105,4 +105,4 @@ async def bassbooster(e):
     
 CmdHelp('bass').add_command('bass', (LANG['BASS1']), (LANG['BASS2'])
 ).add_warning((LANG['BASS3'])
-).add_info('🎆 By @ErdewBey').add()
+).add_info('🎆 By @SancaklarMedias').add()

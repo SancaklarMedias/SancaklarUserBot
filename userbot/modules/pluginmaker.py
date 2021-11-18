@@ -5,7 +5,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ByMisakiMey - ErdewBey 
+# SancaklarUsersBot - ByMisakiMey - SancaklarMedias 
 #
 #CR // Thx Fireqanq - Faerid
 

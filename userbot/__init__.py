@@ -156,7 +156,7 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 # Güncelleyici için özel (fork) repo linki.
 STABILITY = sb(os.environ.get("STABILITY", "True")) # 
 
-UPSTREAM_REPO_URL = "https://github.com/sancaklarmedias/SancaklarUsersBot.git" #if not STABILITY else https://github.com/erdewbey/SancaklarUsersBot.git Eski Dostum Berce'ye Aittir.
+UPSTREAM_REPO_URL = "https://github.com/sancaklarmedias/SancaklarUsersBot.git" #if not STABILITY else https://github.com/SancaklarMedias/SancaklarUsersBot.git Eski Dostum Berce'ye Aittir.
 EMERGENCY = "https://github.com/SancaklarMedias/SancaklarUsersBot.git" # Acil durrum için
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
@@ -281,7 +281,7 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
-WHITELIST = get('https://raw.githubusercontent.com/erdewbey/datas/master/whitelist.json').json()
+WHITELIST = get('https://raw.githubusercontent.com/SancaklarMedias/datas/master/whitelist.json').json()
 
 # Bot versiyon kontrolü
 forceVer = []
@@ -290,7 +290,7 @@ if os.path.exists("force-surum.check"):
 else:
     LOGS.info("Force Sürüm Kontrol dosyası yok, getiriliyor...")
 
-URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/force-surum.check' 
+URL = 'https://raw.githubusercontent.com/SancaklarMedias/datas/master/force-surum.check' 
 with open('force-surum.check', 'wb') as load:
     load.write(get(URL).content)
 
@@ -310,7 +310,7 @@ if os.path.exists("force-update.check"):
 else:
     LOGS.info("Force Update Kontrol dosyası yok, getiriliyor...")
 
-URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/force-update.check' 
+URL = 'https://raw.githubusercontent.com/SancaklarMedias/datas/master/force-update.check' 
 with open('force-update.check', 'wb') as load:
     load.write(get(URL).content)
 
@@ -359,7 +359,7 @@ else:
 
 DEVS = 1422746074, 1044658315, #developer ayrıcalıkları olacak
 
-PREMIUM = get('https://raw.githubusercontent.com/erdewbey/datas/master/premium.json').json() # Premium Üyelerin ID 
+PREMIUM = get('https://raw.githubusercontent.com/SancaklarMedias/datas/master/premium.json').json() # Premium Üyelerin ID 
 
 ASISTAN = 1899959408 # Bot yardımcısı
 
@@ -368,7 +368,7 @@ if os.path.exists("learning-data-root.check"):
 else:
     LOGS.info("Braincheck dosyası yok, getiriliyor...")
 
-URL = 'https://raw.githubusercontent.com/erdewbey/datas/master/learning-data-root.check'
+URL = 'https://raw.githubusercontent.com/SancaklarMedias/datas/master/learning-data-root.check'
 with open('learning-data-root.check', 'wb') as load:
     load.write(get(URL).content)
     

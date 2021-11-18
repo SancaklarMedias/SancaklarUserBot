@@ -518,9 +518,9 @@
             "GOODBYE_MFRS": "`Görüşənədək... *Windows XP söndürlmə səsi*`",
             "RESTARTING": "`Bot yenidən qoşulur..`",
             "SUPPORT_GROUP": "[Buradan](http://t.me/sancaklarSupport) Dəstək qrupumuza çata bilərsiniz.",
-            "CREATOR": "Bu bot \n@erdewbey & @ByMisakiMey hazırlanmışdır. \n",
-            "README": "[sancaklar README.md](https://github.com/erdewbey/SancaklarUsersBot/blob/master/README.md)",
-            "REPO": "[sancaklar Repo](https://github.com/erdewbey/SancaklarUsersBot)",
+            "CREATOR": "Bu bot \n@SancaklarMedias & @ByMisakiMey hazırlanmışdır. \n",
+            "README": "[sancaklar README.md](https://github.com/SancaklarMedias/SancaklarUsersBot/blob/master/README.md)",
+            "REPO": "[sancaklar Repo](https://github.com/SancaklarMedias/SancaklarUsersBot)",
             "CHECK_LOGS": "`Tapılmış Mesaj üçün istifadəçi qeydlərini yoxlayın!`",
             "MS1": "'<eşya1> <eşya2> ... <eşyaN>'",
             "MS2": "'Maddə siyahısından təsadüfi bir maddə seçir'",
@@ -984,7 +984,7 @@
             "EM1": "'<sebep>'",
             "EM2": "'Qrupdakı üzvləri Emojilərlə etiketləyin.'",
             "EM3": "'Etiketləmə prosesini dayandırır.'",
-            "EM4": "'👌 Niyə yazmaq məcburiyyətində deyilsiniz @erdewbey'"
+            "EM4": "'👌 Niyə yazmaq məcburiyyətində deyilsiniz @SancaklarMedias'"
         },
         "fontlar": {
             "FONT1": "'.font1-13 fəzilət bəy şəklində'"
@@ -1027,7 +1027,7 @@
             "H3": "'Mevcut VAR'larınızı alın, sadece botlog grubunuza ulaşabilirsiniz.'",
             "H4": "'del var <Var name> Seçilen ConfigVari'yi sildikten sonra botunuzu yeniden başlatın.'",
             "H5": "'Kahraman logonuza bakın'",
-            "H6": "'** Botlog grubunun dışındaysanız, sizin için düzeltmek için **` .set BOTLOG False` ** yazın .. ✨ @ erdewbey'e teşekkürler **' "
+            "H6": "'** Botlog grubunun dışındaysanız, sizin için düzeltmek için **` .set BOTLOG False` ** yazın .. ✨ @ SancaklarMedias'e teşekkürler **' "
         },
         "hbilgi": {
             "HBLG": "'Hesabınız hakkında bilgi almak için.'"
@@ -1038,7 +1038,7 @@
         },
         "iplogger": {
             "İP1": "'IP adresi'",
-            "İP2": "'İp Adres Hakkında Bilgi Veriyor Termux ile uzun süre uğraşmanıza gerek yok. @erdewbey'"
+            "İP2": "'İp Adres Hakkında Bilgi Veriyor Termux ile uzun süre uğraşmanıza gerek yok. @SancaklarMedias'"
         },
         "memes": {
             "ME1": "'kedi / köpek / panda / kuş / kurt'",
@@ -1128,7 +1128,7 @@
         },
         "texts": {
             "TE1": "'sözləri daha səliqəli şəkildə yazır, avtomatik rəng və şrift seçimi edir.'",
-            "TE2": "'Modul pozulmayıb, sadəcə gec işləyir, amma tezliklə düzəldiləcək. @erdewbey'"
+            "TE2": "'Modul pozulmayıb, sadəcə gec işləyir, amma tezliklə düzəldiləcək. @SancaklarMedias'"
         },
         "tghp": {
             "TG1": "'<m/t>'",

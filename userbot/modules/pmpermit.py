@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 
 
 """ Kimin size özel mesaj gönderebileceğini kontrol altına almanızı sağlayan UserBot modülüdür. """

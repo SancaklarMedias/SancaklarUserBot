@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 
 
 """ İnsanlarla eğlenmek için yapılmış olan UserBot modülü. """

@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # 
 
-# SancaklarUsersBot - ErdewBey - Midy - ByMisakiMey
+# SancaklarUsersBot - SancaklarMedias - Midy - ByMisakiMey
 
 """
 Bu modül commit sayısına bağlı olarak botu günceller.

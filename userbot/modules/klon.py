@@ -157,4 +157,4 @@ async def get_full_user(event):
 CmdHelp('klon').add_command('klon', LANG['K1'], LANG['K2']
 ).add_command('revert', None, LANG['K3']
 ).add_warning(LANG['K4']
-).add_info('🎆 Thx to @erdewbey').add()
+).add_info('🎆 Thx to @SancaklarMedias').add()

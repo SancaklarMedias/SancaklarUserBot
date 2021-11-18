@@ -449,7 +449,7 @@
             "NOT_FOUND": " bulunamadı`",
             "GH1": "'<kullanıcı adı>'",
             "GH2": "'Hedeflenen kişinin GitHub bilgilerini gösterir.'",
-            "GH3": "'git erdewbey'"
+            "GH3": "'git SancaklarMedias'"
         },
         "lastfm": {
            "BIO_ENABLED": "```last.fm'de oynatılan müziği biyografiye ekleme aktif.```",
@@ -522,8 +522,8 @@
             "RESTARTING": "`Bot yeniden başlatılıyor...`",
             "SUPPORT_GROUP": "[Buradan](http://t.me/sancaklarSupport) destek grubumuza ulaşabilirsiniz.",
             "CREATOR": "Bu Bot @SancaklarMedias Ekibi Tarafından Yapılmıştır.",
-            "README": "[sancaklar README.md](https://github.com/erdewbey/SancaklarUsersBot/blob/master/README.md)",
-            "REPO": "[sancaklar Repo](https://github.com/erdewbey/SancaklarUsersBot)",
+            "README": "[sancaklar README.md](https://github.com/SancaklarMedias/SancaklarUsersBot/blob/master/README.md)",
+            "REPO": "[sancaklar Repo](https://github.com/SancaklarMedias/SancaklarUsersBot)",
             "CHECK_LOGS": "`Çözülmüş mesaj için userbot loglarını kontrol et!`",
             "MS1": "'<eşya1> <eşya2> ... <eşyaN>'",
             "MS2": "'Eşya listesinden rastgele bir eşya seçer'",
@@ -987,7 +987,7 @@
             "EM1": "'<sebep>'",
             "EM2": "'Gruptaki Üyeleri Emojili Bir Şekilde Etiketler.'",
             "EM3": "'Etiketleme işlemini durdurur.'",
-            "EM4": "'👌 Neden yazmak Zorunda Değilsiniz @erdewbey'"
+            "EM4": "'👌 Neden yazmak Zorunda Değilsiniz @SancaklarMedias'"
         },
         "fontlar": {
             "FONT1": "'.font1-13 erdem bey şeklinde'"
@@ -1030,7 +1030,7 @@
             "H3": "'Mevcut VARlarınızı elde edin, yalnızca botlog gurubunuzda ulaşabilirsiniz .'",
             "H4": "'del var <Var adı> Seçdiğiniz ConfigVarı siler sildikten sonra botunuza .restart atın.'",
             "H5": "'Heroku logunuza bakın'",
-            "H6": "'**Botlog grubundan çıktıysanız sizin yerinize düzeltmesi için** `.set var BOTLOG False` **yazın.. ✨ Thx to @erdewbey**'"
+            "H6": "'**Botlog grubundan çıktıysanız sizin yerinize düzeltmesi için** `.set var BOTLOG False` **yazın.. ✨ Thx to @SancaklarMedias**'"
         },
         "hbilgi": {
             "HBLG": "'Hesabınız hakkında bilgi almanıza için.'"
@@ -1041,7 +1041,7 @@
         },
         "iplogger": {
             "İP1": "'İP Adresi'",
-            "İP2": "'İp Adresi Hakkında Bilgiler Verir Termux ile uzun uğraşmanıza gerek kalmaz. @erdewbey'"
+            "İP2": "'İp Adresi Hakkında Bilgiler Verir Termux ile uzun uğraşmanıza gerek kalmaz. @SancaklarMedias'"
         },
         "memes": {
             "ME1": "'kedi/köpek/panda/kuş/kurt'",
@@ -1131,7 +1131,7 @@
         },
         "texts": {
             "TE1": "'kelimeleri daha süslü bir şekilde yazar oto renk ve font seçiimi yapar.'",
-            "TE2": "'modul bozuk değildir sadece geç çalışmaktadır ama yakın zamanda giderilecektir. @erdewbey'"
+            "TE2": "'modul bozuk değildir sadece geç çalışmaktadır ama yakın zamanda giderilecektir. @SancaklarMedias'"
         },
         "tghp": {
             "TG1": "'<m/t>'",

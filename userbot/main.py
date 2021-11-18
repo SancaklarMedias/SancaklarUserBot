@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# sancaklar UserBot - ErdewBey - ByMisakiMey
+# sancaklar UserBot - SancaklarMedias - ByMisakiMey
 
 """ UserBot başlangıç noktası """
 import importlib
@@ -176,7 +176,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    sancaklarbl = requests.get('https://raw.githubusercontent.com/erdewbey/datas/master/blacklist.json').json()
+    sancaklarbl = requests.get('https://raw.githubusercontent.com/SancaklarMedias/datas/master/blacklist.json').json()
     if idim in sancaklarbl:
         bot.send_message("me", f"`❌ sancaklar yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("sancaklar yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")

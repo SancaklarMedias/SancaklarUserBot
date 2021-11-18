@@ -1,4 +1,4 @@
-# SancaklarUsersBot - ErdewBey - Midy
+# SancaklarUsersBot - SancaklarMedias - Midy
 import asyncio
 import telethon
 from userbot.events import register

@@ -7,8 +7,8 @@
     sancaklar UserBot, Telegram kullanmanızı kolaylaştıran ve eğlenceli bir yol almasını sağlayan bir bottur. <br>
     sancaklar UserBot is a bot that makes it easy and fun to use Telegram.
     <br>
-        <a href="https://github.com/erdewbey/SancaklarUsersBot/blob/master/README.md#kurulum/setup">| Kurulum/Setup</a> |
-        <a href="https://github.com/erdewbey/SancaklarUsersBot/wiki/G%C3%BCncelleme">Güncelleme/Update</a> |
+        <a href="https://github.com/SancaklarMedias/SancaklarUsersBot/blob/master/README.md#kurulum/setup">| Kurulum/Setup</a> |
+        <a href="https://github.com/SancaklarMedias/SancaklarUsersBot/wiki/G%C3%BCncelleme">Güncelleme/Update</a> |
         <a href="https://t.me/SancaklarUsersBot">Kanal/Channel </a> |
         <a href="https://t.me/sancaklarSupport">Destek/Support</a> |
     <br>
@@ -24,7 +24,7 @@
 
 🇹🇷**Tarayıcı Kurulum / Online Setup**🇺🇲
 
-[![Run on Repl.it](https://repl.it/badge/github/erdewbey/sancaklarinstaller)](https://repl.it/@erdewbey/sancaklarinstaller)
+[![Run on Repl.it](https://repl.it/badge/github/SancaklarMedias/sancaklarinstaller)](https://repl.it/@SancaklarMedias/sancaklarinstaller)
 
 ### 🇹🇷 Elle Kurulum / Manual Setup 🇺🇲
 
@@ -47,7 +47,7 @@
 ```
 
 ### 🇹🇷 Geliştiriciler / Developers 🇺🇲
-  [![ErdewBey](https://github.com/erdewbey.png?size=100)](https://github.com/erdewbey)
+  [![SancaklarMedias](https://github.com/SancaklarMedias.png?size=100)](https://github.com/SancaklarMedias)
  [![Misaki](https://github.com/ber4tbey.png?size=100)](https://github.com/ber4tbey)
 
 ## Credit
