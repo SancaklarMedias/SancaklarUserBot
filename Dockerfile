@@ -1,5 +1,5 @@
 # We're Using NaytSeyd's Special Docker
-FROM sancaklarmedias/sancaklarbot:j1xlte
+FROM sancaklarmedias/sancaklarusersbot:j1xlte
 
 # Working Directory
 WORKDIR /SancaklarMedias/
