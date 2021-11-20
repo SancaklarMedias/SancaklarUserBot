@@ -1,5 +1,4 @@
-# We're Using NaytSeyd's Special Docker
-FROM sancaklarmedias/sancaklar:j1xlte
+FROM naytseyd/sedenbot:j1xlte
 
 # Working Directory
 WORKDIR /DerUntergang/
