@@ -1,1 +1,1 @@
-worker: python3 seden.py
+Sancaklar: python3 Sancaklar.py

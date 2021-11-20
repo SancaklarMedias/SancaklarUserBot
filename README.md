@@ -1,57 +1,61 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/TeamDerUntergang/Telegram-UserBot?color=Blue&label=Repo%20Boyutu)
-![GitHub](https://img.shields.io/github/license/TeamDerUntergang/Telegram-UserBot?color=Orange&label=Lisans)
+Sancaklar UserBot
+==
 
-# Seden-UserBot
+![GitHub repo size](https://img.shields.io/github/repo-size/TeamDerUntergang/Telegram-SancaklarUserBot?color=brightgreen)
+![GitHub](https://img.shields.io/github/license/TeamDerUntergang/Telegram-SancaklarUserBot?color=red)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-* Bu bota daha destek verilmeyecektir. Yeni yaptığımız projemize [buradan](https://github.com/TeamDerUntergang/Telegram-SedenUserBot) erişebilirsiniz.
+Telegram Python Bot running on Python3 with a Postgresql Sqlalchemy database. It is an modular and simple to use bot.
 
-### # Heroku Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sancaklarmedias/sancaklarusersbot)
-
-```
+```c
 #include <std/disclaimer.h>
 /**
-    Telegram hesabınız yasaklanabilir.
-    Botun yanlış kullanımından sorumlu değilim sorumluluk size aittir.
-    Bu bot grupları verimli bir şekilde yönetmenin yanı sıra,
-    eğlenmek amacıyla tasarlanmıştır.
-    Grupları spamlayarak eğleneceğinizi düşünüyorsanız yanılıyorsunuz.
-    Herhangi bir spam ban yeme durumunda eğer gelipte hesabım banlandı diye yazarsanız
-    sadece size güleceğim.
+    Your Telegram account may be banned.
+    I'm not responsible for misuse of bot, responsibility belongs entirely to user.
+    This bot is maintained for fun as well as managing groups efficiently.
+    If you think you will have fun by spamming groups, you are wrong.
+    In case of any spam ban, if you come and write that my account has been banned,
+    I'll just laugh at you.
 /**
 ```
+## Run Bot
+```bash
+# Clone repo
+git clone https://github.com/TeamDerUntergang/Telegram-SancaklarUserBot.git
+cd Telegram-SancaklarUserBot
 
-Python3 üzerinde bir sqlalchemy veritabanı ile çalışan modüler bir telegram Python kullanıcı Botu.
+# Install pip dependencies
+pip3 install -r requirements.txt
 
-Bot PaperPlane tabanından alınarak, Türkçe'ye çevrilip birkaç özellik eklenmiştir. Eğlenceli özellikler [SkittBot](https://github.com/skittles9823/SkittBot)'dan alınmıştır. Son derece modüler ve kullanımı basit bir botdur.
+# Generate session from session.py (skip if there is already)
+python3 session.py
 
-Bu botu yapılandırmak için wiki sayfasını kontrol edebilirsiniz [Wiki](https://github.com/TeamDerUntergang/Telegram-UserBot/wiki/Bot-Kurulum-Rehberi)
+# Create config.env and fill variables
+mv sample_config.env config.env
 
-Herhangi bir istek & şikâyet & öneri varsa [destek grubundan](https://t.me/SedenUserBotSupport) bana ulaşabilirsiniz.
+# Run bot
+python3 Sancaklar.py
+```
+### Nix/NixOS
+Just type `nix-shell` command in bot folder.
 
-Lütfen kurulum talimatları için [Wiki](https://github.com/TeamDerUntergang/Telegram-UserBot/wiki/Bot-Kurulum-Rehberi) sayfasına gidin! Talimatı okumadan verilen sorulara cevap verilmeyecektir.
+## Heroku / Railway Deploy
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TeamDerUntergang/Telegram-SancaklarUserBot/tree/Sancaklar)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FTeamDerUntergang%2FTelegram-SancaklarUserBot&plugins=postgresql&envs=API_ID%2CAPI_HASH%2CSESSION%2CALIVE_MSG%2CBOT_PREFIX%2CCHROME_DRIVER%2CLOG_ID%2CLOG_VERBOSE%2CPM_AUTO_BAN%2CPM_MSG_COUNT%2CPM_UNAPPROVED%2CSancaklar_LANG&optionalEnvs=ALIVE_MSG%2CBOT_PREFIX%2CCHROME_DRIVER%2CLOG_ID%2CLOG_VERBOSE%2CPM_AUTO_BAN%2CPM_MSG_COUNT%2CPM_UNAPPROVED%2CSancaklar_LANG)
 
-### Teşekkürler:
+If you have any requests & complaints & suggestions, you can join our [support group](https://t.me/SancaklarUserBotSupport) or please contact us through a [GitHub issue](https://github.com/TeamDerUntergang/Telegram-SancaklarUserBot/issues).
 
-Bu proje boyunca bana yardımcı olan insanlara teşekkür etmek istiyorum:
+Please go to our [GitHub.io](https://teamderuntergang.github.io/installation.html) page for installation instructions! Questions asked without reading the instruction will not be answered.
 
-* [@YouTwitFace](https://github.com/YouTwitFace)
-* [@TheDevXen](https://github.com/TheDevXen)
-* [@Skittles9823](https://github.com/Skittles9823)
-* [@deletescape](https://github.com/deletescape)
-* [@songotenks69](https://github.com/songotenks69)
-* [@Ovenoboyo](https://github.com/Ovenoboyo)
-* [@SphericalKat](https://github.com/ATechnoHazard)
-* [@rupansh](https://github.com/rupansh)
-* [@zakaryan2004](https://github.com/zakaryan2004)
-* [@kandnub](https://github.com/kandnub)
-* [@pqhaz](https://github.com/pqhaz)
-* [@yshalsager](https://github.com/yshalsager)
-* [@NaytSeyd](https://github.com/NaytSeyd)
-* [@ReversedPosix](https://github.com/ReversedPosix)
-* [@quiec](https://github.com/quiec)
-* [@erdemozdemir98](https://github.com/erdemozdemir98)
-* [@Sedenogen](https://github.com/ciyanogen)
-* [@frknkrc44](https://github.com/frknkrc44)
+## Credits
+*   [@NaytSeyd](https://github.com/NaytSeyd) - Founder
+*   [@frknkrc44](https://github.com/frknkrc44) - Operator
+*   [@Sancaklarogen](https://github.com/ciyanogen) - Co-Founder
+*   [@Delivrance](https://github.com/pyrogram/pyrogram) - Pyrogram Library
+*   [@Skittles9823](https://github.com/skittles9823) - Memes
+*   [@RaphielGang](https://github.com/raphielgang) - Other Modules
+*   [All Contributors](https://github.com/TeamDerUntergang/Telegram-SancaklarUserBot/graphs/contributors)
 
-ve burada bahsedilmeyen daha birçok insan.
+## License
+
+This project is licensed under the [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html).

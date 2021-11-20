@@ -1,21 +1,11 @@
-# Credits @NaytSeyd
-FROM naytseyd/sedenbot:latest
+# We're Using NaytSeyd's Special Docker
+FROM naytseyd/Sancaklarbot:j1xlte
 
-# Maintainer
-MAINTAINER Ahmet Acikgoz <NaytSeyd@yandex.com>
+# Working Directory
+WORKDIR /DerUntergang/
 
-# Zaman dilimini ayarla
-ENV TZ=Europe/Istanbul
+# Clone Repo
+RUN git clone -b Sancaklar https://github.com/TeamDerUntergang/Telegram-SancaklarUserBot.git /DerUntergang/
 
-# Çalışma dizini
-ENV PATH="/root/sedenuser/bin:$PATH"
-WORKDIR /root/sedenuser
-
-# Repoyu klonla
-RUN git clone -b seden https://github.com/TeamDerUntergang/Telegram-UserBot /root/sedenuser
-
-# Oturum ve yapılandırmayı kopyala (varsa)
-COPY ./sample_config.env ./sedenbot.session* ./config.env* /root/sedenuser/
-
-# Botu çalıştır
-CMD ["python3","seden.py"]
+# Run bot
+CMD ["python3", "Sancaklar.py"]
