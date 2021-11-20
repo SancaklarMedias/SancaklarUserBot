@@ -1,4 +1,4 @@
-from telethon import TelegramClient
+from telethon import TelegramClient, events
 API_KEY="Bunu buraya yazın"
 API_HASH="Bunu buraya yazın"
 #my.telegram.org adresinden alın

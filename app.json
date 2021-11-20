@@ -1,18 +1,18 @@
 {
-  "name": "sancaklar UserBot",
-  "description": "sancaklar UserBot",
-  "logo": "https://i.hizliresim.com/9tep7oz.jpg",
+  "name": "SedenBot",
+  "description": "Seden UserBot",
+  "logo": "https://i.imgur.com/ZLi4nDP.jpg",
   "keywords": [
     "telegram",
     "userbot",
-	"sancaklar",
+	"seden",
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/SancaklarMedias/SancaklarUsersBot",
-  "website":   "https://t.me/SancaklarMedias",
-  "success_url": "https://t.me/SancaklarUsersBot",
+  "repository": "https://github.com/TeamDerUntergang/Telegram-UserBot",
+  "website":   "https://github.com/TeamDerUntergang/Telegram-UserBot/wiki",
+  "success_url": "https://t.me/SedenUserBotSupport",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -23,40 +23,8 @@
       "description": "Bu değeri my.telegram.org adresinden alın.",
       "required": true
     },
-    "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır",
-      "required": false
-    },
-"SUDO_ID": {
-  "description": "İd sini yazdığınız arkadaşınızın bazı komutları kullanabilmesi için",
-  "value": "",
-  "required": false
-    },
-"CV_MSG": {
-  "description": "CV nizde gözükecek olan yazı.",
-  "value": "Sahibim Fazla Bi Bilgi Ayarlamamış Ama Şunu Biliyorum Kendisi Baya Zevkli Birisi Çünkü sancaklar Userbot Kullanıyor 😁",
-  "required": false
-    },
-    "SPOTIFY_DC": {
-      "description": "Spotify bio için gerekli olan anahtar",
-      "required": false
-    },
-    "BLACKLIST_CHAT": {
-      "description": "Userbotun kapatılacağı gruplar, boşlukla ayırın! -0000 -1111 tarzı bilmiyorsanız veya userbot heryerde çalışsın istiyorsanız ELLEMEYİN!",
-      "value": "False",
-      "required": false
-    },
-    "SPOTIFY_KEY": {
-      "description": "Spotify bio için gerekli olan anahtar",
-      "required": false
-    },
     "STRING_SESSION": {
       "description": "python3 GenerateStringSession.py dosyasını yerel olarak çalıştırarak bu değeri alın.",
-      "required": true
-    },
-    "HEROKU_MEMEZ": {
-      "description": "UserBot bir Heroku Dyno üzerinde çalışıyorsa, bu değer True olmalıdır.",
-      "value": "True",
       "required": true
     },
     "HEROKU_APIKEY": {
@@ -69,7 +37,7 @@
     },
     "UPSTREAM_REPO_URL": {
       "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/SancaklarMedias/SancaklarUsersBot",
+      "value": "https://github.com/TeamDerUntergang/Telegram-UserBot",
       "required": true
     },
     "COUNTRY": {
@@ -92,33 +60,24 @@
       "value": "/usr/bin/chromedriver",
       "required": false
     },
-    "GOOGLE_CHROME_BIN": {
-      "description": "Selenium tabanlı modüller için Google Chrome (veya) Chromium binary konumu.",
-      "value": "/usr/bin/chromium-browser",
-      "required": false
-    },
-    "OPEN_WEATHER_MAP_APPID": {
-      "description": "https://api.openweathermap.org/data/2.5/weather adresinden kendi APPID'inizi (API key) edinin.",
-      "required": false
-    },
     "BOTLOG": {
-      "description": "Botla yaptığınız işlemi kaydetmek için bir grup ve bazı pluginleri çalışması için gerekli",
+      "description": "Günlüğe kaydetmeyi açmak istiyorsanız, bunu True olarak ayarlayın",
       "value": "False"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @sancaklarBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @NaytSeydBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
       "required": false  
     },
     "BOT_TOKEN": {
       "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun tokenini yazmanız lazım. Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
       "required": false    
     },
-    "GENIUS": {
-      "description": "Buraya aldığınız Genius API Token'i yazın.",
+    "GENIUS_API_TOKEN": {
+      "description": "Genius API Key, 'https://genius.com/developers' adresinden alın.",
       "required": false
     },
     "AUTO_PP": {
-      "description": "Autopp modülünün çalışması için gerekli olan değişkendir. Çalışması için kullanacağınız resmin direk adresini girmeniz gerekiyor.",
+      "description": "Autopp modülünün çalışması için gerekli olan değişkendir. Çalışması için kullanacağınız resmin direkt adresini girmeniz gerekiyor.",
       "required": false      
     },
     "BOTLOG_CHATID": {
@@ -133,17 +92,12 @@
       "description": "PM Otomatik Yasaklama Özelliği. 'Hey! Bu bir bot.' modülüdür.",
       "value": "False"
     },
-    "PM_AUTO_BAN_LIMIT": {
-      "description": "PM Auto Ban limiti. Size kullanıcı x mesaj atarsa engellencek.",
-      "value": "4",
-      "required": false
-    },
     "YOUTUBE_API_KEY": {
       "description": ".yt komutu için YouTube Veri API'sı keyidir. https://console.cloud.google.com adresinden alın.",
       "required": false
     },
-    "OCR_sancaklar_API_KEY": {
-      "description": ".ocr komutu için OCR API Key. https://ocr.sancaklar/ocrapi adresinden alın.",
+    "OCR_SPACE_API_KEY": {
+      "description": ".ocr komutu için OCR API Key. https://ocr.space/ocrapi adresinden alın.",
       "required": false
     },
     "REM_BG_API_KEY": {
@@ -189,14 +143,10 @@
     "BIO_PREFIX": {
       "description": "Last.FM Modülü Biyografi için önek.",
       "required": false
-    }, 
-    "DEFAULT_NAME": {
-      "description": "Klon plugininden sonra hesabınızın eski haline dönmesi için Telegram isminiz",
-      "required": false
-    }, 
+    },
     "DEFAULT_BIO": {
-      "description": "Varsayılan profil biyografisi.",
-      "value": "@SancaklarUsersBot",
+      "description": "Varsayılan profil biyografisi. (Lastfm modülü için)",
+      "value": "#TeamDerUntergang",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
@@ -218,40 +168,13 @@
     "LOGSPAMMER": {
       "description": "Hata günlüklerinin, geçerli sohbette dosyayı göndermesi yerine UserBot günlük grubunda saklanmasını istemeniz durumunda bu değeri True olarak ayarlayın. Geçerli bir BOTLOG_CHATID değerinin ayarlanmasını gerektirir.",
       "value": "False"
-    },
-    "WARN_LIMIT": {
-      "description": "Kişiyi gmutelemek/gbanlamak için gerekli uyarı sayısı. Genellikle 3 kullanılır.",
-      "value": "3",
-      "required": false
-    },
-    "WARN_MODE": {
-      "description": "3 uyarıdan sonra gerçekleşecek olay. Sadece gmute ya da gban yazabilirsiniz. Aksi takdirde bot çalışmayabilir.",
-      "value": "gmute",
-      "required": false
-    },
-    "GALERI_SURE": {
-      "description": "Galeri plugini içindir. Profil fotoğrafları kaç saniye de bir değişsin?",
-      "value": "60",
-      "required": false
-    },
-    "PAKET_ISMI": {
-      "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@SancaklarUsersBot Paketi",
-      "required": false
-    },
-    "OTOMATIK_KATILMA": {
-      "description": "Support grubuna ve Kanal'a otomatik katılmak istemiyorsanız False yazın.",
-      "value": "True",
-      "required": true
-    },
-    "LANGUAGE": {
-      "description": "Botun dili. EN/TR/AZ yazabilirsiniz.",
-      "value": "TR",
-      "required": true
     }
   },
   "addons": [{
-    "plan": "heroku-postgresql"
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
   }],
   "buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"

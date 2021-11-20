@@ -1,7 +1,21 @@
-# FROM kısmını Değiştirmeyiniz sancaklarye DockerFile Kullanın
+# Credits @NaytSeyd
+FROM naytseyd/sedenbot:latest
 
-FROM erdembey/epicuserbot:latest
-RUN git clone https://github.com/SancaklarMedias/SancaklarUsersBot /root/SancaklarUsersBot
-WORKDIR /root/SancaklarUsersBot/
-RUN pip3 install -r requirements.txt
-CMD ["python3", "main.py"]  
+# Maintainer
+MAINTAINER Ahmet Acikgoz <NaytSeyd@yandex.com>
+
+# Zaman dilimini ayarla
+ENV TZ=Europe/Istanbul
+
+# Çalışma dizini
+ENV PATH="/root/sedenuser/bin:$PATH"
+WORKDIR /root/sedenuser
+
+# Repoyu klonla
+RUN git clone -b seden https://github.com/TeamDerUntergang/Telegram-UserBot /root/sedenuser
+
+# Oturum ve yapılandırmayı kopyala (varsa)
+COPY ./sample_config.env ./sedenbot.session* ./config.env* /root/sedenuser/
+
+# Botu çalıştır
+CMD ["python3","seden.py"]
