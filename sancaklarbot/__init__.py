@@ -1,6 +1,6 @@
-# Copyright (C) 2020-2021 TeamDerUntergang <https://github.com/TeamDerUntergang>
+# Copyright (C) 2020-2021 SancaklarMedias <https://github.com/SancaklarMedias>
 #
-# This file is part of TeamDerUntergang project,
+# This file is part of SancaklarMedias project,
 # and licensed under GNU Affero General Public License v3.
 # See the GNU Affero General Public License for more details.
 #
@@ -143,7 +143,7 @@ SPOTIPY_CLIENT_SECRET = environ.get('SPOTIPY_CLIENT_SECRET')
 ALIVE_MSG = environ.get('ALIVE_MSG', None)
 
 # For neofetch
-HOSTNAME = environ.get('HOSTNAME', 'DerUntergang')
+HOSTNAME = environ.get('HOSTNAME', 'SancaklarMedias')
 USER = environ.get('USER', 'sancaklarmedias')
 
 # Chrome Driver and Headless Google Chrome Binaries
@@ -169,7 +169,7 @@ DATABASE_URL = environ.get('DATABASE_URL', None)
 SESSION = environ.get('SESSION', 'sancaklaruserbot')
 
 # sancaklarBot repo url for updater
-REPO_URL = environ.get('REPO_URL', 'https://github.com/TeamDerUntergang/sancaklarUserBot')
+REPO_URL = environ.get('REPO_URL', 'https://github.com/SancaklarMedias/sancaklarUserBot')
 
 # Heroku Credentials for updater
 HEROKU_KEY = environ.get('HEROKU_KEY', None)

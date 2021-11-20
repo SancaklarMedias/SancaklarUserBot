@@ -1,7 +1,7 @@
-# Copyright (C) 2020-2021 TeamDerUntergang <https://github.com/TeamDerUntergang>
+# Copyright (C) 2020-2021 SancaklarMedias <https://github.com/SancaklarMedias>
 # Copyright (C) 2021 kisekinopureya <https://github.com/kisekinopureya>
 #
-# This file is part of TeamDerUntergang project,
+# This file is part of SancaklarMedias project,
 # and licensed under GNU Affero General Public License v3.
 # See the GNU Affero General Public License for more details.
 #

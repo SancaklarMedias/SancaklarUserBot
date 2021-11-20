@@ -1,6 +1,6 @@
-# Copyright (C) 2020-2021 TeamDerUntergang <https://github.com/TeamDerUntergang>
+# Copyright (C) 2020-2021 SancaklarMedias <https://github.com/SancaklarMedias>
 #
-# This file is part of TeamDerUntergang project,
+# This file is part of SancaklarMedias project,
 # and licensed under GNU Affero General Public License v3.
 # See the GNU Affero General Public License for more details.
 #
@@ -93,7 +93,7 @@ def founder(message):
 def readme(message):
     edit(
         message,
-        '[sancaklar README.md](https://github.com/TeamDerUntergang/'
+        '[sancaklar README.md](https://github.com/SancaklarMedias/'
         'Telegram-sancaklarUserBot/blob/sancaklar/README.md)',
         preview=False,
     )
@@ -103,7 +103,7 @@ def readme(message):
 def repo(message):
     edit(
         message,
-        '[sancaklar Repo](https://github.com/TeamDerUntergang/' 'Telegram-sancaklarUserBot)',
+        '[sancaklar Repo](https://github.com/SancaklarMedias/' 'Telegram-sancaklarUserBot)',
         preview=False,
     )
 

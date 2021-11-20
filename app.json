@@ -70,7 +70,7 @@
         "REPO_URL": {
             "description": "It helps your bot updates, if you maintain a fork repo you can add your repo URL here.",
             "required": true,
-            "value": "https://github.com/TeamSancaklarMedias/Telegram-sancaklarUserBot"
+            "value": "https://github.com/SancaklarMedias/sancaklarUsersBot"
         },
         "sancaklar_LANG": {
             "description": "It permanently changes your bot's lang. Default is English (en).",
