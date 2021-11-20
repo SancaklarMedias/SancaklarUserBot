@@ -17,7 +17,7 @@
         "ALIVE_MSG": {
             "description": "Custom message for .alive command. We have our own alive message by default.",
             "required": false,
-            "value": "`Hello Sancaklar! I am alive \u2764\ufe0f`"
+            "value": "`Merhaba Sancaklar Users Bot Aktif çalışmaktadır... 🇹🇷 \u2764\ufe0f`"
         },
         "API_HASH": {
             "description": "Get this value from my.telegram.org.",
