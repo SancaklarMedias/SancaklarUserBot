@@ -1,6 +1,6 @@
-# Copyright (C) 2020-2021 SancaklarMedias <https://github.com/SancaklarMedias>
+# Copyright (C) 2020-2021 TeamDerUntergang <https://github.com/TeamDerUntergang>
 #
-# This file is part of SancaklarMedias project,
+# This file is part of TeamDerUntergang project,
 # and licensed under GNU Affero General Public License v3.
 # See the GNU Affero General Public License for more details.
 #
@@ -29,10 +29,10 @@ Create a new application, by entering the required details\n''')
         API_HASH = input('API HASH: ')
 
     app = Client(
-        'sancaklaruserbot',
+        'sedenuserbot',
         api_id=API_ID,
         api_hash=API_HASH,
-        app_version='sancaklarmedias',
+        app_version='SedenEcem',
         device_model='Firefox 91.0.2',
         system_version='Session',
         lang_code='en',
@@ -73,10 +73,10 @@ Gerekli ayrıntıları girerek yeni bir uygulama oluşturun\n''')
         API_HASH = input('API HASH: ')
 
     app = Client(
-        'sancaklaruserbot',
+        'sedenuserbot',
         api_id=API_ID,
         api_hash=API_HASH,
-        app_version='sancaklarmedias',
+        app_version='SedenEcem',
         device_model='Firefox 91.0.2',
         system_version='Session',
         lang_code='tr',

@@ -2,8 +2,8 @@ config.env
 brains.check
 learning-data-root.check
 blacklist.check
-sancaklarbot.db
-sancaklarbot.session*
+sedenbot.db
+sedenbot.session*
 .DS_Store/
 __pycache__/
 downloads/

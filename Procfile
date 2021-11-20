@@ -1,1 +1,1 @@
-sancaklar: python3 sancaklar.py
+seden: python3 seden.py
