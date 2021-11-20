@@ -2,9 +2,10 @@
 FROM naytseyd/sedenbot:j1xlte
 
 # Working Directory
-WORKDIR /SancaklarMedias/
+WORKDIR /DerUntergang/
 
 # Clone Repo
+RUN git clone -b seden https://github.com/SancaklarMedias/sancaklarUsersBot.git /DerUntergang/
 
 # Run bot
 CMD ["python3", "sancaklar.py"]
