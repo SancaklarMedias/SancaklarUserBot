@@ -13,26 +13,6 @@ Telegram Python Bot running on Python3 with a Postgresql Sqlalchemy database. It
     I'll just laugh at you.
 /**
 ```
-## Run Bot
-```bash
-# Clone repo
-git clone https://github.com/SancaklarMedias/SancaklarUsersBot.git
-cd Telegram-SancaklarUserBot
-
-# Install pip dependencies
-pip3 install -r requirements.txt
-
-# Generate session from session.py (skip if there is already)
-python3 session.py
-
-# Create config.env and fill variables
-mv sample_config.env config.env
-
-# Run bot
-python3 Sancaklar.py
-```
-### Nix/NixOS
-Just type `nix-shell` command in bot folder.
 
 ## Heroku / Railway Deploy
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SancaklarMedias/SancaklarUsersBot)
