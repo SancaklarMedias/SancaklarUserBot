@@ -14,8 +14,8 @@ from PIL import Image
 from pyrogram.errors import YouBlockedUser
 from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
-from Sancaklarbot import HELP, PACKNAME, PACKNICK, TEMP_SETTINGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, PACKNAME, PACKNICK, TEMP_SETTINGS
+from sancaklarmedias.core import (
     PyroConversation,
     download_media_wc,
     edit,
@@ -23,16 +23,16 @@ from SancaklarMedias.core import (
     get_download_dir,
     get_translation,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
-from SancaklarMedias.core import sticker_resize as resizer
+from sancaklarmedias.core import sticker_resize as resizer
 
 # ================= CONSTANT =================
 DIZCILIK = [get_translation(f'kangstr{i+1}') for i in range(0, 12)]
 # ================= CONSTANT =================
 
 
-@Sancaklarify(pattern='^.(d[ıi]zla|kang)', compat=False)
+@sancaklarify(pattern='^.(d[ıi]zla|kang)', compat=False)
 def kang(client, message):
     myacc = TEMP_SETTINGS['ME']
     kanger = myacc.username or myacc.first_name
@@ -200,7 +200,7 @@ def send_recv(conv, msg, doc=False):
     return conv.recv_msg()
 
 
-@Sancaklarify(pattern='^.getsticker$')
+@sancaklarify(pattern='^.getsticker$')
 def getsticker(message):
     reply = message.reply_to_message
     if not reply or not reply.sticker:
@@ -222,7 +222,7 @@ def getsticker(message):
     message.delete()
 
 
-@Sancaklarify(pattern='.packinfo$', compat=False)
+@sancaklarify(pattern='.packinfo$', compat=False)
 def packinfo(client, message):
     reply = message.reply_to_message
     if not reply:

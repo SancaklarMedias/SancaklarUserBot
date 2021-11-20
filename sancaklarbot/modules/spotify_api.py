@@ -6,15 +6,15 @@ from urllib.request import urlretrieve
 from zipfile import ZipFile
 
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     reply_audio,
     reply_doc,
     reply_img,
-    Sancaklarify,
+    sancaklarify,
 )
 from spotipy import Spotify, SpotifyClientCredentials
 from yt_dlp import YoutubeDL
@@ -209,7 +209,7 @@ class Spotipy:
                     edit(message, out, preview=False)
 
 
-@Sancaklarify(pattern='^.spoti(|fy)')
+@sancaklarify(pattern='^.spoti(|fy)')
 def spotify_download(message):
     spotify = Spotipy()
     args = extract_args(message).split(' ', 2)

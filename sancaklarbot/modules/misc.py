@@ -14,19 +14,19 @@ from subprocess import run as runapp
 
 from image_to_ascii import ImageToAscii
 from pybase64 import b64decode, b64encode
-from Sancaklarbot import HELP, SUPPORT_GROUP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, SUPPORT_GROUP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
     reply,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.random')
+@sancaklarify(pattern='^.random')
 def random(message):
     items = extract_args(message, False)
     args = items.split()
@@ -37,12 +37,12 @@ def random(message):
     edit(message, get_translation('randomResult', ['**', '`', items, choice(args)]))
 
 
-@Sancaklarify(pattern='^.chatid$', private=False)
+@sancaklarify(pattern='^.chatid$', private=False)
 def chatid(message):
     edit(message, get_translation('chatidResult', ['`', str(message.chat.id)]))
 
 
-@Sancaklarify(pattern='^.invitelink$', compat=False, admin=True, private=False)
+@sancaklarify(pattern='^.invitelink$', compat=False, admin=True, private=False)
 def get_invite_link(client, message):
     chat = client.get_chat(message.chat.id)
     try:
@@ -52,7 +52,7 @@ def get_invite_link(client, message):
         pass
 
 
-@Sancaklarify(pattern='^.id$')
+@sancaklarify(pattern='^.id$')
 def userid(message):
     reply = message.reply_to_message
     if reply:
@@ -73,42 +73,42 @@ def userid(message):
         edit(message, f'`{get_translation("wrongCommand")}`')
 
 
-@Sancaklarify(pattern='^.kickme$', compat=False, private=False)
+@sancaklarify(pattern='^.kickme$', compat=False, private=False)
 def kickme(client, message):
     edit(message, f'`{get_translation("kickmeResult")}`')
     client.leave_chat(message.chat.id, 'me')
 
 
-@Sancaklarify(pattern='^.support$')
+@sancaklarify(pattern='^.support$')
 def support(message):
     edit(message, get_translation('supportResult', [SUPPORT_GROUP]), preview=False)
 
 
-@Sancaklarify(pattern='^.founder')
+@sancaklarify(pattern='^.founder')
 def founder(message):
     edit(message, get_translation('founderResult', ['`', '**']), preview=False)
 
 
-@Sancaklarify(pattern='^.readme$')
+@sancaklarify(pattern='^.readme$')
 def readme(message):
     edit(
         message,
-        '[Sancaklar README.md](https://github.com/TeamDerUntergang/'
-        'Telegram-SancaklarUserBot/blob/Sancaklar/README.md)',
+        '[sancaklar README.md](https://github.com/TeamDerUntergang/'
+        'Telegram-sancaklarUserBot/blob/sancaklar/README.md)',
         preview=False,
     )
 
 
-@Sancaklarify(pattern='^.repo$')
+@sancaklarify(pattern='^.repo$')
 def repo(message):
     edit(
         message,
-        '[Sancaklar Repo](https://github.com/TeamDerUntergang/' 'Telegram-SancaklarUserBot)',
+        '[sancaklar Repo](https://github.com/TeamDerUntergang/' 'Telegram-sancaklarUserBot)',
         preview=False,
     )
 
 
-@Sancaklarify(pattern='^.repeat')
+@sancaklarify(pattern='^.repeat')
 def repeat(message):
     # Copyright (c) Gegham Zakaryan | 2019
     args = extract_args(message).split(' ', 1)
@@ -130,13 +130,13 @@ def repeat(message):
     edit(message, replyText)
 
 
-@Sancaklarify(pattern='^.crash$')
+@sancaklarify(pattern='^.crash$')
 def crash(message):
     edit(message, f'`{get_translation("testLogId")}`')
     raise Exception(get_translation('testException'))
 
 
-@Sancaklarify(pattern='^.tagall$', compat=False, private=False)
+@sancaklarify(pattern='^.tagall$', compat=False, private=False)
 def tagall(client, message):
     msg = '@tag'
     chat = message.chat.id
@@ -148,7 +148,7 @@ def tagall(client, message):
     reply(message, msg, delete_orig=True)
 
 
-@Sancaklarify(pattern='^.report$', compat=False, private=False)
+@sancaklarify(pattern='^.report$', compat=False, private=False)
 def report_admin(client, message):
     msg = '@admin'
     chat = message.chat.id
@@ -159,7 +159,7 @@ def report_admin(client, message):
     message.delete()
 
 
-@Sancaklarify(pattern='^.hash')
+@sancaklarify(pattern='^.hash')
 def hash(message):
     hashtxt_ = extract_args(message)
     if len(hashtxt_) < 1:
@@ -199,7 +199,7 @@ def hash(message):
         edit(message, ans)
 
 
-@Sancaklarify(pattern='^.base64')
+@sancaklarify(pattern='^.base64')
 def base64(message):
     argv = extract_args(message)
     args = argv.split(' ', 1)
@@ -215,7 +215,7 @@ def base64(message):
         edit(message, f'Input: `{args[1]}`\nDecoded: `{lething[:-1]}`')
 
 
-@Sancaklarify(pattern='^.ascii$')
+@sancaklarify(pattern='^.ascii$')
 def img_to_ascii(message):
     reply = message.reply_to_message
     edit(message, f'`{get_translation("processing")}`')

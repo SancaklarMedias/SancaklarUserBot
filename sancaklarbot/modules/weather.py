@@ -8,8 +8,8 @@
 #
 
 from requests import get
-from Sancaklarbot import HELP, Sancaklar_LANG, WEATHER
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify
+from sancaklarbot import HELP, sancaklar_LANG, WEATHER
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify
 
 # ===== CONSTANT =====
 if WEATHER:
@@ -19,7 +19,7 @@ else:
 # ====================
 
 
-@Sancaklarify(pattern='^.(havadurumu|w(eathe|tt)r)')
+@sancaklarify(pattern='^.(havadurumu|w(eathe|tt)r)')
 def havadurumu(message):
     args = extract_args(message)
 
@@ -37,7 +37,7 @@ def havadurumu(message):
     try:
         req = get(
             f'http://wttr.in/{CITY}?mqT0',
-            headers={'User-Agent': 'curl/7.66.0', 'Accept-Language': Sancaklar_LANG},
+            headers={'User-Agent': 'curl/7.66.0', 'Accept-Language': sancaklar_LANG},
         )
         data = req.text
         if '===' in data:

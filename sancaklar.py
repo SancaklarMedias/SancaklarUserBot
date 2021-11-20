@@ -8,6 +8,6 @@
 #
 
 if __name__ == '__main__':
-    from Sancaklarbot import app
+    from sancaklarbot import app
 
     app.run()

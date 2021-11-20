@@ -13,20 +13,20 @@ from os import remove
 
 from PIL import Image
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_download_dir,
     get_translation,
     reply_audio,
     reply_video,
-    Sancaklarify,
+    sancaklarify,
 )
 from yt_dlp import YoutubeDL
 
 
-@Sancaklarify(pattern='^.(youtube|yt)dl')
+@sancaklarify(pattern='^.(youtube|yt)dl')
 def youtubedl(message):
     args = extract_args(message).split(' ', 2)
 

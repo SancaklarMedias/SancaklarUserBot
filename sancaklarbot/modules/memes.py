@@ -16,14 +16,14 @@ from time import sleep
 from cowpy import cow
 from PIL import Image, ImageDraw, ImageFont
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     parse_cmd,
     reply_sticker,
-    Sancaklarify,
+    sancaklarify,
 )
 
 # ================= CONSTANT =================
@@ -412,7 +412,7 @@ XDA_STRINGS = [
 # ================= CONSTANT =================
 
 
-@Sancaklarify(pattern=r'^.(\w+)say')
+@sancaklarify(pattern=r'^.(\w+)say')
 def cowsay(message):
     ext = message.text.split(' ', 1)
     arg = parse_cmd(ext[0])
@@ -435,7 +435,7 @@ def cowsay(message):
     edit(message, f"`{cheese.milk(text).replace('`', '´')}`")
 
 
-@Sancaklarify(pattern='^:/$')
+@sancaklarify(pattern='^:/$')
 def kek(message):
     uio = ['/', '\\']
     for i in range(1, 15):
@@ -443,12 +443,12 @@ def kek(message):
         edit(message, f':{uio[i % len(uio)]}')
 
 
-@Sancaklarify(pattern='^.cry$')
+@sancaklarify(pattern='^.cry$')
 def cry(message):
     edit(message, choice(CRYS))
 
 
-@Sancaklarify(pattern='^.cp')
+@sancaklarify(pattern='^.cp')
 def copypasta(message):
     textx = message.reply_to_message
     copypasta = extract_args(message)
@@ -480,7 +480,7 @@ def copypasta(message):
     edit(message, reply_text)
 
 
-@Sancaklarify(pattern='^.vapor')
+@sancaklarify(pattern='^.vapor')
 def vapor(message):
     reply_text = []
     textx = message.reply_to_message
@@ -504,7 +504,7 @@ def vapor(message):
     edit(message, ''.join(reply_text))
 
 
-@Sancaklarify(pattern='^.str')
+@sancaklarify(pattern='^.str')
 def stretch(message):
     textx = message.reply_to_message
     stretch = extract_args(message)
@@ -521,7 +521,7 @@ def stretch(message):
     edit(message, reply_text)
 
 
-@Sancaklarify(pattern='^.zal')
+@sancaklarify(pattern='^.zal')
 def zalgofy(message):
     reply_text = []
     textx = message.reply_to_message
@@ -547,7 +547,7 @@ def zalgofy(message):
     edit(message, ''.join(reply_text))
 
 
-@Sancaklarify(pattern='^.owo')
+@sancaklarify(pattern='^.owo')
 def owo(message):
     textx = message.reply_to_message
     owo = extract_args(message)
@@ -569,7 +569,7 @@ def owo(message):
     edit(message, reply_text)
 
 
-@Sancaklarify(pattern='^.mock')
+@sancaklarify(pattern='^.mock')
 def mock(message):
     reply_text = []
     textx = message.reply_to_message
@@ -592,7 +592,7 @@ def mock(message):
     edit(message, ''.join(reply_text))
 
 
-@Sancaklarify(pattern='^.clap')
+@sancaklarify(pattern='^.clap')
 def clap(message):
     textx = message.reply_to_message
     clap = extract_args(message)
@@ -609,7 +609,7 @@ def clap(message):
     edit(message, reply_text)
 
 
-@Sancaklarify(pattern='^.lfy')
+@sancaklarify(pattern='^.lfy')
 def lfy(message):
     textx = message.reply_to_message
     qry = extract_args(message)
@@ -631,7 +631,7 @@ def lfy(message):
     )
 
 
-@Sancaklarify(pattern=r'.scam', compat=False)
+@sancaklarify(pattern=r'.scam', compat=False)
 def scam(client, message):
     options = [
         'typing',
@@ -675,7 +675,7 @@ def scam(client, message):
         return
 
 
-@Sancaklarify(pattern='^.type')
+@sancaklarify(pattern='^.type')
 def type(message):
     textx = message.reply_to_message
     type = extract_args(message)
@@ -699,7 +699,7 @@ def type(message):
         sleep(0.03)
 
 
-@Sancaklarify(pattern='^[Ss]krrt$')
+@sancaklarify(pattern='^[Ss]krrt$')
 def skrrt(message):
     t = f'{(message.text or message.caption)[0]}krrt'
     for j in range(16):
@@ -707,7 +707,7 @@ def skrrt(message):
         edit(message, t)
 
 
-@Sancaklarify(pattern='^[Oo]of$')
+@sancaklarify(pattern='^[Oo]of$')
 def oof(message):
     t = f'{(message.text or message.caption)[0]}of'
     for j in range(16):
@@ -715,7 +715,7 @@ def oof(message):
         edit(message, t)
 
 
-@Sancaklarify(pattern='^.10iq$')
+@sancaklarify(pattern='^.10iq$')
 def iqless(message):
     edit(
         message,
@@ -732,7 +732,7 @@ def iqless(message):
     )
 
 
-@Sancaklarify(pattern='^.mizah$')
+@sancaklarify(pattern='^.mizah$')
 def mizahshow(message):
     edit(
         message,
@@ -760,7 +760,7 @@ def mizahshow(message):
     )
 
 
-@Sancaklarify(pattern='^.h$')
+@sancaklarify(pattern='^.h$')
 def h(message):
     edit(
         message,
@@ -787,7 +787,7 @@ def h(message):
     )
 
 
-@Sancaklarify(pattern='^.(amogu|su)s')
+@sancaklarify(pattern='^.(amogu|su)s')
 def amogus(message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -805,7 +805,7 @@ def amogus(message):
 
     arr = randint(1, 12)
     fontsize = 100
-    FONT_FILE = 'SancaklarMedias/fonts/OpenSans.ttf'
+    FONT_FILE = 'sancaklarmedias/fonts/OpenSans.ttf'
     # https://github.com/KeyZenD/AmongUs
     url = 'https://raw.githubusercontent.com/KeyZenD/AmongUs/master/'
     font = ImageFont.truetype(FONT_FILE, size=int(fontsize))
@@ -835,7 +835,7 @@ def amogus(message):
     message.delete()
 
 
-@Sancaklarify(pattern='^.gay')
+@sancaklarify(pattern='^.gay')
 def gay_calculator(message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -857,22 +857,22 @@ def gay_calculator(message):
         edit(message, f'**{get_translation("gayString3", [random])}**')
 
 
-@Sancaklarify(pattern='^.react$')
+@sancaklarify(pattern='^.react$')
 def react(message):
     edit(message, choice(REACTS))
 
 
-@Sancaklarify(pattern='^.shg$')
+@sancaklarify(pattern='^.shg$')
 def shg(message):
     edit(message, choice(SHGS))
 
 
-@Sancaklarify(pattern='^.run$')
+@sancaklarify(pattern='^.run$')
 def run(message):
     edit(message, choice(RUNS))
 
 
-@Sancaklarify(pattern='^.xda$')
+@sancaklarify(pattern='^.xda$')
 def xda(message):
     """
     Copyright (c) @NaytSeyd, Quotes taken
@@ -880,7 +880,7 @@ def xda(message):
     edit(message, choice(XDA_STRINGS))
 
 
-@Sancaklarify(pattern='^.f (.*)')
+@sancaklarify(pattern='^.f (.*)')
 def payf(message):
     paytext = extract_args(message)
     pay = (

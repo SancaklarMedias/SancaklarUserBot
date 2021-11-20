@@ -13,11 +13,11 @@ from urllib.parse import unquote, urlparse
 
 from bs4 import BeautifulSoup
 from requests import Session, get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, get_webdriver, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, get_webdriver, sancaklarify
 
 
-@Sancaklarify(pattern=r'^.direct')
+@sancaklarify(pattern=r'^.direct')
 def direct(message):
     edit(message, f'`{get_translation("processing")}`')
     textx = message.reply_to_message

@@ -9,8 +9,8 @@
 
 from random import choice
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, get_translation, sancaklarify
 
 # ================= CONSTANT =================
 ECEM_STRINGS = [
@@ -206,7 +206,7 @@ ECEM_STRINGS = [
     "Dünyanın en tatlı varlığı",
     "Ya hahahahahahahahaha o benim tek aşkım",
     "Hadi İzmire",
-    "Buyrun Sancaklar hanım",
+    "Buyrun sancaklar hanım",
     "Arkada yeni farketmem djskskskskskkssksk",
     "Okulun güzel yanı",
     "Kes önce benim mesajlarıma bak sen",
@@ -271,10 +271,10 @@ ECEM_STRINGS = [
     "Tabi koçç",
     "Yuh 2 sene önceydi o",
     "Aslan 2 ay sonra barıştık biz onun üzerinden",
-    "Djdjdkkdkdkdkd çünkü o Sancaklar",
+    "Djdjdkkdkdkdkd çünkü o sancaklar",
     "Uğraşmaaa",
     "Yayaya♥♥♥",
-    "Birthday baby♥♥ -acil fotoğraf @Sancaklarogen",
+    "Birthday baby♥♥ -acil fotoğraf @sancaklarogen",
     "Sjsjdjjsksksks özlediğime değil ÇOK özlediğime",
     "Yaaaaa",
     "Deme bak gider boyatırım",
@@ -353,17 +353,17 @@ ECEM_STRINGS = [
     "SENİİİN👅",
     "Aşşşşşkkıım",
     "💗💗",
-    "Ah Sancaklar'im... küçük civcivim",
+    "Ah sancaklar'im... küçük civcivim",
     "💓💓💓💓",
     "Özlemini tişörtünle gideriyorum.",
     "Sus ya sen çok farklısın sanki",
-    "Sancaklar'e derdimi anlatıyorumdur. Sancaklar:",
+    "sancaklar'e derdimi anlatıyorumdur. sancaklar:",
     "Canımın içiiiii 💙",
     "😘😘",
     "Anlık sinir krizleri geçirildi",
     "Çevrimiçi olup olmadığımızı test ediyoruzdur #whatsapp yaktın bizi",
     "Djjdkdkmdöödööd",
-    "Ben almadım Sancaklar almış",
+    "Ben almadım sancaklar almış",
     "Hocam lütfen bir sonraki dersimize olsun",
     "Biraz da şerefsiz arkadaşlarımızı paylaşalım ♥️♥️♥️♥️",
     "sadece Doğum günümde yazıyorsunuz",
@@ -376,10 +376,10 @@ ECEM_STRINGS = [
     "Yemin ederim daha fazla sevenini görmedim jdjdkdkdkd",
 ]
 # ================= CONSTANT =================
-'''Copyright (c) @Sancaklarogen | 2020'''
+'''Copyright (c) @sancaklarogen | 2020'''
 
 
-@Sancaklarify(pattern='^.ecem$')
+@sancaklarify(pattern='^.ecem$')
 def ecemify(message):
     ecem(message)
 

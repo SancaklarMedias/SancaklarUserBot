@@ -11,18 +11,18 @@ from os import path, remove
 
 from PIL import Image
 from removebg import RemoveBg
-from Sancaklarbot import HELP, RBG_APIKEY
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, RBG_APIKEY
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     get_download_dir,
     get_translation,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.rbg$')
+@sancaklarify(pattern='^.rbg$')
 def rbg(message):
     if not RBG_APIKEY:
         return edit(

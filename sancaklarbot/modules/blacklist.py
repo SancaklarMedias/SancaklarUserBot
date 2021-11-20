@@ -10,14 +10,14 @@
 from io import BytesIO
 from re import IGNORECASE, escape, search
 
-from Sancaklarbot import HELP, LOGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, LOGS
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     reply,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
@@ -27,7 +27,7 @@ def blacklist_init():
         global sql
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.blacklist_sql')
+        sql = import_module('sancaklarmedias.sql.blacklist_sql')
     except Exception as e:
         sql = None
         LOGS.warn(get_translation('blacklistSqlLog'))
@@ -37,7 +37,7 @@ def blacklist_init():
 blacklist_init()
 
 
-@Sancaklarify(incoming=True, outgoing=False)
+@sancaklarify(incoming=True, outgoing=False)
 def blacklist(message):
     if message.from_user and message.from_user.is_self:
         message.continue_propagation()
@@ -73,7 +73,7 @@ def blacklist(message):
         message.continue_propagation()
 
 
-@Sancaklarify(pattern='^.addblacklist')
+@sancaklarify(pattern='^.addblacklist')
 def addblacklist(message):
     if not sql:
         edit(message, f'`{get_translation("nonSqlMode")}`')
@@ -92,7 +92,7 @@ def addblacklist(message):
     send_log(get_translation('blacklistLog', ['`', message.chat.id, text]))
 
 
-@Sancaklarify(pattern='^.showblacklist$')
+@sancaklarify(pattern='^.showblacklist$')
 def showblacklist(message):
     if not sql:
         edit(message, f'`{get_translation("nonSqlMode")}`')
@@ -115,7 +115,7 @@ def showblacklist(message):
         edit(message, OUT_STR)
 
 
-@Sancaklarify(pattern='^.rmblacklist')
+@sancaklarify(pattern='^.rmblacklist')
 def rmblacklist(message):
     if not sql:
         edit(message, f'`{get_translation("nonSqlMode")}`')

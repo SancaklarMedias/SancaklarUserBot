@@ -8,11 +8,11 @@
 #
 
 from pyrogram.types import ChatPermissions
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, get_translation, parse_cmd, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, get_translation, parse_cmd, sancaklarify
 
 
-@Sancaklarify(pattern=r'^.(un|)lock', compat=False, private=False, admin=True)
+@sancaklarify(pattern=r'^.(un|)lock', compat=False, private=False, admin=True)
 def lock(client, message):
     text = (message.text or message.caption).replace(r'\s+', ' ').split(' ', 1)
 

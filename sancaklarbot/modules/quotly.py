@@ -10,11 +10,11 @@
 from time import sleep
 
 from pyrogram.errors import YouBlockedUser
-from Sancaklarbot import HELP
-from SancaklarMedias.core import PyroConversation, edit, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import PyroConversation, edit, get_translation, sancaklarify
 
 
-@Sancaklarify(pattern='^.q$', compat=False)
+@sancaklarify(pattern='^.q$', compat=False)
 def quotly(client, message):
     reply = message.reply_to_message
     if reply and (reply.text or reply.photo or reply.sticker):

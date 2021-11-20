@@ -7,15 +7,15 @@
 # All rights reserved. See COPYING, AUTHORS.
 #
 
-from Sancaklarbot import HELP, LOG_ID, LOGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, LOG_ID, LOGS
+from sancaklarmedias.core import (
     edit,
     extract_args,
     forward,
     get_messages,
     get_translation,
     reply_msg,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
@@ -25,7 +25,7 @@ def snips_init():
         global sql
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.snips_sql')
+        sql = import_module('sancaklarmedias.sql.snips_sql')
     except Exception as e:
         sql = None
         LOGS.warn(get_translation('snipsSqlLog'))
@@ -35,10 +35,10 @@ def snips_init():
 snips_init()
 
 
-@Sancaklarify(pattern='^.addsnip')
+@sancaklarify(pattern='^.addsnip')
 def save_snip(message):
     try:
-        from SancaklarMedias.sql.snips_sql import add_snip
+        from sancaklarmedias.sql.snips_sql import add_snip
     except AttributeError:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -72,10 +72,10 @@ def save_snip(message):
         edit(message, get_translation('snipsAdded', ['`', keyword]))
 
 
-@Sancaklarify(pattern='^.snips$')
+@sancaklarify(pattern='^.snips$')
 def snip_list(message):
     try:
-        from SancaklarMedias.sql.snips_sql import get_snips
+        from sancaklarmedias.sql.snips_sql import get_snips
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -92,10 +92,10 @@ def snip_list(message):
     edit(message, list)
 
 
-@Sancaklarify(pattern='^.remsnip')
+@sancaklarify(pattern='^.remsnip')
 def delete_snip(message):
     try:
-        from SancaklarMedias.sql.snips_sql import remove_snip
+        from sancaklarmedias.sql.snips_sql import remove_snip
     except AttributeError:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -113,7 +113,7 @@ def delete_snip(message):
 def get_snip(message):
     try:
         try:
-            from SancaklarMedias.sql.snips_sql import get_snip
+            from sancaklarmedias.sql.snips_sql import get_snip
         except BaseException:
             edit(message, f'`{get_translation("nonSqlMode")}`')
             return

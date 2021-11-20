@@ -23,8 +23,8 @@ from gtts import gTTS
 from gtts.lang import tts_langs
 from pyrogram.types import InputMediaPhoto
 from requests import get
-from Sancaklarbot import HELP, Sancaklar_LANG
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, sancaklar_LANG
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
@@ -32,7 +32,7 @@ from SancaklarMedias.core import (
     google_domains,
     reply_doc,
     reply_voice,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 from urbandict import define
@@ -40,18 +40,18 @@ from wikipedia import set_lang, summary
 from wikipedia.exceptions import DisambiguationError, PageError
 
 CARBONLANG = 'auto'
-TTS_LANG = Sancaklar_LANG
-TRT_LANG = Sancaklar_LANG
+TTS_LANG = sancaklar_LANG
+TRT_LANG = sancaklar_LANG
 
 
-@Sancaklarify(pattern='^.crblang')
+@sancaklarify(pattern='^.crblang')
 def carbonlang(message):
     global CARBONLANG
     CARBONLANG = extract_args(message)
     edit(message, get_translation('carbonLang', ['**', CARBONLANG]))
 
 
-@Sancaklarify(pattern='^.carbon')
+@sancaklarify(pattern='^.carbon')
 def carbon(message):
     match = extract_args(message)
     if len(match) < 1:
@@ -94,7 +94,7 @@ def carbon(message):
     driver.quit()
 
 
-@Sancaklarify(pattern='^.img')
+@sancaklarify(pattern='^.img')
 def img(message):
     query = extract_args(message)
     lim = findall(r'lim=\d+', query)
@@ -160,7 +160,7 @@ def img(message):
     reply_doc(message, files, delete_orig=True, delete_after_send=True)
 
 
-@Sancaklarify(pattern=r'^.google')
+@sancaklarify(pattern=r'^.google')
 def google(message):
     match = extract_args(message)
     if len(match) < 1:
@@ -217,7 +217,7 @@ def do_gsearch(query, page):
 
     query = parse_key(query)
     page = find_page(page)
-    temp = f'/search?q={query}&start={find_page(page)}&hl={Sancaklar_LANG}'
+    temp = f'/search?q={query}&start={find_page(page)}&hl={sancaklar_LANG}'
 
     req = get(
         f'https://{choice(google_domains)}{temp}',
@@ -258,7 +258,7 @@ def do_gsearch(query, page):
     return out
 
 
-@Sancaklarify(pattern='^.d(uckduck|d)go')
+@sancaklarify(pattern='^.d(uckduck|d)go')
 def ddgo(message):
     query = extract_args(message)
     if len(query) < 1:
@@ -319,7 +319,7 @@ def do_ddsearch(res1):
     return out
 
 
-@Sancaklarify(pattern='^.ud')
+@sancaklarify(pattern='^.ud')
 def urbandictionary(message):
     query = extract_args(message)
     if len(query) < 1:
@@ -361,20 +361,20 @@ def urbandictionary(message):
         edit(
             message,
             get_translation(
-                'SancaklarQueryUd', ['**', '`', query, mean[0]['def'], mean[0]['example']]
+                'sancaklarQueryUd', ['**', '`', query, mean[0]['def'], mean[0]['example']]
             ),
         )
     else:
         edit(message, get_translation('udNoResult', ['**', query]))
 
 
-@Sancaklarify(pattern='^.wiki')
+@sancaklarify(pattern='^.wiki')
 def wiki(message):
     args = extract_args(message)
     if len(args) < 1:
         edit(message, f'`{get_translation("wrongCommand")}`')
         return
-    set_lang(Sancaklar_LANG)
+    set_lang(sancaklar_LANG)
     try:
         summary(args)
     except DisambiguationError as error:
@@ -394,12 +394,12 @@ def wiki(message):
             caption=f'`{get_translation("outputTooLarge")}`',
             delete_after_send=True,
         )
-    edit(message, get_translation('SancaklarQuery', ['**', '`', args, result]))
+    edit(message, get_translation('sancaklarQuery', ['**', '`', args, result]))
 
     send_log(get_translation('wikiLog', ['`', args]))
 
 
-@Sancaklarify(pattern='^.tts')
+@sancaklarify(pattern='^.tts')
 def text_to_speech(message):
     reply = message.reply_to_message
     args = extract_args(message)
@@ -439,7 +439,7 @@ def text_to_speech(message):
     send_log(get_translation('ttsLog'))
 
 
-@Sancaklarify(pattern='^.trt')
+@sancaklarify(pattern='^.trt')
 def translate(message):
     translator = Translator()
     reply = message.reply_to_message
@@ -478,7 +478,7 @@ def deEmojify(inputString):
     return get_emoji_regexp().sub(u'', inputString)
 
 
-@Sancaklarify(pattern='^.lang')
+@sancaklarify(pattern='^.lang')
 def lang(message):
     arr = extract_args(message).split(' ', 1)
 
@@ -511,7 +511,7 @@ def lang(message):
     send_log(get_translation('scraperLog', ['`', scraper, LANG.title()]))
 
 
-@Sancaklarify(pattern='^.d[oö]viz')
+@sancaklarify(pattern='^.d[oö]viz')
 def doviz(message):
     page = BeautifulSoup(get('https://www.doviz.com/').content, 'html.parser')
     res = page.find_all('div', {'class', 'item'})

@@ -13,22 +13,22 @@ from barcode import get
 from barcode.writer import ImageWriter
 from bs4 import BeautifulSoup
 from PIL import Image
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_download_dir,
     get_translation,
     reply_sticker,
-    Sancaklarify,
+    sancaklarify,
 )
 from urllib3 import PoolManager
 
 from qrcode import QRCode, constants
 
 
-@Sancaklarify(pattern='^.decode$')
+@sancaklarify(pattern='^.decode$')
 def parseqr(message):
     reply = message.reply_to_message
     if (
@@ -77,7 +77,7 @@ def parseqr(message):
         edit(message, f'`{get_translation("decodeFail")}`')
 
 
-@Sancaklarify(pattern='^.barcode')
+@sancaklarify(pattern='^.barcode')
 def barcode(message):
     input_str = extract_args(message)
     reply = message.reply_to_message
@@ -99,7 +99,7 @@ def barcode(message):
         return
 
 
-@Sancaklarify(pattern='^.makeqr')
+@sancaklarify(pattern='^.makeqr')
 def makeqr(message):
     input_str = extract_args(message)
     reply = message.reply_to_message

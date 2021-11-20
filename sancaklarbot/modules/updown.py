@@ -10,19 +10,19 @@
 from os.path import isfile
 from time import time
 
-from Sancaklarbot import HELP, TEMP_SETTINGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, TEMP_SETTINGS
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
     reply_video,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.download$')
+@sancaklarify(pattern='^.download$')
 def download(message):
     reply = message.reply_to_message
     if not reply or not reply.media:
@@ -53,7 +53,7 @@ def download(message):
     del TEMP_SETTINGS[f'upload_{posix}']
 
 
-@Sancaklarify(pattern='^.upload')
+@sancaklarify(pattern='^.upload')
 def upload(message):
     args = extract_args(message)
 

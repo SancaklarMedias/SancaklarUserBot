@@ -11,14 +11,14 @@ from os import execl, path
 from sys import argv, executable
 
 from heroku3 import from_key
-from Sancaklarbot import HELP, HEROKU_APPNAME, HEROKU_KEY, REPO_URL
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, HEROKU_APPNAME, HEROKU_KEY, REPO_URL
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     reply,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
 
 from git import Repo  # type: ignore
@@ -46,7 +46,7 @@ def update_requirements():
         return repr(e)
 
 
-@Sancaklarify(pattern='^.update')
+@sancaklarify(pattern='^.update')
 def upstream(ups):
     edit(ups, f'`{get_translation("updateCheck")}`')
     conf = extract_args(ups)
@@ -74,12 +74,12 @@ def upstream(ups):
         origin = repo.create_remote('upstream', off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head('Sancaklar', origin.refs.Sancaklar)
-        repo.heads.Sancaklar.set_tracking_branch(origin.refs.Sancaklar)
-        repo.heads.Sancaklar.checkout(True)
+        repo.create_head('sancaklar', origin.refs.sancaklar)
+        repo.heads.sancaklar.set_tracking_branch(origin.refs.sancaklar)
+        repo.heads.sancaklar.checkout(True)
 
     ac_br = repo.active_branch.name
-    if ac_br != 'Sancaklar':
+    if ac_br != 'sancaklar':
         edit(ups, get_translation('updateFolderError', ['**', ac_br]))
         repo.__del__()
         return
@@ -116,7 +116,7 @@ def upstream(ups):
     if force_update:
         edit(ups, f'`{get_translation("updateForceSync")}`')
     else:
-        edit(ups, f'`{get_translation("updateSancaklarBot")}`')
+        edit(ups, f'`{get_translation("updatesancaklarBot")}`')
 
     if HEROKU_KEY:
         try:

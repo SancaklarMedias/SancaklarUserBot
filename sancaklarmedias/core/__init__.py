@@ -12,7 +12,7 @@ from .image import *
 from .misc import *
 from .proxy import *
 from .replier import *
-from .Sancaklarify import *
-from .Sancaklarlog import *
+from .sancaklarify import *
+from .sancaklarlog import *
 from .send import *
 from .webdriver import *

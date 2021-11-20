@@ -10,8 +10,8 @@
 from re import IGNORECASE, I, match, sub
 from sre_constants import error as sre_err
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, get_translation, sancaklarify
 
 DELIMITERS = ('/', ':', '|', '_')
 
@@ -63,7 +63,7 @@ def separate_sed(sed_string):
     return None
 
 
-@Sancaklarify(pattern='^sed')
+@sancaklarify(pattern='^sed')
 def sed(message):
     sed_result = separate_sed(message.text or message.caption)
     textx = message.reply_to_message

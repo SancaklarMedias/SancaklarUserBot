@@ -13,16 +13,16 @@ from os import remove, path
 from exifread import process_file
 from fractions import Fraction
 from PIL import Image
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     get_translation,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern="^.exif")
+@sancaklarify(pattern="^.exif")
 def exif_data(message):
     reply = message.reply_to_message
     google_coordinate = ["https://www.google.com/maps?q="]

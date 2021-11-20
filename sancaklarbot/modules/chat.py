@@ -9,8 +9,8 @@
 
 from time import sleep
 
-from Sancaklarbot import HELP, LOGS
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify, send_log
+from sancaklarbot import HELP, LOGS
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify, send_log
 
 
 def chat_init():
@@ -18,7 +18,7 @@ def chat_init():
         global sql
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.keep_read_sql')
+        sql = import_module('sancaklarmedias.sql.keep_read_sql')
     except Exception as e:
         sql = None
         LOGS.warn(get_translation('chatSqlLog'))
@@ -28,10 +28,10 @@ def chat_init():
 chat_init()
 
 
-@Sancaklarify(pattern='^.unmutechat$')
+@sancaklarify(pattern='^.unmutechat$')
 def unmutechat(message):
     try:
-        from SancaklarMedias.sql.keep_read_sql import unkread
+        from sancaklarmedias.sql.keep_read_sql import unkread
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -44,10 +44,10 @@ def unmutechat(message):
     message.delete()
 
 
-@Sancaklarify(pattern='^.mutechat$')
+@sancaklarify(pattern='^.mutechat$')
 def mutechat(message):
     try:
-        from SancaklarMedias.sql.keep_read_sql import kread
+        from sancaklarmedias.sql.keep_read_sql import kread
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -62,13 +62,13 @@ def mutechat(message):
     send_log(get_translation('chatLog', [message.chat.id]))
 
 
-@Sancaklarify(incoming=True, compat=False)
+@sancaklarify(incoming=True, compat=False)
 def keep_read(client, message):
     if message.from_user and message.from_user.is_self:
         message.continue_propagation()
 
     try:
-        from SancaklarMedias.sql.keep_read_sql import is_kread
+        from sancaklarmedias.sql.keep_read_sql import is_kread
     except BaseException:
         return
 
@@ -78,11 +78,11 @@ def keep_read(client, message):
     message.continue_propagation()
 
 
-@Sancaklarify(pattern='^.call')
+@sancaklarify(pattern='^.call')
 def call_notes(message):
     try:
-        from Sancaklarbot.modules.notes import get_note
-        from Sancaklarbot.modules.snips import get_snip
+        from sancaklarbot.modules.notes import get_note
+        from sancaklarbot.modules.snips import get_snip
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -98,7 +98,7 @@ def call_notes(message):
 
 def is_muted(chat_id):
     try:
-        from SancaklarMedias.sql.keep_read_sql import is_kread
+        from sancaklarmedias.sql.keep_read_sql import is_kread
     except BaseException:
         return False
 

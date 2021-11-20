@@ -7,7 +7,7 @@
 # All rights reserved. See COPYING, AUTHORS.
 #
 
-from SancaklarMedias.translator import get_language_files, pwd
+from sancaklarmedias.translator import get_language_files, pwd
 from json import dumps, loads
 
 

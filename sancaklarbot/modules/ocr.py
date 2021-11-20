@@ -10,13 +10,13 @@
 from os import remove
 
 from requests import post
-from Sancaklarbot import HELP, OCR_APIKEY
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, OCR_APIKEY
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
@@ -36,7 +36,7 @@ def ocr_file(filename, language='eng', overlay=False, api_key=OCR_APIKEY):
     return r.json()
 
 
-@Sancaklarify(pattern=r'^.ocr')
+@sancaklarify(pattern=r'^.ocr')
 def ocr(message):
     if not OCR_APIKEY:
         return edit(

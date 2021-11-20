@@ -1,4 +1,4 @@
-# Sancaklar UserBot Translations
+# sancaklar UserBot Translations
 
 **Attention!** If there is any language you want to add, create a pull request.
 

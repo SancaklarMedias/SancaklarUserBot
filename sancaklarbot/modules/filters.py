@@ -9,8 +9,8 @@
 
 from re import IGNORECASE, fullmatch
 
-from Sancaklarbot import HELP, LOG_ID, LOGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, LOG_ID, LOGS
+from sancaklarmedias.core import (
     edit,
     extract_args,
     forward,
@@ -18,7 +18,7 @@ from SancaklarMedias.core import (
     get_translation,
     reply,
     reply_msg,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
@@ -28,7 +28,7 @@ def filters_init():
         global sql
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.filters_sql')
+        sql = import_module('sancaklarmedias.sql.filters_sql')
     except Exception as e:
         sql = None
         LOGS.warn(get_translation('filtersSqlLog'))
@@ -38,7 +38,7 @@ def filters_init():
 filters_init()
 
 
-@Sancaklarify(incoming=True, outgoing=False)
+@sancaklarify(incoming=True, outgoing=False)
 def filter_incoming(message):
     if message.from_user and message.from_user.is_self:
         message.continue_propagation()
@@ -48,7 +48,7 @@ def filter_incoming(message):
         message.continue_propagation()
 
     try:
-        from SancaklarMedias.sql.filters_sql import get_filters
+        from sancaklarmedias.sql.filters_sql import get_filters
     except BaseException:
         message.continue_propagation()
 
@@ -78,10 +78,10 @@ def filter_incoming(message):
     message.continue_propagation()
 
 
-@Sancaklarify(pattern='^.addfilter')
+@sancaklarify(pattern='^.addfilter')
 def add_filter(message):
     try:
-        from SancaklarMedias.sql.filters_sql import add_filter
+        from sancaklarmedias.sql.filters_sql import add_filter
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -115,10 +115,10 @@ def add_filter(message):
         edit(message, get_translation('filterUpdated', ['**', '`', keyword]))
 
 
-@Sancaklarify(pattern='^.stop')
+@sancaklarify(pattern='^.stop')
 def stop_filter(message):
     try:
-        from SancaklarMedias.sql.filters_sql import remove_filter
+        from sancaklarmedias.sql.filters_sql import remove_filter
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -129,10 +129,10 @@ def stop_filter(message):
         edit(message, get_translation('filterRemoved', ['**', '`', filt]))
 
 
-@Sancaklarify(pattern='^.stopall$')
+@sancaklarify(pattern='^.stopall$')
 def stop_filter_all(message):
     try:
-        from SancaklarMedias.sql.filters_sql import get_filters, remove_filter
+        from sancaklarmedias.sql.filters_sql import get_filters, remove_filter
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -143,10 +143,10 @@ def stop_filter_all(message):
     edit(message, get_translation('filterRemoved', ['**', '`', ', '.join(filtwords)]))
 
 
-@Sancaklarify(pattern='^.filters$')
+@sancaklarify(pattern='^.filters$')
 def filters(message):
     try:
-        from SancaklarMedias.sql.filters_sql import get_filters
+        from sancaklarmedias.sql.filters_sql import get_filters
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return

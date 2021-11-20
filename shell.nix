@@ -18,15 +18,15 @@ pkgs.mkShell {
     unset SOURCE_DATE_EPOCH
 
     # update bot
-    $GIT pull && $GIT checkout Sancaklar
+    $GIT pull && $GIT checkout sancaklar
     echo "Fetching dependencies..."
     $PIP install -r requirements.txt
     
-    if [ -f "config.env" -a -f "Sancaklaruserbot.session" ]; then
+    if [ -f "config.env" -a -f "sancaklaruserbot.session" ]; then
       # update chromedriver path
       sed -i -E '/CHROME_DRIVER/d' config.env
       echo "CHROME_DRIVER='${pkgs.chromedriver}/bin/chromedriver'" >> config.env
-      $PYTHON Sancaklar.py
+      $PYTHON sancaklar.py
       exit
     else
       # first run
@@ -34,7 +34,7 @@ pkgs.mkShell {
       mv sample_config.env config.env
       echo "Press enter to edit config.env file..." && read >> /dev/null
       nano config.env
-      echo "Type 'nix-shell' to start SancaklarUserBot!"
+      echo "Type 'nix-shell' to start sancaklarUserBot!"
       exit
     fi
     '';

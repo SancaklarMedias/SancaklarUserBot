@@ -29,10 +29,10 @@ Create a new application, by entering the required details\n''')
         API_HASH = input('API HASH: ')
 
     app = Client(
-        'Sancaklaruserbot',
+        'sancaklaruserbot',
         api_id=API_ID,
         api_hash=API_HASH,
-        app_version='SancaklarMedias',
+        app_version='sancaklarmedias',
         device_model='Firefox 91.0.2',
         system_version='Session',
         lang_code='en',
@@ -73,10 +73,10 @@ Gerekli ayrıntıları girerek yeni bir uygulama oluşturun\n''')
         API_HASH = input('API HASH: ')
 
     app = Client(
-        'Sancaklaruserbot',
+        'sancaklaruserbot',
         api_id=API_ID,
         api_hash=API_HASH,
-        app_version='SancaklarMedias',
+        app_version='sancaklarmedias',
         device_model='Firefox 91.0.2',
         system_version='Session',
         lang_code='tr',

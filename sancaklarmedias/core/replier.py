@@ -12,7 +12,7 @@ from os import remove, path
 from pyrogram.types import Message
 
 from .misc import MARKDOWN_FIX_CHAR, get_duration, __status_out__
-from Sancaklarbot import LOG_VERBOSE
+from sancaklarbot import LOG_VERBOSE
 
 
 def reply_img(

@@ -11,18 +11,18 @@ from base64 import b64decode
 from re import match
 from time import sleep
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     get_webdriver,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.ss')
+@sancaklarify(pattern='^.ss')
 def screenshot(message):
     input_str = extract_args(message)
     reply = message.reply_to_message

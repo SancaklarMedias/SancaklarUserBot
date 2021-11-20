@@ -9,8 +9,8 @@
 
 from threading import Event
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     edit,
     extract_args,
     extract_args_arr,
@@ -18,13 +18,13 @@ from SancaklarMedias.core import (
     increment_spam_count,
     reply,
     reply_img,
-    Sancaklarify,
+    sancaklarify,
     send_log,
     spam_allowed,
 )
 
 
-@Sancaklarify(pattern='^.tspam')
+@sancaklarify(pattern='^.tspam')
 def tspam(message):
     tspam = extract_args(message)
     if len(tspam) < 1:
@@ -44,7 +44,7 @@ def tspam(message):
     send_log(get_translation('tspamLog'))
 
 
-@Sancaklarify(pattern='^.spam')
+@sancaklarify(pattern='^.spam')
 def spam(message):
     spam = extract_args(message)
     if len(spam) < 1:
@@ -71,7 +71,7 @@ def spam(message):
     send_log(get_translation('spamLog'))
 
 
-@Sancaklarify(pattern='^.picspam')
+@sancaklarify(pattern='^.picspam')
 def picspam(message):
     arr = extract_args_arr(message)
     if len(arr) < 2 or not arr[0].isdigit():
@@ -93,7 +93,7 @@ def picspam(message):
     send_log(get_translation('picspamLog'))
 
 
-@Sancaklarify(pattern='^.delayspam')
+@sancaklarify(pattern='^.delayspam')
 def delayspam(message):
     # Copyright (c) @ReversedPosix | 2020-2021
     delayspam = extract_args(message)

@@ -10,11 +10,11 @@
 from json import loads
 
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify
 
 
-@Sancaklarify(pattern='^.github')
+@sancaklarify(pattern='^.github')
 def github(message):
     args = extract_args(message)
 

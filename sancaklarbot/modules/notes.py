@@ -7,15 +7,15 @@
 # All rights reserved. See COPYING, AUTHORS.
 #
 
-from Sancaklarbot import HELP, LOG_ID, LOGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, LOG_ID, LOGS
+from sancaklarmedias.core import (
     edit,
     extract_args,
     forward,
     get_messages,
     get_translation,
     reply_msg,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
@@ -25,7 +25,7 @@ def notes_init():
         global sql
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.notes_sql')
+        sql = import_module('sancaklarmedias.sql.notes_sql')
     except Exception as e:
         sql = None
         LOGS.warn(get_translation('notesSqlLog'))
@@ -35,10 +35,10 @@ def notes_init():
 notes_init()
 
 
-@Sancaklarify(pattern='^.notes$')
+@sancaklarify(pattern='^.notes$')
 def notes(message):
     try:
-        from SancaklarMedias.sql.notes_sql import get_notes
+        from sancaklarmedias.sql.notes_sql import get_notes
     except AttributeError:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -53,10 +53,10 @@ def notes(message):
     edit(message, reply)
 
 
-@Sancaklarify(pattern=r'^.save')
+@sancaklarify(pattern=r'^.save')
 def save_note(message):
     try:
-        from SancaklarMedias.sql.notes_sql import add_note
+        from sancaklarmedias.sql.notes_sql import add_note
     except AttributeError:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -90,10 +90,10 @@ def save_note(message):
         edit(message, get_translation('notesAdded', ['`', keyword]))
 
 
-@Sancaklarify(pattern=r'^.clear')
+@sancaklarify(pattern=r'^.clear')
 def clear_note(message):
     try:
-        from SancaklarMedias.sql.notes_sql import rm_note
+        from sancaklarmedias.sql.notes_sql import rm_note
     except AttributeError:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -108,7 +108,7 @@ def clear_note(message):
 def get_note(message):
     try:
         try:
-            from SancaklarMedias.sql.notes_sql import get_note
+            from sancaklarmedias.sql.notes_sql import get_note
         except BaseException:
             edit(message, f'`{get_translation("nonSqlMode")}`')
             return

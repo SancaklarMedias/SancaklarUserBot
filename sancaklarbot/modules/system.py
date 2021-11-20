@@ -14,24 +14,24 @@ from operator import add, mul, neg, pow, sub, truediv, xor
 from shutil import which
 
 from pyrogram.raw.functions.help import GetNearestDc
-from Sancaklarbot import ALIVE_MSG, BOT_VERSION, CHANNEL, HELP, HOSTNAME, USER
-from Sancaklarbot.modules.ecem import ecem
-from SancaklarMedias.core import (
+from sancaklarbot import ALIVE_MSG, BOT_VERSION, CHANNEL, HELP, HOSTNAME, USER
+from sancaklarbot.modules.ecem import ecem
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     reply,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
 # ================= CONSTANT =================
-CUSTOM_MSG = ALIVE_MSG or f"`{get_translation('SancaklarAlive')}`"
+CUSTOM_MSG = ALIVE_MSG or f"`{get_translation('sancaklarAlive')}`"
 # ============================================
 
 
-@Sancaklarify(pattern='^.neofetch$')
+@sancaklarify(pattern='^.neofetch$')
 def neofetch(message):
     try:
         from subprocess import PIPE, Popen
@@ -47,7 +47,7 @@ def neofetch(message):
         edit(message, f'`{get_translation("neofetchNotFound")}`')
 
 
-@Sancaklarify(pattern='^.botver$')
+@sancaklarify(pattern='^.botver$')
 def bot_version(message):
     if which('git'):
         from subprocess import PIPE, Popen
@@ -63,16 +63,16 @@ def bot_version(message):
         edit(
             message,
             get_translation(
-                'SancaklarShowBotVersion',
+                'sancaklarShowBotVersion',
                 ['**', '`', CHANNEL, BOT_VERSION, result],
             ),
             preview=False,
         )
     else:
-        edit(message, f'`{get_translation("SancaklarGitNotFound")}`')
+        edit(message, f'`{get_translation("sancaklarGitNotFound")}`')
 
 
-@Sancaklarify(pattern='^.ping$')
+@sancaklarify(pattern='^.ping$')
 def ping(message):
     start = datetime.now()
     edit(message, '**Pong!**')
@@ -81,7 +81,7 @@ def ping(message):
     edit(message, f'**Pong!**\n`{time}ms`')
 
 
-@Sancaklarify(pattern='^.alive$')
+@sancaklarify(pattern='^.alive$')
 def alive(message):
     if CUSTOM_MSG.lower() == 'ecem':
         ecem(message)
@@ -89,7 +89,7 @@ def alive(message):
     edit(message, f'{CUSTOM_MSG}')
 
 
-@Sancaklarify(pattern='^.echo')
+@sancaklarify(pattern='^.echo')
 def test_echo(message):
     args = extract_args(message)
     if len(args) > 0:
@@ -99,20 +99,20 @@ def test_echo(message):
         edit(message, f'`{get_translation("echoHelp")}`')
 
 
-@Sancaklarify(pattern='^.dc$', compat=False)
+@sancaklarify(pattern='^.dc$', compat=False)
 def data_center(client, message):
     result = client.send(GetNearestDc())
 
     edit(
         message,
         get_translation(
-            'SancaklarNearestDC',
+            'sancaklarNearestDC',
             ['**', '`', result.country, result.nearest_dc, result.this_dc],
         ),
     )
 
 
-@Sancaklarify(pattern='^.term')
+@sancaklarify(pattern='^.term')
 def terminal(message):
     command = extract_args(message)
 
@@ -134,7 +134,7 @@ def terminal(message):
 
     result = get_translation("termNoResult")
     try:
-        from SancaklarMedias.core.misc import __status_out__
+        from sancaklarmedias.core.misc import __status_out__
         _, result = __status_out__(command)
     except BaseException as e:
         pass
@@ -156,7 +156,7 @@ def terminal(message):
     send_log(get_translation('termLog', [command]))
 
 
-@Sancaklarify(pattern='^.eval')
+@sancaklarify(pattern='^.eval')
 def eval(message):
     args = extract_args(message)
     if len(args) < 1:
@@ -180,17 +180,17 @@ def eval(message):
                     return
                 edit(
                     message,
-                    get_translation('SancaklarQuery', ['**', '`', args, evaluation]),
+                    get_translation('sancaklarQuery', ['**', '`', args, evaluation]),
                 )
         else:
             edit(
                 message,
                 get_translation(
-                    'SancaklarQuery', ['**', '`', args, get_translation('SancaklarErrorResult')]
+                    'sancaklarQuery', ['**', '`', args, get_translation('sancaklarErrorResult')]
                 ),
             )
     except Exception as err:
-        edit(message, get_translation('SancaklarQuery', ['**', '`', args, str(err)]))
+        edit(message, get_translation('sancaklarQuery', ['**', '`', args, str(err)]))
 
     send_log(get_translation('evalLog', [args]))
 

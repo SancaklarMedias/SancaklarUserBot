@@ -7,7 +7,7 @@
 # All rights reserved. See COPYING, AUTHORS.
 #
 
-from Sancaklarbot import CHROME_DRIVER
+from sancaklarbot import CHROME_DRIVER
 from selenium.webdriver import Chrome, ChromeOptions
 
 

@@ -1,1 +1,1 @@
-Sancaklar: python3 Sancaklar.py
+sancaklar: python3 sancaklar.py

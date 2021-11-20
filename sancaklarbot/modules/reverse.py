@@ -15,14 +15,14 @@ from bs4 import BeautifulSoup
 from PIL import Image
 from pyrogram.types import InputMediaPhoto
 from requests import get, post
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
 )
 
 opener = request.build_opener()
@@ -30,7 +30,7 @@ useragent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gec
 opener.addheaders = [('User-agent', useragent)]
 
 
-@Sancaklarify(pattern='^.reverse$')
+@sancaklarify(pattern='^.reverse$')
 def reverse(message):
     photo = 'reverse.png'
     if path.isfile(photo):

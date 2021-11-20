@@ -12,11 +12,11 @@ from re import DOTALL, sub
 
 from bs4 import BeautifulSoup
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify
 
 
-@Sancaklarify(pattern='^.ezanvakti')
+@sancaklarify(pattern='^.ezanvakti')
 def ezanvakti(message):
     konum = extract_args(message).lower()
     if len(konum) < 1:

@@ -11,8 +11,8 @@ from re import sub
 from urllib.parse import quote
 
 from pylast import LastFMNetwork, User, md5
-from Sancaklarbot import HELP, environ
-from SancaklarMedias.core import edit, get_translation, Sancaklarify
+from sancaklarbot import HELP, environ
+from sancaklarmedias.core import edit, get_translation, sancaklarify
 
 # =================== CONSTANT ===================
 LASTFM_API = environ.get('LASTFM_API', None)
@@ -32,7 +32,7 @@ else:
 # ================================================
 
 
-@Sancaklarify(pattern='^.lastfm$')
+@sancaklarify(pattern='^.lastfm$')
 def last_fm(message):
     edit(message, f'`{get_translation("processing")}`')
     if not lastfm:

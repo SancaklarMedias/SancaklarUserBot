@@ -11,7 +11,7 @@ from time import sleep
 
 from dotenv import dotenv_values
 from heroku3 import from_key
-from Sancaklarbot import (
+from sancaklarbot import (
     ENV_RESTRICTED_KEYS,
     HELP,
     HEROKU_APPNAME,
@@ -21,11 +21,11 @@ from Sancaklarbot import (
     set_local_env,
     unset_local_env,
 )
-from Sancaklarbot.modules.horeke import restart
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify
+from sancaklarbot.modules.horeke import restart
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify
 
 
-@Sancaklarify(pattern='^.env', compat=False)
+@sancaklarify(pattern='^.env', compat=False)
 def manage_env(client, message):
     action = extract_args(message).split(' ', 1)
 

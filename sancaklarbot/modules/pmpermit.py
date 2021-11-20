@@ -8,7 +8,7 @@
 #
 
 from re import VERBOSE
-from Sancaklarbot import (
+from sancaklarbot import (
     HELP,
     LOGS,
     PM_AUTO_BAN,
@@ -16,8 +16,8 @@ from Sancaklarbot import (
     PM_UNAPPROVED,
     TEMP_SETTINGS,
 )
-from Sancaklarbot.modules.chat import is_muted
-from SancaklarMedias.core import edit, get_translation, reply, Sancaklarify, send_log
+from sancaklarbot.modules.chat import is_muted
+from sancaklarmedias.core import edit, get_translation, reply, sancaklarify, send_log
 from sqlalchemy.exc import IntegrityError
 
 # ========================= CONSTANTS ============================
@@ -30,7 +30,7 @@ def pmpermit_init():
         global sql
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.pm_permit_sql')
+        sql = import_module('sancaklarmedias.sql.pm_permit_sql')
     except Exception as e:
         sql = None
         LOGS.warn(get_translation('pmpermitSqlLog'))
@@ -40,7 +40,7 @@ def pmpermit_init():
 pmpermit_init()
 
 
-@Sancaklarify(
+@sancaklarify(
     incoming=True,
     outgoing=True,
     disable_edited=True,
@@ -58,7 +58,7 @@ def permitpm(client, message):
 
         if message.chat.id != 777000:
             try:
-                from SancaklarMedias.sql.pm_permit_sql import is_approved
+                from sancaklarmedias.sql.pm_permit_sql import is_approved
             except BaseException:
                 pass
 
@@ -111,7 +111,7 @@ def auto_accept(client, message):
     self_user = TEMP_SETTINGS['ME']
     if message.chat.id not in [self_user.id, 777000]:
         try:
-            from SancaklarMedias.sql.pm_permit_sql import approve, is_approved
+            from sancaklarmedias.sql.pm_permit_sql import approve, is_approved
         except BaseException:
             return False
 
@@ -147,10 +147,10 @@ def auto_accept(client, message):
     return False
 
 
-@Sancaklarify(outgoing=True, pattern='^.notifoff$')
+@sancaklarify(outgoing=True, pattern='^.notifoff$')
 def notifoff(message):
     try:
-        from SancaklarMedias.sql.keep_read_sql import kread
+        from sancaklarmedias.sql.keep_read_sql import kread
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -159,10 +159,10 @@ def notifoff(message):
     edit(message, f'`{get_translation("pmNotifOff")}`')
 
 
-@Sancaklarify(outgoing=True, pattern='^.notifon$')
+@sancaklarify(outgoing=True, pattern='^.notifon$')
 def notifon(message):
     try:
-        from SancaklarMedias.sql.keep_read_sql import unkread
+        from sancaklarmedias.sql.keep_read_sql import unkread
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -171,10 +171,10 @@ def notifon(message):
     edit(message, f'`{get_translation("pmNotifOn")}`')
 
 
-@Sancaklarify(outgoing=True, pattern='^.approve$', compat=False)
+@sancaklarify(outgoing=True, pattern='^.approve$', compat=False)
 def approvepm(client, message):
     try:
-        from SancaklarMedias.sql.pm_permit_sql import approve
+        from sancaklarmedias.sql.pm_permit_sql import approve
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return
@@ -207,10 +207,10 @@ def approvepm(client, message):
         return
 
 
-@Sancaklarify(outgoing=True, pattern="^.disapprove$")
+@sancaklarify(outgoing=True, pattern="^.disapprove$")
 def disapprovepm(message):
     try:
-        from SancaklarMedias.sql.pm_permit_sql import dissprove
+        from sancaklarmedias.sql.pm_permit_sql import dissprove
     except BaseException:
         edit(message, f'`{get_translation("nonSqlMode")}`')
         return

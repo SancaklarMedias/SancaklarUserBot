@@ -13,11 +13,11 @@ from sys import argv, executable
 
 from heroku3 import from_key
 from requests import get
-from Sancaklarbot import HELP, HEROKU_APPNAME, HEROKU_KEY
-from SancaklarMedias.core import edit, get_translation, reply_doc, Sancaklarify, send_log
+from sancaklarbot import HELP, HEROKU_APPNAME, HEROKU_KEY
+from sancaklarmedias.core import edit, get_translation, reply_doc, sancaklarify, send_log
 
 
-@Sancaklarify(pattern='^.(quo|ko)ta$')
+@sancaklarify(pattern='^.(quo|ko)ta$')
 def dyno(message):
     if not HEROKU_KEY:
         edit(message, f"`{get_translation('notHeroku')}`")
@@ -115,12 +115,12 @@ def dyno(message):
     )
 
 
-@Sancaklarify(pattern='^.(restart|yb)$')
+@sancaklarify(pattern='^.(restart|yb)$')
 def _restart(message):
     return restart(message)
 
 
-@Sancaklarify(pattern='^.d(restart|yb)$')
+@sancaklarify(pattern='^.d(restart|yb)$')
 def _drestart(message):
     return restart(message, dyno=True)
 
@@ -173,14 +173,14 @@ def restart(message, dyno=False):
     dynos[0].restart()
 
 
-@Sancaklarify(pattern='^.(shutdown|kapat)$')
+@sancaklarify(pattern='^.(shutdown|kapat)$')
 def shutdown(message):
     edit(message, f'`{get_translation("shutdown")}`')
     send_log(get_translation('shutdownLog'))
 
     def std_off():
         try:
-            from SancaklarMedias.core.misc import __status_out__
+            from sancaklarmedias.core.misc import __status_out__
             __status_out__(f'kill -7 {getpid()}')
         except Exception:
             pass
@@ -213,10 +213,10 @@ def shutdown(message):
         std_off()
         return
 
-    heroku_app.scale_formation_process('Sancaklar', 0)
+    heroku_app.scale_formation_process('sancaklar', 0)
 
 
-@Sancaklarify(pattern='^.logs$')
+@sancaklarify(pattern='^.logs$')
 def dyno_logs(message):
     if not HEROKU_KEY:
         edit(message, f"`{get_translation('notHeroku')}`")
@@ -245,7 +245,7 @@ def dyno_logs(message):
         )
         return
 
-    filename = 'Sancaklar_heroku_log.txt'
+    filename = 'sancaklar_heroku_log.txt'
 
     with open(filename, 'w+') as log:
         log.write(heroku_app.get_log())

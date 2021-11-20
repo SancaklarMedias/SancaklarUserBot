@@ -14,14 +14,14 @@ from PIL import Image
 from pyrogram.errors import UsernameOccupied
 from pyrogram.raw.functions.account import UpdateProfile, UpdateStatus, UpdateUsername
 from pyrogram.raw.functions.channels import GetAdminedPublicChannels
-from Sancaklarbot import HELP, TEMP_SETTINGS
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, TEMP_SETTINGS
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_download_dir,
     get_translation,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
@@ -30,7 +30,7 @@ ALWAYS_ONLINE = 'offline'
 # ===============================================================
 
 
-@Sancaklarify(pattern='^.reserved$', compat=False)
+@sancaklarify(pattern='^.reserved$', compat=False)
 def reserved(client, message):
     sonuc = client.send(GetAdminedPublicChannels())
     mesaj = ''
@@ -39,7 +39,7 @@ def reserved(client, message):
     edit(message, mesaj)
 
 
-@Sancaklarify(pattern='^.name', compat=False)
+@sancaklarify(pattern='^.name', compat=False)
 def name(client, message):
     newname = extract_args(message)
     if ' ' not in newname:
@@ -54,7 +54,7 @@ def name(client, message):
     edit(message, f'`{get_translation("nameOk")}`')
 
 
-@Sancaklarify(pattern='^.setpfp$', compat=False)
+@sancaklarify(pattern='^.setpfp$', compat=False)
 def set_profilepic(client, message):
     reply = message.reply_to_message
     photo = None
@@ -87,7 +87,7 @@ def set_profilepic(client, message):
         edit(message, f'`{get_translation("ppError")}`')
 
 
-@Sancaklarify(pattern='^.delpfp', compat=False)
+@sancaklarify(pattern='^.delpfp', compat=False)
 def remove_profilepic(client, message):
     group = extract_args(message)
     if group == 'all':
@@ -104,14 +104,14 @@ def remove_profilepic(client, message):
     edit(message, f'`{get_translation("ppDeleted", [count])}`')
 
 
-@Sancaklarify(pattern='^.setbio', compat=False)
+@sancaklarify(pattern='^.setbio', compat=False)
 def setbio(client, message):
     newbio = extract_args(message)
     client.send(UpdateProfile(about=newbio))
     edit(message, f'`{get_translation("bioSuccess")}`')
 
 
-@Sancaklarify(pattern='^.username', compat=False)
+@sancaklarify(pattern='^.username', compat=False)
 def username(client, message):
     newusername = extract_args(message)
     try:
@@ -121,7 +121,7 @@ def username(client, message):
         edit(message, f'`{get_translation("usernameTaken")}`')
 
 
-@Sancaklarify(pattern='^.block$', compat=False)
+@sancaklarify(pattern='^.block$', compat=False)
 def blockpm(client, message):
     if message.reply_to_message:
         reply = message.reply_to_message
@@ -145,7 +145,7 @@ def blockpm(client, message):
     edit(message, f'`{get_translation("pmBlocked")}`')
 
     try:
-        from SancaklarMedias.sql.pm_permit_sql import dissprove
+        from sancaklarmedias.sql.pm_permit_sql import dissprove
 
         dissprove(uid)
     except BaseException:
@@ -154,7 +154,7 @@ def blockpm(client, message):
     send_log(get_translation('pmBlockedLog', [name0, uid]))
 
 
-@Sancaklarify(pattern='^.unblock$', compat=False)
+@sancaklarify(pattern='^.unblock$', compat=False)
 def unblockpm(client, message):
     if message.reply_to_message:
         reply = message.reply_to_message
@@ -172,7 +172,7 @@ def unblockpm(client, message):
         edit(message, f'`{get_translation("pmUnblockedUsage")}`')
 
 
-@Sancaklarify(pattern='^.online', compat=False)
+@sancaklarify(pattern='^.online', compat=False)
 def online(client, message):
     args = extract_args(message)
     offline = ALWAYS_ONLINE in TEMP_SETTINGS
@@ -200,7 +200,7 @@ def online(client, message):
             return
 
 
-@Sancaklarify(pattern='^.stats$', compat=False)
+@sancaklarify(pattern='^.stats$', compat=False)
 def user_stats(client, message):
     edit(message, f'`{get_translation("processing")}`')
     chats = 0

@@ -10,8 +10,8 @@
 from time import sleep
 
 from pyrogram.types import ChatPermissions
-from Sancaklarbot import BRAIN, HELP, LOGS, TEMP_SETTINGS
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify, send_log
+from sancaklarbot import BRAIN, HELP, LOGS, TEMP_SETTINGS
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify, send_log
 
 
 def globals_init():
@@ -19,8 +19,8 @@ def globals_init():
         global sql, sql2
         from importlib import import_module
 
-        sql = import_module('SancaklarMedias.sql.gban_sql')
-        sql2 = import_module('SancaklarMedias.sql.gmute_sql')
+        sql = import_module('sancaklarmedias.sql.gban_sql')
+        sql2 = import_module('sancaklarmedias.sql.gmute_sql')
     except Exception as e:
         sql = None
         sql2 = None
@@ -31,7 +31,7 @@ def globals_init():
 globals_init()
 
 
-@Sancaklarify(pattern='^.gban', compat=False)
+@sancaklarify(pattern='^.gban', compat=False)
 def gban_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -85,7 +85,7 @@ def gban_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.(ung|gun)ban', compat=False)
+@sancaklarify(pattern='^.(ung|gun)ban', compat=False)
 def ungban_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -155,7 +155,7 @@ def ungban_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.listgban$')
+@sancaklarify(pattern='^.listgban$')
 def gbanlist(message):
     users = sql.gbanned_users()
     if not users:
@@ -168,7 +168,7 @@ def gbanlist(message):
     return edit(message, gban_list)
 
 
-@Sancaklarify(incoming=True, outgoing=False, compat=False)
+@sancaklarify(incoming=True, outgoing=False, compat=False)
 def gban_check(client, message):
     if sql.is_gbanned(message.from_user.id):
         try:
@@ -181,7 +181,7 @@ def gban_check(client, message):
     message.continue_propagation()
 
 
-@Sancaklarify(pattern='^.gmute', compat=False)
+@sancaklarify(pattern='^.gmute', compat=False)
 def gmute_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -235,7 +235,7 @@ def gmute_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.ungmute', compat=False)
+@sancaklarify(pattern='^.ungmute', compat=False)
 def ungmute_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -280,7 +280,7 @@ def ungmute_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.listgmute$')
+@sancaklarify(pattern='^.listgmute$')
 def gmutelist(message):
     users = sql2.gmuted_users()
     if not users:
@@ -293,7 +293,7 @@ def gmutelist(message):
     return edit(message, gmute_list)
 
 
-@Sancaklarify(incoming=True, outgoing=False, compat=False)
+@sancaklarify(incoming=True, outgoing=False, compat=False)
 def gmute_check(client, message):
     if sql2.is_gmuted(message.from_user.id):
         sleep(0.1)

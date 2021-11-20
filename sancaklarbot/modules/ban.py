@@ -18,8 +18,8 @@ from pyrogram.errors import (
     UserAdminInvalid,
 )
 from pyrogram.types import ChatPermissions
-from Sancaklarbot import BRAIN, HELP
-from SancaklarMedias.core import (
+from sancaklarbot import BRAIN, HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
@@ -27,12 +27,12 @@ from SancaklarMedias.core import (
     get_translation,
     is_admin,
     reply_doc,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
 
-@Sancaklarify(pattern='^.ban', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.ban', compat=False, private=False, admin=True)
 def ban_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -83,7 +83,7 @@ def ban_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.unban', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.unban', compat=False, private=False, admin=True)
 def unban_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -120,7 +120,7 @@ def unban_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.kick', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.kick', compat=False, private=False, admin=True)
 def kick_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -177,10 +177,10 @@ def kick_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.mute', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.mute', compat=False, private=False, admin=True)
 def mute_user(client, message):
     try:
-        from SancaklarMedias.sql import mute_sql as sql
+        from sancaklarmedias.sql import mute_sql as sql
     except BaseException:
         edit(message,f'`{get_translation("nonSqlMode")}`')
         return
@@ -235,10 +235,10 @@ def mute_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.unmute', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.unmute', compat=False, private=False, admin=True)
 def unmute_user(client, message):
     try:
-        from SancaklarMedias.sql import mute_sql as sql
+        from sancaklarmedias.sql import mute_sql as sql
     except BaseException:
         edit(message,f'`{get_translation("nonSqlMode")}`')
         return
@@ -279,7 +279,7 @@ def unmute_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.promote', admin=True, private=False, compat=False)
+@sancaklarify(pattern='^.promote', admin=True, private=False, compat=False)
 def promote_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -339,7 +339,7 @@ def promote_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.demote', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.demote', compat=False, private=False, admin=True)
 def demote_user(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -385,7 +385,7 @@ def demote_user(client, message):
         return
 
 
-@Sancaklarify(pattern='^.pin$', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.pin$', compat=False, private=False, admin=True)
 def pin_message(client, message):
     reply = message.reply_to_message
 
@@ -404,7 +404,7 @@ def pin_message(client, message):
         return
 
 
-@Sancaklarify(pattern='^.unpin', compat=False, private=False, admin=True)
+@sancaklarify(pattern='^.unpin', compat=False, private=False, admin=True)
 def unpin_message(client, message):
     args = extract_args(message)
     reply = message.reply_to_message
@@ -428,7 +428,7 @@ def unpin_message(client, message):
 
 
 
-@Sancaklarify(pattern='^.(admins|bots|user(s|sdel))$', compat=False, private=False)
+@sancaklarify(pattern='^.(admins|bots|user(s|sdel))$', compat=False, private=False)
 def get_users(client, message):
     args = message.text.split(' ', 1)
     users = args[0][1:5] == 'user'
@@ -490,7 +490,7 @@ def get_users(client, message):
         )
 
 
-@Sancaklarify(pattern='^.zombies', private=False, compat=False)
+@sancaklarify(pattern='^.zombies', private=False, compat=False)
 def zombie_accounts(client, message):
     args = extract_args(message).lower()
     chat_id = message.chat.id
@@ -542,7 +542,7 @@ def zombie_accounts(client, message):
     )
 
 
-@Sancaklarify(pattern='^.setgpic$', compat=False, admin=True, private=False)
+@sancaklarify(pattern='^.setgpic$', compat=False, admin=True, private=False)
 def set_group_photo(client, message):
     reply = message.reply_to_message
     photo = None
@@ -584,10 +584,10 @@ def set_group_photo(client, message):
         edit(message, f'`{get_translation("ppError")}`')
 
 
-@Sancaklarify(incoming=True, outgoing=False, compat=False)
+@sancaklarify(incoming=True, outgoing=False, compat=False)
 def mute_check(client, message):
     try:
-        from SancaklarMedias.sql import mute_sql as sql
+        from sancaklarmedias.sql import mute_sql as sql
     except BaseException:
         return
 

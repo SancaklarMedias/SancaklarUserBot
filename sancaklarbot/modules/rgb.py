@@ -12,11 +12,11 @@ from random import randint
 from textwrap import wrap
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, reply_sticker, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, reply_sticker, sancaklarify
 
 
-@Sancaklarify(pattern='^.rgb')
+@sancaklarify(pattern='^.rgb')
 def sticklet(message):
     R = randint(0, 256)
     G = randint(0, 256)
@@ -39,7 +39,7 @@ def sticklet(message):
     draw = ImageDraw.Draw(image)
     fontsize = 230
 
-    FONT_FILE = 'SancaklarMedias/fonts/OpenSans.ttf'
+    FONT_FILE = 'sancaklarmedias/fonts/OpenSans.ttf'
 
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 

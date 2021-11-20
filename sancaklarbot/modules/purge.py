@@ -10,18 +10,18 @@
 from time import sleep
 
 from pyrogram.errors import FloodWait
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     reply,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
 
-@Sancaklarify(pattern='^.purge$', compat=False, admin=True)
+@sancaklarify(pattern='^.purge$', compat=False, admin=True)
 def purge(client, message):
     msg = message.reply_to_message
     if msg:
@@ -50,7 +50,7 @@ def purge(client, message):
     done.delete()
 
 
-@Sancaklarify(pattern='^.purgeme', compat=False)
+@sancaklarify(pattern='^.purgeme', compat=False)
 def purgeme(client, message):
     count = extract_args(message)
     if not count.isdigit():
@@ -71,7 +71,7 @@ def purgeme(client, message):
     smsg.delete()
 
 
-@Sancaklarify(pattern='^.del$', compat=False, admin=True)
+@sancaklarify(pattern='^.del$', compat=False, admin=True)
 def delete(client, message):
     msg_src = message.reply_to_message
     if msg_src:

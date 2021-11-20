@@ -14,11 +14,11 @@ from urllib.parse import urlencode
 
 from bs4 import BeautifulSoup
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, Sancaklarify, use_proxy
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, sancaklarify, use_proxy
 
 
-@Sancaklarify(pattern='^.magisk$')
+@sancaklarify(pattern='^.magisk$')
 def magisk(message):
     magisk_dict = {
         'Stable': 'https://raw.githubusercontent.com/topjohnwu/'
@@ -38,7 +38,7 @@ def magisk(message):
     edit(message, releases, preview=False)
 
 
-@Sancaklarify(pattern='^.phh')
+@sancaklarify(pattern='^.phh')
 def phh(message):
     get_phh = get(
         'https://api.github.com/repos/phhusson/treble_experimentations/releases/latest'
@@ -68,7 +68,7 @@ def phh(message):
     edit(message, releases, preview=False)
 
 
-@Sancaklarify(pattern=r'^.device')
+@sancaklarify(pattern=r'^.device')
 def device(message):
     textx = message.reply_to_message
     codename = extract_args(message)
@@ -98,7 +98,7 @@ def device(message):
     edit(message, reply)
 
 
-@Sancaklarify(pattern=r'^.codename')
+@sancaklarify(pattern=r'^.codename')
 def codename(message):
     textx = message.reply_to_message
     arr = extract_args(message)
@@ -145,7 +145,7 @@ def codename(message):
     edit(message, reply)
 
 
-@Sancaklarify(pattern=r'^.twrp')
+@sancaklarify(pattern=r'^.twrp')
 def twrp(message):
     textx = message.reply_to_message
     device = extract_args(message)
@@ -173,7 +173,7 @@ def twrp(message):
     edit(message, reply)
 
 
-@Sancaklarify(pattern=r'^.o(range|)f(ox|rp)')
+@sancaklarify(pattern=r'^.o(range|)f(ox|rp)')
 def ofox(message):
     if len(args := extract_args(message)) < 1:
         edit(message, f'`{get_translation("ofrpUsage")}`')
@@ -206,7 +206,7 @@ def ofox(message):
     edit(message, f'**OrangeFox Recovery ({args}):**\n{out}')
 
 
-@Sancaklarify(pattern=r'^.specs')
+@sancaklarify(pattern=r'^.specs')
 def specs(message):
     args = extract_args(message)
     if len(args) < 1:

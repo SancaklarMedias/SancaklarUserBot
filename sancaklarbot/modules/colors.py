@@ -8,11 +8,11 @@
 #
 
 from PIL import Image, ImageColor
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, reply_img, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, reply_img, sancaklarify
 
 
-@Sancaklarify(pattern='^.color')
+@sancaklarify(pattern='^.color')
 def color(message):
     input_str = extract_args(message)
 
@@ -24,10 +24,10 @@ def color(message):
             return False
         else:
             im = Image.new(mode='RGB', size=(1920, 1080), color=usercolor)
-            im.save('Sancaklarcik.png', 'PNG')
+            im.save('sancaklarcik.png', 'PNG')
             reply_img(
                 message,
-                'Sancaklarcik.png',
+                'sancaklarcik.png',
                 caption=input_str,
                 delete_file=True,
                 delete_orig=True,

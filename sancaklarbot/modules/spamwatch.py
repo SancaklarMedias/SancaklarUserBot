@@ -7,8 +7,8 @@
 # All rights reserved. See COPYING, AUTHORS.
 #
 
-from Sancaklarbot import BRAIN, HELP, SPAMWATCH_KEY
-from SancaklarMedias.core import get_translation, is_admin_myself, reply, Sancaklarify, send_log
+from sancaklarbot import BRAIN, HELP, SPAMWATCH_KEY
+from sancaklarmedias.core import get_translation, is_admin_myself, reply, sancaklarify, send_log
 from spamwatch import Client as SpamWatch
 
 
@@ -16,7 +16,7 @@ class SWClient:
     spamwatch_client = SpamWatch(SPAMWATCH_KEY) if SPAMWATCH_KEY else None
 
 
-@Sancaklarify(compat=False, outgoing=False, incoming=True, disable_notify=True, disable_edited=True)
+@sancaklarify(compat=False, outgoing=False, incoming=True, disable_notify=True, disable_edited=True)
 def spamwatch_action(client, message):
     if not SWClient.spamwatch_client:
         message.continue_propagation()

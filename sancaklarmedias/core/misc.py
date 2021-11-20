@@ -12,7 +12,7 @@ from re import escape, sub
 from subprocess import CalledProcessError, check_output, STDOUT
 
 from pyrogram.types import Message
-from Sancaklarbot import BOT_PREFIX, BRAIN, LOG_VERBOSE, TEMP_SETTINGS, app
+from sancaklarbot import BOT_PREFIX, BRAIN, LOG_VERBOSE, TEMP_SETTINGS, app
 
 MARKDOWN_FIX_CHAR = '\u2064'
 SPAM_COUNT = [0]

@@ -12,11 +12,11 @@ from re import sub
 
 from bs4 import BeautifulSoup
 from requests import get
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, get_translation, sancaklarify
 
 
-@Sancaklarify(pattern='^.covid(|19)$')
+@sancaklarify(pattern='^.covid(|19)$')
 def covid(message):
     try:
         req = get(

@@ -11,13 +11,13 @@ from random import choice, randint
 from time import sleep
 
 from pyrogram import ContinuePropagation, StopPropagation
-from Sancaklarbot import HELP, PM_AUTO_BAN, TEMP_SETTINGS, app
-from SancaklarMedias.core import (
+from sancaklarbot import HELP, PM_AUTO_BAN, TEMP_SETTINGS, app
+from sancaklarmedias.core import (
     edit,
     extract_args,
     get_translation,
     reply,
-    Sancaklarify,
+    sancaklarify,
     send_log,
 )
 
@@ -29,7 +29,7 @@ TEMP_SETTINGS['COUNT_MSG'] = 0
 # =================================================================
 
 
-@Sancaklarify(
+@sancaklarify(
     incoming=True,
     outgoing=False,
     disable_edited=True,
@@ -92,7 +92,7 @@ def mention_afk(msg):
     raise ContinuePropagation
 
 
-@Sancaklarify(
+@sancaklarify(
     incoming=True,
     outgoing=False,
     disable_errors=True,
@@ -103,7 +103,7 @@ def mention_afk(msg):
 def afk_on_pm(message):
     if PM_AUTO_BAN:
         try:
-            from SancaklarMedias.sql.pm_permit_sql import is_approved
+            from sancaklarmedias.sql.pm_permit_sql import is_approved
 
             apprv = is_approved(message.from_user.id)
         except BaseException:
@@ -155,7 +155,7 @@ def afk_on_pm(message):
     raise ContinuePropagation
 
 
-@Sancaklarify(pattern=r'^.afk')
+@sancaklarify(pattern=r'^.afk')
 def set_afk(message):
     args = extract_args(message)
     if len(args) > 0:
@@ -171,7 +171,7 @@ def set_afk(message):
     raise StopPropagation
 
 
-@Sancaklarify()
+@sancaklarify()
 def type_afk_is_not_true(message):
     if TEMP_SETTINGS['IS_AFK']:
         TEMP_SETTINGS['IS_AFK'] = False

@@ -9,22 +9,22 @@
 
 from collections import OrderedDict
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, reply, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, reply, sancaklarify
 
 
-@Sancaklarify(pattern='^.Sancaklar')
-def Sancaklar(message):
-    Sancaklar = extract_args(message).lower()
+@sancaklarify(pattern='^.sancaklar')
+def sancaklar(message):
+    sancaklar = extract_args(message).lower()
     cmds = OrderedDict(sorted(HELP.items()))
-    if len(Sancaklar) > 0:
-        if Sancaklar in cmds:
-            edit(message, str(cmds[Sancaklar]))
+    if len(sancaklar) > 0:
+        if sancaklar in cmds:
+            edit(message, str(cmds[sancaklar]))
         else:
-            edit(message, f'**{get_translation("SancaklarUsage")}**')
+            edit(message, f'**{get_translation("sancaklarUsage")}**')
     else:
-        edit(message, get_translation('SancaklarUsage2', ['**', '`']))
-        metin = f'{get_translation("SancaklarShowLoadedModules", ["**", "`", len(cmds)])}\n'
+        edit(message, get_translation('sancaklarUsage2', ['**', '`']))
+        metin = f'{get_translation("sancaklarShowLoadedModules", ["**", "`", len(cmds)])}\n'
         for item in cmds:
             metin += f'• `{item}`\n'
         reply(message, metin)

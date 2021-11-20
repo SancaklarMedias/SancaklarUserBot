@@ -15,13 +15,13 @@ from traceback import format_exc
 
 from pyrogram import ContinuePropagation, StopPropagation, filters
 from pyrogram.handlers import MessageHandler
-from Sancaklarbot import BLACKLIST, BOT_VERSION, BRAIN, TEMP_SETTINGS, app, get_translation
+from sancaklarbot import BLACKLIST, BOT_VERSION, BRAIN, TEMP_SETTINGS, app, get_translation
 
 from .misc import _parsed_prefix, edit, get_cmd, is_admin
-from .Sancaklarlog import send_log_doc
+from .sancaklarlog import send_log_doc
 
 
-def Sancaklarify(**args):
+def sancaklarify(**args):
     pattern = args.get('pattern', None)
     outgoing = args.get('outgoing', True)
     incoming = args.get('incoming', False)
@@ -99,11 +99,11 @@ def Sancaklarify(**args):
                         if not disable_notify:
                             edit(message, f'`{get_translation("errorLogSend")}`')
                         text = get_translation(
-                            'SancaklarErrorText', ['**', '`', exc_info()[1]]
+                            'sancaklarErrorText', ['**', '`', exc_info()[1]]
                         )
 
                     ftext = get_translation(
-                        'SancaklarErrorText2',
+                        'sancaklarErrorText2',
                         [
                             date,
                             message.chat.id,

@@ -8,11 +8,11 @@
 #
 
 from lyricsgenius import Genius
-from Sancaklarbot import GENIUS_TOKEN, HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, reply_doc, Sancaklarify
+from sancaklarbot import GENIUS_TOKEN, HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, reply_doc, sancaklarify
 
 
-@Sancaklarify(pattern='^.lyrics')
+@sancaklarify(pattern='^.lyrics')
 def lyrics(message):
     args = extract_args(message)
     if r'-' in args:

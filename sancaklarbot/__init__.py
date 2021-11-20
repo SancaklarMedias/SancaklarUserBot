@@ -25,7 +25,7 @@ from sys import version_info
 from traceback import format_exc
 from typing import Any, Dict
 
-import SancaklarMedias.translator as _tr
+import sancaklarmedias.translator as _tr
 from dotenv import load_dotenv, set_key, unset_key
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
@@ -42,7 +42,7 @@ LOGS = getLogger(__name__)
 
 
 def get_translation(transKey, params: list = None):
-    ret = _tr.get_translation(Sancaklar_LANG, transKey)
+    ret = _tr.get_translation(sancaklar_LANG, transKey)
 
     if params and len(params) > 0:
         for i in reversed(range(len(params))):
@@ -78,7 +78,7 @@ basicConfig(
 # Bot lang
 #
 # If missted, the default lang is English.
-Sancaklar_LANG = environ.get('Sancaklar_LANG', 'en')
+sancaklar_LANG = environ.get('sancaklar_LANG', 'en')
 
 
 def set_local_env(key: str, value: str):
@@ -124,8 +124,8 @@ if not API_HASH:
     quit(1)
 
 BOT_VERSION = '1.5.1s'
-SUPPORT_GROUP = 'SancaklarUserBotSupport'
-CHANNEL = 'SancaklarUserBot'
+SUPPORT_GROUP = 'sancaklarUserBotSupport'
+CHANNEL = 'sancaklarUserBot'
 
 # Weather default city
 WEATHER = environ.get('WEATHER', None)
@@ -144,7 +144,7 @@ ALIVE_MSG = environ.get('ALIVE_MSG', None)
 
 # For neofetch
 HOSTNAME = environ.get('HOSTNAME', 'DerUntergang')
-USER = environ.get('USER', 'SancaklarMedias')
+USER = environ.get('USER', 'sancaklarmedias')
 
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_DRIVER = environ.get('CHROME_DRIVER', 'chromedriver')
@@ -165,11 +165,11 @@ PACKNICK = environ.get('PACKNICK', None)
 # SQL Database URL
 DATABASE_URL = environ.get('DATABASE_URL', None)
 
-# SancaklarBot Session
-SESSION = environ.get('SESSION', 'Sancaklaruserbot')
+# sancaklarBot Session
+SESSION = environ.get('SESSION', 'sancaklaruserbot')
 
-# SancaklarBot repo url for updater
-REPO_URL = environ.get('REPO_URL', 'https://github.com/TeamDerUntergang/SancaklarUserBot')
+# sancaklarBot repo url for updater
+REPO_URL = environ.get('REPO_URL', 'https://github.com/TeamDerUntergang/sancaklarUserBot')
 
 # Heroku Credentials for updater
 HEROKU_KEY = environ.get('HEROKU_KEY', None)
@@ -267,7 +267,7 @@ app = PyroClient(
     SESSION,
     api_id=API_ID,
     api_hash=API_HASH,
-    app_version='SancaklarMedias',
+    app_version='sancaklarmedias',
     device_model='Firefox 91.0.2',
     system_version=f'v{BOT_VERSION}',
 )
@@ -280,7 +280,7 @@ del API_HASH
 
 
 def __get_modules():
-    folder = 'Sancaklarbot/modules'
+    folder = 'sancaklarbot/modules'
     modules = [
         f[:-3]
         for f in listdir(folder)
@@ -294,7 +294,7 @@ def __import_modules():
     LOGS.info(get_translation('loadedModules', [modules]))
     for module in modules:
         try:
-            import_module(f'Sancaklarbot.modules.{module}')
+            import_module(f'sancaklarbot.modules.{module}')
         except Exception:
             if LOG_VERBOSE:
                 LOGS.warn(format_exc())
@@ -304,4 +304,4 @@ def __import_modules():
 __import_modules()
 
 LOGS.info(get_translation('runningBot', [SUPPORT_GROUP]))
-LOGS.info(get_translation('SancaklarVersion', [BOT_VERSION]))
+LOGS.info(get_translation('sancaklarVersion', [BOT_VERSION]))

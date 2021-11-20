@@ -10,19 +10,19 @@
 from os import path, remove
 from subprocess import Popen
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
     reply_audio,
     reply_video,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.earrape')
+@sancaklarify(pattern='^.earrape')
 def earrape(message):
     args = extract_args(message).split(' ', 1)
     reply = message.reply_to_message
@@ -93,7 +93,7 @@ def earrape(message):
         return
 
 
-@Sancaklarify(pattern='^.nightcore$')
+@sancaklarify(pattern='^.nightcore$')
 def nightcore(message):
     # Copyright (c) @kisekinopureya | 2021
     reply = message.reply_to_message
@@ -132,7 +132,7 @@ def nightcore(message):
         message.delete()
 
 
-@Sancaklarify(pattern='^.slowedtoperfection$')
+@sancaklarify(pattern='^.slowedtoperfection$')
 def slowedtoperfection(message):
     # Copyright (c) @kisekinopureya | 2021
     reply = message.reply_to_message

@@ -8,11 +8,11 @@
 #
 
 from pyrogram.errors import YouBlockedUser
-from Sancaklarbot import HELP
-from SancaklarMedias.core import PyroConversation, edit, get_translation, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import PyroConversation, edit, get_translation, sancaklarify
 
 
-@Sancaklarify(pattern='^.sangmata$', compat=False)
+@sancaklarify(pattern='^.sangmata$', compat=False)
 def sangmata(client, message):
     reply = message.reply_to_message
     if reply and reply.text:

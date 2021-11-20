@@ -9,13 +9,13 @@
 
 from datetime import datetime
 
-from Sancaklarbot import HELP
-from SancaklarMedias.core import edit, extract_args, get_translation, reply_doc, Sancaklarify
+from sancaklarbot import HELP
+from sancaklarmedias.core import edit, extract_args, get_translation, reply_doc, sancaklarify
 
 from speedtest import Speedtest
 
 
-@Sancaklarify(pattern='^.speedtest')
+@sancaklarify(pattern='^.speedtest')
 def speed_test(message):
     input_str = extract_args(message)
     as_text = False

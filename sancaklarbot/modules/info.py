@@ -9,18 +9,18 @@
 
 from pyrogram.errors import PeerIdInvalid
 from pyrogram.raw.functions.messages import GetOnlines
-from Sancaklarbot import BLACKLIST, BRAIN, HELP
-from SancaklarMedias.core import (
+from sancaklarbot import BLACKLIST, BRAIN, HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
     reply_img,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.whois', compat=False)
+@sancaklarify(pattern='^.whois', compat=False)
 def who_is(client, message):
     user_info = extract_args(message)
     reply = message.reply_to_message
@@ -125,7 +125,7 @@ def BlacklistCheck(user_id):
         return get_translation('blacklistCheck')
 
 
-@Sancaklarify(pattern='^.ginfo', compat=False)
+@sancaklarify(pattern='^.ginfo', compat=False)
 def get_chat_info(client, message):
     args = extract_args(message)
     reply = message.reply_to_message

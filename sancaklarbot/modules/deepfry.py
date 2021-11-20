@@ -11,18 +11,18 @@ from os import remove
 from random import randint, uniform
 
 from PIL import Image, ImageEnhance, ImageOps
-from Sancaklarbot import HELP
-from SancaklarMedias.core import (
+from sancaklarbot import HELP
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     get_translation,
     parse_cmd,
     reply_img,
-    Sancaklarify,
+    sancaklarify,
 )
 
 
-@Sancaklarify(pattern='^.(deepf|f)ry')
+@sancaklarify(pattern='^.(deepf|f)ry')
 def deepfry(message):
 
     text = (message.text or message.caption).split(' ', 1)

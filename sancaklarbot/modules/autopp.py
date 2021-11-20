@@ -13,13 +13,13 @@ from time import sleep
 
 from PIL import Image, ImageDraw, ImageFont
 from requests import get
-from Sancaklarbot import AUTO_PP, HELP, LOGS, TEMP_SETTINGS
-from SancaklarMedias.core import (
+from sancaklarbot import AUTO_PP, HELP, LOGS, TEMP_SETTINGS
+from sancaklarmedias.core import (
     download_media_wc,
     edit,
     extract_args,
     get_translation,
-    Sancaklarify,
+    sancaklarify,
 )
 
 # =================== CONSTANT ===================
@@ -27,7 +27,7 @@ KEY_AUTOPP = 'autopic'
 # ================================================
 
 
-@Sancaklarify(pattern='^.autopp', compat=False)
+@sancaklarify(pattern='^.autopp', compat=False)
 def autopic(client, message):
     args = extract_args(message)
     autopic = KEY_AUTOPP in TEMP_SETTINGS
@@ -47,7 +47,7 @@ def autopic(client, message):
 
     edit(message, f'`{get_translation("autoppProcess")}`')
 
-    FONT_FILE = 'SancaklarMedias/fonts/GoogleSans.ttf'
+    FONT_FILE = 'sancaklarmedias/fonts/GoogleSans.ttf'
 
     downloaded_file_name = 'oldpp.png'
     photo = 'newpp.png'
