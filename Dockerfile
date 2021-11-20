@@ -1,11 +1,11 @@
 # We're Using NaytSeyd's Special Docker
-FROM naytseyd/sedenbot:j1xlte
+FROM naytseyd/sancaklarbot:j1xlte
 
 # Working Directory
-WORKDIR /DerUntergang/
+WORKDIR /SancaklarMedias/
 
 # Clone Repo
-RUN git clone -b seden https://github.com/SancaklarMedias/sancaklarUsersBot.git /DerUntergang/
+RUN git clone -b sancaklar https://github.com/SancaklarMedias/sancaklarUsersBot.git /SancaklarMedias/
 
 # Run bot
 CMD ["python3", "sancaklar.py"]
