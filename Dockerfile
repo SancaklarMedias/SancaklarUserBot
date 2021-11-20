@@ -5,7 +5,7 @@ FROM naytseyd/Sancaklarbot:j1xlte
 WORKDIR /DerUntergang/
 
 # Clone Repo
-RUN git clone -b Sancaklar https://github.com/TeamDerUntergang/Telegram-SancaklarUserBot.git /DerUntergang/
+RUN git clone -b sancaklar https://github.com/SancaklarMedias/SancaklarUsersBot /DerUntergang/
 
 # Run bot
-CMD ["python3", "Sancaklar.py"]
+CMD ["python3", "sancaklar.py"]
